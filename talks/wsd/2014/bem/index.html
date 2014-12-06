@@ -27,6 +27,7 @@
     img {max-width: 100%;}
     .slide pre code.wrap {white-space: normal;}
   </style>
+  <script src="node_modules/jquery-2.1.1.min.js"></script>
 </head>
 <body class="list">
   <header class="caption">
@@ -36,172 +37,6 @@
 
 <section class="slide cover" id="Cover"><div>
   <h2>Пишем БЭМ правильно</h2>
-<!--
- Слайд iDeus
-Здравствуйте! Меня зовут Игорь, я работаю в харьковской аутсорс- компании iDeus. 
-Я изучаю и разрабатываю верстку по BEM уже 6 лет. Я прочитал и пересмотрел все, что Яндекс сказал про BEM в докладах, статьях, обсуждениях в я.ру, а что не понял - спросил лично. И я имею вам кое что сказать. 
-Слайд "Зачем доклад"
-
-Цель моего доклада - рассказать про типичные ошибки верстки "по BEM".
-
-- Скажите, кто в этом зале пробовал верстать что-то "по BEM"?
-Отлично.
-- А кому было все понятно и никаких вопросов не возникло? :)
-- Я так понимаю есть некоторые вопросы вида "как правильно сверстать что-то по BEM". Значит мой доклад будет актуален.
-
-Слайд "Pepelsbey facepalm".
-
-Кстати кроме как об ошибках - я расскажу вам ещё и о дополнительной семантике БЭМ. БЭМ - он такой, он семантичный.
-
-Итак, ошибки верстки "по BEM"
-
-Чтобы их осознать, мы с вами должны вспомнить как писать правильно. Вспомнить правила.
-
-Я говорю "вспомнить", потому что то о чем мы будем говорить - это ручная верстка по BEM.
-
-Слайд "Я.ру теория"
-
-То как верстал Яндекс в 2007 году. И о чем Виталий Харисов не рассказал вам в своих докладах. Чего вы не найдете ни в одной статье, ни одном докладе и ни одном руководстве по BEM. Не рассказал, потому что их реальность потребовала изменений. Они выбросили, оставили в прошлом то, что полезно при ручной верстке, но вредно им при сборке. Поэтому нам нужно вернуться в прошлое, чтобы собрать все воедино.
-
-Музыка из терминатора, зеленый экран.
-
-Слайд "2007 год"
-
-Мы возвращаемся в 2007 год. На хабре в комментах не то что не считают верстку по БЭМ извращением, нет, о ней ещё даже слышали. Самого Хабра еще нет:) Яндекс ещё не ездит с проповедями по городам. Еще даже нет слова BEM. IE6 ещё жив. Windows 7 еще не вышла. Только появился первый айфон. До того  как придумают Node.js остается ещё 2 года!
-
-Слайд "Харисов"
-Виталий Харисов вручную верстает новый большой проект - Я.ру.
-
-И придумывает "Независимые блоки". Очень быстро они превращаются в "Абсолютно независимые блоки". Потом в Лего. Потом появляется слово BEM.
-
-Картинка американского проповедника.
-
-И тот путь, который он прошел за 2 года от независимых блоков до BEM, большинство из нас начало только сейчас. 
-Только сейчас мы осознаем смысл написанного им в самых первых постах клуба БЭМ на ярушке. А он пошел дальше и все что вы слышали о BEM от Яндекса - вы слышали уже о сборке и генерации кода!
-
-Слайд с Мурсей.
-
-Если бы здесь была Мурся, она бы меня задушила за сравнение BEM с религией. Но ее здесь нет и поэтому я продолжу.
-
-Проблема непонятости БЭМ.
-
-Слайд с проповедником и камнями с кодом.
-
-Чтоб собрать все пришлось читать апокрифы. Нет единого стандарта. Есть множество толкований - диалектов БЭМ. Евангелие от Вегеда, проповедь на внутренней коференции и статьи других апостолов, простите евангелистов БЭМ. Сам БЭМ допускает множество вариантов самой методологии. А уж какой путь выбирать в каждом конкретном случае, при модификации кода например - можно спорить и спорить. Поэтому -тот- старый добрый ручной Бэм и правду похож на религию. 
-
-БЭМ рос настолько быстро, что первая крайне сырая документация появилась только спустя 4 года.
-
-Выглядела она примерно вот так:
-
-Слайды про сову.
-
-И кстати к сегодняшнему дню мало изменилась. Именно поэтому я рассказываю вам это все сегодня.
-
-Яндекс придумал свой шаблонизатор и язык, а мы, простые верстальщики только в прошлом году всерьез задумались о том, что стоит писать  код по БЭМ. 
-
-Слайд "вопрос про bem"
-
-Но как писать код вручную? Что делать фрилансеру, который верстает небольшой  сайт на Wordpress? Как ему черт возьми просто вывести текст из БД? Назначить класс каждому заголовку и абзацу? Но он же получает их из визига!
-
-К концу этого доклада вы будете знать ответ!
-
-Слайд "Суть #b"
-
-Слайд "Я не буду говорить о bem-tools"
-Не буду говорить об абстрактных блоках
-Миксовании
-Еще чемто
-Про путь Бэм - почему все так какие были пробы и почему что сделали.
-Про это я расскажу вам к Новому году в  большой статье на Frontender Magazine, ждите премьеры и подписывайтесь:
-
-Слайд Frontender magazine 
-
-Там вы увидите полное руководство как, что, почему, какие были варианты и что было отброшено. Тут же с вами мы сосредоточимся только на том,  как писать BEM-код вручную. И как его не писать.
-
-Итак правила: Как писать.
-
-Слайд Независимый блок
-Главное что вы должны понимать по Бэм это понятие независимого блока.
-
-Слайд "формальное определение"
-Простыми словами это блок, который можно без каких либо проблем переместить в любую другую часть страницы или на другую страницу и он таки заработает, не поломается сам и не поломает ничего вокруг. 
-
-Формальное определение нужно только затем чтоб описать при каких условиях он должен таким стать.
-
-Как его таким писать?
-Просто писать стили тупо на каждый блок. БЭМ хорош тем, что позволяет не забивать голову ерундой с каскадом, а сосредоточимся на семантике и логике кода. А с препроцессорами 
-Бэм позволяет писать еще и очень чистый и логичный код.
-Но про это чуть позже.
-
-Слайд Как проверить?
-Просто навести на блок в инспекторе кода. У него не должно быть каскада.
-
-Слайд Элемент
-Главное что вы должны вынести с этого доклада - Не бывает элементов вложенных в элементы!
-Я тоже раньше так писал:
-Код
-Аэрофлот-from city
-
-Что делать когда надо?
-Делать новый блок. И придумывать ему имя несвязанное с именем блока сверху. Не включайте имя родительского блока с элементом в имя нового блока!
-Код
-Ну перенесёте в другое место хрень же выйдет!
-Код
-Придумывайте нормальные, независимые имена. Бейте на максимальное количество блоков!
-
-Это и есть разница между DOM-деревом и BEM-деревом.
-
----
-Слайд
-Dom-дерево - густые переплетающиеся ветки 
-Код
-
-Bem-дерево - ствол, прямые палки от него (блоки), на палке - листочки (элементы).
-Код.
-
----
-Слайд Модификация
-В BEM существует 6 разрешенных видов модификации. Их разбор достоин отдельного доклада. Подробнее о них вы сможете почитать перед НГ во Frontender Magazine.
-Сейчас вам достаточно запомнить одну.
-
-Слайд: в любой непонятной ситуации - вешай модификатор на блок!
-А для элементов - делай каскад от модификатора.
-
-Вы спросите а можно ли делать модификаторы для элементов?
-
-Слайд тви: Грешновато.
-На самом деле в случае ручной верстки это сигнал об ошибках в вашей логике разбиения на блоки.
-Если вам нужен модификатор на элемент - вам скорее нужно сделать из этого элемента новый блок.
-
-Про camelCase и альтернативный синтаксис тире-подчеркиваний рассказать.
-
-Советы:
-1. b-text
-2. Модификатор на все
-3. Максимально бить на блоки
-
-Почитать дальше:
-Про абстрактные блоки
-Про миксование блоков
-
---
-Bem на английском тк так требует мурся. Лицензионный Бэм.
-
---
-Бэм допускает ошибки, в этом большое достоинство. Его легко исправить на правильный код.
-
----
-Раздел "Вопросы-ответы"
---
-Примеры гайдлайнов по БЭМ 
---
-Не забыть мой аудиодоклад про Бэм
-Не забыть посмотреть остальные мои записи про Бэм.
-Посмотреть статью на хабре
-Посмотреть еще на доклад Макеева.
-
-   -->  
-  
   
 <!-- harisov twit -->  
 <iframe src="embed/twitter-harisov.html"
@@ -211,44 +46,91 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 
 <section class="slide cover" id="ideus"><div>
   <!--
-  Здравствуйте! Меня зовут Игорь, я работаю в харьковской аутсорс-компании iDeus.
-  Я изучаю и разрабатываю верстку по BEM уже 6 лет. Прочитал и пересмотрел все, что Яндекс сказал про БЭМ в докладах, статья, обсуждениях   в я.ру, а что не понял - спросил лично. И я имею вам кое что сказать. 
+Слайд iDeus
+Здравствуйте! Меня зовут Игорь, я работаю в харьковской аутсорс- компании iDeus. 
+Я изучаю и разрабатываю верстку по BEM уже 6 лет. Я прочитал и пересмотрел наверное почти все, что Яндекс сказал про BEM в докладах, статьях, обсуждениях в я.ру, а что не понял - спросил лично. И я имею вам кое что сказать. 
   --> 
   <a href="http://ideus.biz"><img src="pictures/iDeus-vizitka.png" alt="iDeus"></a>
-  <style>
-    #ideus {
-
-    }
-  </style>  
 </div></section>
 
 <section class="slide shout"><div>
-  <!-- 
-  Цель моего доклада - рассказать про типичные ошибки верстки "по BEM".
-  Но чтобы их осознать, мы с вами должны вспомнить, как писать "по BEM" правильно. Сформулировать правила.
-  -->
-  <h2>Зачем ещё один доклад про BEM?!</h2>
+  <h2>Зачем ещё один доклад про BEM?!</h2> 
+<!-- 
+Цель моего доклада - рассказать про типичные ошибки верстки "по BEM".
+- Скажите, кто в этом зале пробовал верстать что-то "по BEM"?
+Отлично.
+- А кому было все понятно и никаких вопросов не возникло? :)
+- Я так понимаю есть некоторые вопросы вида "как правильно сверстать что-то по BEM". Значит мой доклад будет актуален.
+Кстати кроме как об ошибках - я расскажу вам ещё и о дополнительной семантике BEM. BEM - он такой, он семантичный. 
+-->
+</div></section>
+
+<section class="slide cover" id="Cover"><div>
+<!--  
+Слайд "Pepelsbey facepalm".
+-->
+  <img src="pictures/pepelsbey.jpg" alt="Pepelsbey">
 </div></section>
 
 <section class="slide shout"><div>
-  <!-- 
-  Я говорю "вспомнить", потому что то, о чем мы будем говорить - это ручная верстка по BEM.
+  <h2>Ошибки</h2>
+<!--  
+Вообще если бы было меньше бредовых статей типа этой: http://habrahabr.ru/post/203440/ которые пишут те, кто сам ничего не понял, было бы лучше. И ошибок было бы меньше.
+
+Итак, ошибки верстки "по BEM"
+Чтобы их осознать, мы с вами должны вспомнить как писать правильно. Вспомнить правила.
+Я говорю "вспомнить", потому что то о чем мы будем говорить - это ручная верстка по BEM.
+В правильных терминах bem это называется 
+-->
+</div></section>
+
+<section class="slide shout"><div>
+  <h2>CSS подмножество BEM</h2>
+<!-- 
+Потому что bem он не только про CSS.
+Итак вспомнить!
+-->
+</div></section>
+
+<section class="slide cover" id="Cover"><div>
+<!--  
+Слайд "Я.ру"
+То как верстал Яндекс в 2007 году. И о чем Виталий Харисов не рассказал вам в своих докладах. Чего вы не найдете ни в одной статье, ни одном докладе и ни одном руководстве по BEM. Не рассказал, потому что их реальность потребовала изменений. Они выбросили, оставили в прошлом то, что полезно при ручной верстке, но вредно им при сборке. Поэтому нам нужно вернуться в прошлое, чтобы собрать все воедино.
+-->
+  <img src="pictures/yaru.png" alt="Ya.ru" style="width: 100%">
+</div></section>
+
+<section class="slide cover" id="terminator_slide"><div>
+<!--
+Музыка из терминатора, зеленый экран.
+-->
+    <img src="pictures/Film.png" alt="">
+    <audio id="terminator_audio" src="music/Terminator2Theme.mp3"></audio>
+    <script>
+      $(window).on('hashchange',function(){ 
+          var hash = location.hash.slice(1);
+          if (hash == 'terminator_slide') {
+            $('#terminator_audio').trigger('play');
+            $('.audio').prop("volume", 1);
+            $('#terminator_audio').animate({volume: 0}, 15000);          
+          }
+      });      
+    </script>
+</div></section>
+
+<section class="slide shout"><div>
+  <h2>2007 год</h2>
+  <!--
+Мы возвращаемся в 2007 год. На хабре в комментах не то что считают верстку по BEM извращением, нет, о ней ещё даже не слышали. Хабр появился только год назад и еще нет инвайтов. Яндекс ещё не ездит с проповедями по городам. Еще даже нет слова BEM. IE6 ещё жив. Windows 7 еще не вышла. Только появился первый айфон. До того  как придумают Node.js остается ещё 2 года!
   -->
-  <h2>Ручная верстка "по BEM"</h2>
 </div></section>
 
 <section class="slide cover w" id="vitaly-harisov"><div>
+   <h2 class="place r">Виталий<br> Харисов</h2>
   <!-- 
-  То, как верстал Яндекс в 2007 году. 
-  И о чем Харисов не рассказал вам в своих докладах. 
-  Чего вы не найдете:
-   - ни в одной статье, 
-   - ни одном докладе, 
-   - и ни одном руководстве по BEM.
-  Не рассказал, потому что их реальность потребовала изменений.
-  А нам нужно вернуться в прошлое. 
+Виталий Харисов вручную верстает новый большой проект - Я.ру.
+И придумывает "Независимые блоки". Очень быстро они превращаются в "Абсолютно независимые блоки". Потом в Лего. Потом появляется слово BEM.
   --> 
-  <h2 class="place r">Виталий<br> Харисов</h2>
   <img src="pictures/vitaly-harisov.jpg" alt="Виталий Харисов">
   <style>
     #vitaly-harisov h2 {
@@ -260,71 +142,60 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 </div></section>
 
 <section class="slide cover"><div>
-    <img src="pictures/Film.png" alt="">
-    <audio>Terminator theme</audio>
-</div></section>
-
-<section class="slide shout"><div>
-  <!--
-  Мы возвращаемся в 2007 год. 
-  -->
-  <h2>2007 год</h2>
-</div></section>
-
-
-
-<section class="slide cover"><div>
+<!--
+И тот путь, который он прошел за 2 года от независимых блоков до BEM, большинство из нас начало только сейчас!
+Только сейчас мы осознаем смысл написанного им в самых первых постах клуба BEM на ярушке. А он пошел дальше и все что вы слышали о BEM от Яндекса - вы слышали уже о сборке и генерации кода!
+   -->
     <img src="pictures/Pastor.jpg" alt="">
 </div></section>
 
-<section class="slide shout"><div>
-  <h2>Чтоб рассказать о типичных ошибках</h2>
+<section class="slide cover" id="mursya"><div>
+  <h2 class="place r">@mursya меня бы убила</h2>
+<!--
+Если бы здесь была Мурся, она бы меня задушила за сравнение BEM с религией. Но ее здесь нет и поэтому я продолжу. Кстати вы знаете почему я пишу тут во всех слайдах Bem на английском? Потому что она меня так попросила:). Так лицензионно :)
+   -->
+    <img src="pictures/mursya.jpg" alt="">
+  <style>
+    #mursya h2 {
+      margin:0 100px 0 0;
+      color:#515686;
+      font-size:60px;
+    }
+  </style>    
 </div></section>
 
 <section class="slide shout"><div>
-  <h2>и как верстать "по BEM" правильно</h2>
+  <h2>Непонятость BEM</h2>
+  <!--
+Мы возвращаемся в 2007 год. На хабре в комментах не то что считают верстку по BEM извращением, нет, о ней ещё даже не слышали. Хабр появился только год назад и еще нет инвайтов. Яндекс ещё не ездит с проповедями по городам. Еще даже нет слова BEM. IE6 ещё жив. Windows 7 еще не вышла. Только появился первый айфон. До того  как придумают Node.js остается ещё 2 года!
+  -->
 </div></section>
-	
-<section class="slide shout"><div>
-  <h2>Проблема непонятости BEM</h2>
-</div></section>	
 
-<section class="slide"><div>
-  <h2>Проблема #b_</h2>
-  <p>BEM - не религия, но спецификацию по нему я собирал из <s>апокрифов</s> официально устаревших статей, докладов и обсуждений на форумах, в twitter и инициаций.</p>
-</div></section>	
-				
 <section class="slide cover"><div>
-    <img src="pictures/Ten.png" alt="">
-</div></section>	
+<!--
+Чтоб собрать все пришлось читать апокрифы. Нет единого стандарта. Есть множество толкований - диалектов BEM. Евангелие от Вегеда, проповедь на внутренней коференции и статьи других апостолов, простите евангелистов BEM. Сам BEM допускает множество вариантов самой методологии. А уж какой путь выбирать в каждом конкретном случае, при модификации кода например - можно спорить и спорить. Поэтому -тот- старый добрый ручной BEM и правду похож на религию. 
 
-<section class="slide shout"><div>
-  <h2>Документация по BEM</h2>
-</div></section>	
-			
-<section class="slide cover"><div>
+BEM рос настолько быстро, что первая крайне сырая документация появилась только спустя 4 года.
+
+Выглядела она примерно вот так:
+   -->
     <img src="pictures/Owl-1.png" alt="">
 </div></section>
 
 <section class="slide cover"><div>
     <img src="pictures/Owl-2.png" alt="">
-</div></section>
-		
-<section class="slide"><div>
-    <h2>Статья на Frontender Magazine</h2>    
-    <p><a href="https://github.com/FrontenderMagazine/bem-css-methodology-complete-guide/blob/master/rus.md">https://github.com/FrontenderMagazine/bem-css-methodology-complete-guide/blob/master/rus.md</a></p>
-</div></section>
-
-<section class="slide shout"><div>
-  <h2>Как писать?</h2>
+<!--
+И кстати к сегодняшнему дню мало изменилась. Именно поэтому я рассказываю вам это все сегодня.
+Яндекс придумал свой шаблонизатор и язык, а мы, простые верстальщики только в прошлом году всерьез задумались о том, что стоит писать  код по BEM. 
+-->
 </div></section>
 
 <section class="slide"><div>
-  <h2>Я не буду говорить про bem-tools</h2>
-  <p>Давайте наконец сформулируем простые и понятные правила BEM и обсудим ошибки с примерами при верстке вручную.</p>
-</div></section>
-<section class="slide"><div>
-  <h2>Чтобы выйдя из зала мы знали ответы на такие вопросы</h2>
+<!--
+Что делать фрилансеру, который верстает небольшой  сайт на Wordpress? Как ему черт возьми просто вывести текст из БД? Назначить класс каждому заголовку и абзацу? Но он же получает их из визига!
+К концу этого доклада вы будете знать ответ!
+-->
+  <h2>Но как писать код вручную?</h2>
 		<figure>
 			<blockquote>
 				<p>Как назначаются стили для типографики? Не будешь же назначать каждому тегу какой-то класс?</p>
@@ -332,49 +203,258 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 		    <figcaption>Artur Kornakov, <a href="http://twitter.com/fliptheweb">@fliptheweb</a></figcaption>			
 		</figure>	  	  	
 </div></section>	
- 
+
+<section class="slide"><div>
+  <h2>Я не буду говорить о bem-tools</h2>
+  <ul>
+    <li class="next">и об абстрактных блоках</li>    
+    <li class="next">…контекстных блоках</li>    
+    <li class="next">…миксовании</li>    
+    <li class="next">…глобальных модификаторах</li>    
+  </ul>
+</div></section>
+
+<section class="slide"><div>
+  <h2>Не буду говорить о</h2>
+  <ul>
+    <li>видах префиксов, которых в современном BEM как бы нет.</li>    
+    <li class="next">и про путь BEM - почему все так?</li>      
+  </ul>
+</div></section>
+
+<section class="slide cover" id="frontender"><div>
+  <!--
+Про это я расскажу вам к Новому году в  большой статье на Frontender Magazine, ждите премьеры и подписывайтесь:  
+Там вы увидите полное руководство как, что, почему, какие были варианты и что было отброшено. Тут же с вами мы сосредоточимся только на том,  как писать BEM-код вручную. И как его не писать.
+  --> 
+  <a href="http://frontender.info/"><img src="pictures/frontender.png" alt="Frontender"></a>
+</div></section>
+
 <section class="slide shout"><div>
   <h2>Суть #b_</h2>
 </div></section>
 
 <section class="slide shout"><div>
-  <h2>1. Независимый блок</h2>
+  <h2>.block</h2>
+</div></section>
+
+<section class="slide"><div>
+  <h2>Главное - понятие независимого блока</h2>
+		<figure>
+			<blockquote>
+				<p>Независимый блок (НБ или просто блок) это самодостаточный элемент страницы, который при перемещении в другое место на странице или на другую страницу не теряет своей самодостаточности.</p>
+			</blockquote>
+		    <figcaption>BEM.Клуб на Я.рушке, <a href="http://clubs.ya.ru/bem/replies.xml?item_no=4">Независимый блок</a></figcaption>
+		</figure>
+</div></section>
+
+<section class="slide"><div>
+  <h2>Формальное определение</h2>
+		<figure>
+			<blockquote>
+Правила независимости блока:
+<ol>
+  <li>для описания элемента используется class, но не id</li>
+  <li>каждый блок имеет префикс</li>
+  <li>в таблице стилей нет классов вне блоков</li>
+</ol>
+			</blockquote>
+		    <figcaption>BEM.Клуб на Я.рушке, <a href="http://clubs.ya.ru/bem/replies.xml?item_no=1398">История создания BEM (часть первая)</a></figcaption>
+		</figure>
+<!--
+Формальное определение нужно только затем чтоб описать при каких условиях он должен таким стать.
+Что такое стили вне блоков я опишу ниже.
+
+"Как его таким написать?"
+Просто писать стили тупо на каждый блок. BEM хорош тем, что позволяет не забивать голову ерундой с каскадом, а сосредоточимся на семантике и логике кода. А с препроцессорами 
+BEM позволяет писать еще и очень чистый и логичный код.
+Но про это чуть позже.
+
+Как проверить?
+Просто навести на блок в инспекторе кода. У него не должно быть каскада.
+Слайд инспектор кода
+-->
+</div></section> 
+
+<section class="slide shout"><div>
+  <h2>.block__element</h2>
+<!--
+Главное что вы должны вынести с этого доклада - Не бывает элементов вложенных в элементы!
+-->
+</div></section>
+
+	<section class="slide"><div>
+		<h2>Я тоже раньше так писал</h2>
+		<pre>
+			<code>.form-buy-results__to-city__slider__tab__column_buy</code>
+		</pre>
+		<p class="note">Так делать нельзя</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Как надо?</h2>
+		<pre>
+<code>&lt;div class='block'&gt;</code>
+<code>    &lt;div class='block__elem1'&gt;</code>
+<code>        &lt;div class='block__elem2'&gt;&lt;/div&gt;</code>
+<code>    &lt;/div&gt;</code>
+<code>    &lt;div class='block__elem3'&gt;&lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+		</pre>
+	</div></section>
+    
+	<section class="slide"><div>
+	  <h2>А в CSS</h2>
+		<pre>
+<code>.block {}</code>
+<code>.block__elem1 {}</code>
+<code>.block__elem2 {}</code>
+<code>.block__elem3 {}</code>
+		</pre>
+	</div></section>    
+			
+	<section class="slide"><div>
+		<h2>Делать новый блок</h2>
+		<pre>
+<code>&lt;div class='block'&gt;</code>
+<code>    &lt;div class='block__elem1'&gt;</code>
+<code>        &lt;div class='block2'&gt;&lt;/div&gt;</code>
+<code>    &lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+		</pre>
+	</div></section>		
+			
+	<section class="slide"><div>
+	  <h2>Не пишите странные имена</h2>
+		<pre>
+<code>.block {}</code>
+<code>.block__elem1 {}</code>
+<code><mark>.blockelem1__elem2 {}</mark></code>
+		</pre>
+		<p class="note">Будут проблемы при переносе</p>		
+	</div></section> 			
+			
+<section class="slide shout"><div>
+  <h2>Бейте на блоки!</h2>
+</div></section>				
+
+	<section class="slide"><div>
+    <h2>DOM-дерево</h2>
+		<pre>
+<code>&lt;ul&gt;</code>
+<code>  &lt;li&gt;</code>
+<code>    &lt;a&gt;</code>
+<code>      &lt;span&gt;&lt;/span&gt;</code>
+<code>    &lt;/a&gt;</code>
+<code>  &lt;/li&gt;</code>
+<code>&lt;/ul&gt;</code>
+		</pre>
+	</div></section>	
+	
+<section class="slide cover"><div>
+    <img src="pictures/Tree.png" alt="">
+</div></section>																			
+
+	<section class="slide"><div>
+    <h2>BEM-дерево</h2>
+		<pre>
+<code>&lt;ul class=<mark>"menu"</mark>&gt;</code>
+<code>  &lt;li class=<mark>"menu__item"</mark>&gt;</code>
+<code>    &lt;a class=<mark>"menu__link"</mark>&gt;</code>
+<code>      &lt;span class=<mark>"menu__text"</mark>&gt;&lt;/span&gt;</code>
+<code>    &lt;/a&gt;</code>
+<code>  &lt;/li&gt;</code>
+<code>&lt;/ul&gt;</code>
+		</pre>
+	</div></section>
+
+<section class="slide cover"><div>
+    <img src="pictures/Tree-BEM.png" alt="">
+<!--
+Bem дерево - чистая логика не зависящая ни от чего, даже от размещения в документе. Это и есть новый уровень семантики!   
+-->   
 </div></section>
 
 <section class="slide shout"><div>
-  <h2>2. Что такое элемент</h2>
-</div></section>
-
-<section class="slide shout"><div>
-  <h2>3. Как модифицировать?</h2>
+  <h2>Модификация</h2>
 </section>
+
+<section class="slide"><div>
+  <h2>6 видов</h2>
+<ol>
+<li>Модификатором
+<ul>
+  <li>модификатором блока</li>
+  <li>модификатором элемента</li>
+</ul>
+</li>
+<li>Контекстом (т.е. каскадом от блока выше)</li>
+<li>Уровнем переопределения (добавлением-перезаписью файла стилей)</li>
+<li>Миксованием (добавлением классов других блоков)
+  <ul>
+    <li>включая глобальный класс</li>
+  </ul>
+</li>
+</ol>
+</section>
+  
+		
+<section class="slide"><div>
+    <h2>Статья на Frontender Magazine</h2>    
+    <p><a href="https://github.com/FrontenderMagazine/bem-css-methodology-complete-guide/blob/master/rus.md">https://github.com/FrontenderMagazine/bem-css-methodology-complete-guide/blob/master/rus.md</a></p>
+<!--
+Их разбор достоин отдельного доклада. Подробнее о них вы сможете почитать перед НГ во Frontender Magazine.
+Сейчас вам достаточно запомнить одну.
+-->
+</div></section>
+
+<section class="slide"><div>
+  <h2>Делай модификатор!</h2>
+  <p>А для элементов - делай каскад от модификатора.</p>
+</div></section>
+
+<section class="slide"><div>
+  <h2>Модификаторы для элементов, можно?</h2>
+  <iframe src="embed/twitter-bxxx.html"
+id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" allowfullscreen="" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin: 50px auto; border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187); border-width: 1px; border-style: solid; box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px; position: static; visibility: visible; width: 500px;" title="Встроенный твит" height="190"></iframe>
+<!--
+На самом деле в случае ручной верстки это сигнал об ошибках в вашей логике разбиения на блоки.
+Признак неудачного проектирования родительского блока
+Если вам нужен модификатор на элемент - вам скорее нужно сделать из этого элемента новый блок.
+-->
+</div></section>
+
+<section class="slide shout"><div>
+  <h2>BEM допускает ошибки</h2>
+</div></section>
 
 <section class="slide shout"><div>
   <h2>Ошибки</h2>
 </div></section>
 
-<section class="slide shout"><div>
-  <h2>1. block__element__element</h2>
+<section class="slide"><div>
+  <h2>1. block__el__el</h2>
+<p> 
+Например слайдер - это отдельный блок, а его содержимое - другой блок
+</p>
 </div></section>
 
-<section class="slide shout"><div>
+<section class="slide"><div>
   <h2>2. Межблочный каскад</h2>
+  <p>и высокая специфичность</p>
+  <img src="pictures/independent-blocks-by-cascade.png">  
 </div></section>
 
-<section class="slide shout"><div>
+<section class="slide"><div>
+  <h2>Я написал про это статью</h2>
+  <p><a href="http://delka.name/blog/2013/04/bem-otkroveniya-prinyavshih-veru/">http://delka.name/blog/2013/04/bem-otkroveniya-prinyavshih-veru/</a></p>  
+</div></section>
+
+<section class="slide"><div>
   <h2>3. Стили вне блоков</h2>
-</div></section>
-
-<section class="slide"><div>
-  <h2>Я мог бы рассказать вам про длинные тяжелые специфичные селекторы для типа "независмых блоков"</h2>
-</div></section>
-
-<section class="slide"><div>
-  <h2>...про префиксы и абстрактные блоки</h2>
-</div></section>
-
-<section class="slide"><div>
-  <h2>и многое другое, но не расскажу. </h2>
+		<pre>
+<code>&lt;ul class="menu checkoutForm big <mark>myfuckingclass-bold"</mark>&gt;</code>
+		</pre>  
 </div></section>
 
 <section class="slide shout"><div>
@@ -390,31 +470,77 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 </ul>
 </div></section> 
 
+<section class="slide"><div>
+<h2>Префиксы</h2>
+<ul>
+<li>b-</li>
+<li>l-</li>
+<li>i-</li>
+<li>js-</li>
+</ul>
+</div></section> 
+
+<section class="slide"><div>
+<h2>Сокращенные модификаторы</h2>
+  <p>А также альтернативный синтаксис и camelCase.</p>
+		<pre>
+<code>.block-name__elem_key_value</code>
+<code><mark>.blockName__elem.-key_value</mark></code>
+		</pre>  
+</div></section> 
+
+<section class="slide"><div>
+<h2>JS-блоки</h2>
+		<pre>
+<code>$('<mark>.js-</mark>mark>fancybox').fancybox();</code>
+		</pre>  
+</div></section>
+
 <section class="slide shout"><div>
   <h2>Это всё BEM</h2>
 </div></section>
   
 <section class="slide"><div>
-<h2>Пару советов:</h2>
-<ol>
-<li>Как выводить текст из БД</li>
-<li>Как разбивать на блоки, в чем разница между DOM-деревом и BEM-деревом, как выглядит миксование блоков в DOM и BEM.</li>
-</ol>
-</div></section> 
+  <h2>Примеры гайдлайнов по BEM</h2>
+<ul>
+  <li><a href="http://nano.sapegin.ru/all/opor-methodology">http://nano.sapegin.ru/all/opor-methodology</a></li>
+  <li><a href="https://github.com/ideus-team/guidelines/blob/master/frontend/bem.md">https://github.com/ideus-team/guidelines/blob/master/frontend/bem.md</a></li>
+</ul>
+</div></section>  
   
-<section class="slide"><div>
-<h2>Пример переверстки по BEM</h2>
-<p>Ссылка</p>
+<section class="slide cover"><div>
+    <a href="http://getbem.info"><img src="pictures/getbem-com.png" alt="getbem-com" style="width: 100%"></a>
+</div></section>  
+  
+<section class="slide cover w"><div>
+    <h2 class="place r">Сладкое!</h2>
+    <img src="pictures/sass.png" alt="Sass" style="display: block; margin: 0 auto">
 </div></section>   
   
 <section class="slide"><div>
-<h2>и ещё раз ошибки</h2>
-<ol>
-<li>block__el__el - нельзя!</li>
-<li>Выводи текст из БД в .b-text с каскадом для тегов</li>
-<li>Не знаешь как менять стили - ставь модификатор каждому элементу</li>
-</div></section>         
-
+<h2>Пример переверстки по BEM</h2>
+<ul>
+  <li><a href="http://net-craft.com/old">http://net-craft.com/old</a></li>
+  <li><a href="http://net-craft.com/old">http://net-craft.com/</a></li>
+  <li><a href="http://net-craft.com/wp-content/themes/netcraft/dev/sass/main.scss">http://net-craft.com/wp-content/themes/netcraft/dev/sass/main.scss</a></li>
+</ul>
+</div></section>    
+  
+<section class="slide"><div>
+<h2>Так как же выводить текст из БД?</h2>
+		<pre>
+<code><mark>.b-text</mark> h2 {}</code>
+<code><mark>.b-text</mark> p {}</code>
+<code><mark>.b-text</mark> img {}</code>
+<code><mark>.b-text</mark> ul li {}</code>
+		</pre>
+</div></section>
+ 
+ <section class="slide"><div>
+<h2>Собираем вопросы</h2>
+<p><a href="https://docs.google.com/document/d/1KD9tNdArCv1U1NvFX7rYPvUdbpPGVkuPZ2723KW5p4Y/edit">https://docs.google.com/document/d/1KD9tNdArCv1U1NvFX7rYPvUdbpPGVkuPZ2723KW5p4Y/edit</a></p>
+</div></section>
+  
 	<section class="slide" id="ThankYou"><div>
 		<h2>Спасибо!</h2>
 		<p>Igor Zenich, iDeus</p>
@@ -423,7 +549,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 			<li><a href="http://twitter.com/delaz">twitter.com/delaz</a></li>
 			<li><a href="mailto:igor@delka.name">igor@delka.name</a></li>
 		</ul>
-		<p>Презентация: <a href="http://delka.name/pres/bem/">delka.name/pres/bem</a></p>
+		<p>Презентация: <a href="http://delka.github.io/talks/wsd/2014/bem/">delka.github.io/talks/wsd/2014/bem/</a></p>
 	</div></section>
 
 	<p class="badge"><a href="https://github.com/shower/shower">Powered by Shower</a></p>
