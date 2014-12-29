@@ -1,0 +1,48 @@
+.tip .tip_block .point {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/tips_point.png')
+}
+.tip .tip_block .top .tips_tb {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/tips_tb.png',sizingMethod='scale')
+}
+.tip .tip_block .top .tips_tl {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/tips_tl.png')
+}
+.tip .tip_block .top .tips_tr {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/tips_tr.png')
+}
+.tip .tip_block .bottom .tips_bb {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/tips_bb.png',sizingMethod='scale')
+}
+.tip .tip_block .bottom .tips_bl {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/tips_bl.png')
+}
+.tip .tip_block .bottom .tips_br {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/tips_br.png')
+}
+.tip .tip_block .inner2 {
+	BACKGROUND: url(../img/tips_rb.gif) repeat-y right top
+}
+.tip .tip_block .inner3 {
+	BACKGROUND: url(../img/tips_lb.png) #f7fbe0 repeat-y left top; MARGIN-RIGHT: 3px
+}
+#informers_container {
+	BACKGROUND-POSITION: 0px -2px; MARGIN-BOTTOM: 0px
+}
+#srch_submit {
+	MARGIN-TOP: 10px
+}
+#srch_input {
+	MARGIN-TOP: 10px
+}
+.about .more2 {
+	BORDER-LEFT-WIDTH: 0px; HEIGHT: 29px
+}
+#informers_container2 {
+	HEIGHT: 30px
+}
+.left-bg2 {
+	BACKGROUND-IMAGE: url(../img/hmhm212.gif)! important
+}
+.right-bg2 {
+	BACKGROUND-IMAGE: url(../img/hmhm213.gif)! important
+}
