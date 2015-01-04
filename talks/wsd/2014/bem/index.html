@@ -321,15 +321,27 @@ BEM позволяет писать еще и очень чистый и лог�
 	</div></section>    
 			
 	<section class="slide"><div>
-		<h2>Делать новый блок</h2>
+		<h2>Элемент у элемента?</h2>
+		<p>Если вам нужно сделать элемент у элемента, значит вам нужно сделать новый блок!</p>
+		Вместо:
 		<pre>
 <code>&lt;div class='block'&gt;</code>
 <code>    &lt;div class='block__elem1'&gt;</code>
-<code>        &lt;div class='block2'&gt;&lt;/div&gt;</code>
+<code>        &lt;div class='block__elem1__elem2'&gt;&lt;/div&gt;</code>
 <code>    &lt;/div&gt;</code>
 <code>&lt;/div&gt;</code>
 		</pre>
-	</div></section>		
+	</div></section>
+	<section class="slide"><div>
+		<h2>Надо делать новый блок</h2>
+		<pre>
+<code>&lt;div class='block1'&gt;</code>
+<code>    &lt;div class='block2'&gt;</code>
+<code>        &lt;div class='block2__elem'&gt;&lt;/div&gt;</code>
+<code>    &lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+		</pre>
+	</div></section>	
 			
 	<section class="slide"><div>
 	  <h2>Не пишите странные имена</h2>
