@@ -332,6 +332,7 @@ BEM позволяет писать еще и очень чистый и лог�
 <code>&lt;/div&gt;</code>
 		</pre>
 	</div></section>
+	
 	<section class="slide"><div>
 		<h2>Надо делать новый блок</h2>
 		<pre>
@@ -347,11 +348,20 @@ BEM позволяет писать еще и очень чистый и лог�
 	  <h2>Не пишите странные имена</h2>
 		<pre>
 <code>.block {}</code>
-<code>.block__elem1 {}</code>
+<code>.blockelem1 {}</code>
 <code><mark>.blockelem1__elem2 {}</mark></code>
 		</pre>
 		<p class="note">Будут проблемы при переносе</p>		
-	</div></section> 			
+	</div></section> 
+	
+	<section class="slide"><div>
+	  <h2>Будут проблемы при переносе</h2>
+		<pre>
+<code>&lt;div class='someblock'&gt;</code>
+<code>    &lt;div class='blockelem1__elem2'&gt;&lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+		</pre>		
+	</div></section> 	
 			
 <section class="slide shout"><div>
   <h2>Бейте на блоки!</h2>
