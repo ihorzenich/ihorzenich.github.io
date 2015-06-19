@@ -119,22 +119,8 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   </p>
 </div></section>
 
-<section class="slide cover" id="terminator_slide"><div>
-<!--
-Музыка из терминатора, зеленый экран.
--->
+<section class="slide cover"><div>
     <img src="pictures/Film.png" alt="">
-    <audio id="terminator_audio" src="music/Terminator2Theme.mp3"></audio>
-    <script>
-      $(window).on('hashchange',function(){
-          var hash = location.hash.slice(1);
-          if (hash == 'terminator_slide') {
-            $('#terminator_audio').trigger('play');
-            $('.audio').prop("volume", 1);
-            $('#terminator_audio').animate({volume: 0}, 15000);
-          }
-      });
-    </script>
 </div></section>
 
 <section class="slide shout"><div>
