@@ -7,6 +7,9 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
   <style>
+    .caption h3 .name {color: #000; text-shadow: none;}
+    .caption h3 .work {color: #000; text-shadow: none;}
+
     #Cover h2 {
       margin:30px 0 0;
       color:#FFF;
@@ -24,6 +27,9 @@
       color:#FFF;
     }
 
+    .shout.dark {background:#000;}
+    .shout.dark h2 {color:#FFF;}
+
     img {max-width: 100%;}
     .slide pre code.wrap {white-space: normal;}
   </style>
@@ -32,8 +38,8 @@
 <body class="list">
   <header class="caption">
       <h1>Пишем БЭМ правильно</h1>
-      <h2><a href="https://twitter.com/hashtag/WebCampOdessa?src=hash">#WebCampOdessa</a>, 4 июля 2015г.</h2>
-      <p><a href="http://twitter.com/delaz">Igor Zenich</a>, <a href="http://ideus.biz">iDeus</a>.</p>
+      <h2><a class="hashtag" href="https://twitter.com/hashtag/WebCampOdessa?src=hash">#WebCampOdessa</a>
+      <h3><a class="name" href="http://twitter.com/delaz">Igor Zenich</a>, <a class="work" href="http://ideus.biz">iDeus</a>.</h3>
   </header>
 
 <section class="slide cover" id="Cover"><div>
@@ -47,31 +53,30 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 
 <section class="slide cover" id="ideus"><div>
   <!--
-Слайд iDeus
 Здравствуйте! Меня зовут Игорь, я работаю в харьковской аутсорс- компании iDeus.
 Я изучаю и разрабатываю верстку по БЭМ уже 6 лет. Я прочитал и пересмотрел наверное почти все, что Яндекс сказал про БЭМ в докладах, статьях, обсуждениях в я.ру, а что не понял - спросил лично. И я имею вам кое что сказать.
   -->
   <a href="http://ideus.biz"><img src="pictures/iDeus-vizitka.png" alt="iDeus"></a>
 </div></section>
 
-<section class="slide shout"><div>
+<section class="slide shout dark"><div>
   <h2>Зачем ещё один доклад про БЭМ?!</h2>
 <!--
-Цель моего доклада - рассказать про типичные ошибки верстки "по БЭМ".
-- Скажите, кто в этом зале пробовал верстать что-то "по БЭМ"?
+Цель моего доклада - рассказать про типичные ошибки верстки «по БЭМ».
+- Скажите, кто в этом зале пробовал верстать что-то «по БЭМ»?
 Отлично.
 - А кому было все понятно и никаких вопросов не возникло? :)
-- Я так понимаю есть некоторые вопросы вида "как правильно сверстать что-то по БЭМ". Значит мой доклад будет актуален.
+- Я так понимаю есть некоторые вопросы вида «как правильно сверстать вот этот чертов блок 5-кратной вложенности по БЭМ?» :). Значит мой доклад будет актуален.
 Кстати кроме как об ошибках - я расскажу вам ещё и о дополнительной семантике БЭМ. БЭМ - он такой, он семантичный.
 -->
 </div></section>
 
 <section class="slide shout"><div>
-  <h2>БЭМ - семантичный!</h2>
+  <h2>БЭМ — семантичный!</h2>
 </div></section>
 
 <section class="slide cover" id="pepelsbey"><div>
-  <h2>Что он несёт?!.</h2>
+  <h2>Что он несёт?!</h2>
   <img src="pictures/pepelsbey.jpg" alt="Pepelsbey">
   <style>
     #pepelsbey h2 {
@@ -79,37 +84,75 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
       top: 100px;
       right: 0;
       font-size: 70px;
+      margin: 0;
+      border: 1px solid #000;
+      border-radius: 50%;
+      padding: 30px;
+      background-color: #fff;
+    }
+    #pepelsbey h2:before {
+      content: '';
+      position: absolute;
+      top: 150px;
+      right: 300px;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+    #pepelsbey h2:after {
+      content: '';
+      position: absolute;
+      top: 200px;
+      right: 350px;
+      width: 30px;
+      height: 30px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      background-color: #fff;
     }
   </style>
 </div></section>
 
-<section class="slide shout"><div>
-  <h2>Ошибки</h2>
+<section class="slide"><div>
 <!--
-Вообще если бы было меньше бредовых статей типа этой: http://habrahabr.ru/post/203440/ которые пишут те, кто сам ничего не понял, было бы лучше. И ошибок было бы меньше.
-
-Итак, ошибки верстки "по БЭМ"
-Чтобы их осознать, мы с вами должны вспомнить как писать правильно. Вспомнить правила.
-Я говорю "вспомнить", потому что то о чем мы будем говорить - это ручная верстка по БЭМ.
-В правильных терминах БЭМ это называется
+Обычно имена классов описывают что из себя представляет каждый блок, хорошим тоном считается называть их семантично - не „big-red-button“ например, а „order-button“. Это называют сематикой. А если мы добавим имя класса типа „b-checkout__submit“ - мы покажем связи между боками на странице. Чувствуетет разницу - обычно имена классов описывают конкретные кусочки, а BEM-описывает связи между блоками.
 -->
+  <h2>Имена БЭМ-классов создают дополнительный уровень логики</h2>
+   <p>Есть DOM-дерево, а есть БЭМ-дерево.</p>
+    <pre>
+<code class="next">&lt;input class="<s>big_red_button</s> <mark>order-button</mark>"&gt;</code>
+<code class="next">&lt;input class="<mark>order-button</mark> <mark class="important">b-checkout__submit</mark>"&gt;</code>
+    </pre>
+</div></section>
+
+<section class="slide"><div>
+  <h2>О чём будем говорить?</h2>
+  <ol>
+    <li>Как на вручную сверстать «по-БЭМ»</li>
+    <li>Как не писать классы типа "device-template-generic-indicator-control-slider-bar-d" :)</li>
+  </ol>
 </div></section>
 
 <section class="slide shout"><div>
   <h2>BEM CSS</h2>
   <small>CSS подмножество БЭМ</small>
 <!--
-Потому что БЭМ он не только про CSS.
-Итак вспомнить!
+Ручная верстка по БЭМ называется «BEM CSS». Точнее официльного названия нет, ну я предложил такое.
+Если совсем официально - то «CSS подмножество БЭМ», потому что БЭМ он не только про CSS.
 -->
 </div></section>
 
 <section class="slide shout"><div>
+<!--
+ Ещё существует
+ -->
   <h2>Full stack BEM</h2>
 </div></section>
 
 <section class="slide cover"><div>
-  <img src="https://pbs.twimg.com/media/CHypoEAUYAEPtVs.png:large" alt="">
+  <img src="pictures/full-bem-stack.png" alt="">
 </div></section>
 
 <section class="slide"><div>
@@ -118,6 +161,18 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     <strong>Когда он будет вам нужен — вы это сами поймёте.</strong>
     Это будет момент, когда вам надоесть писать html руками и вы захотите его генерировать.
   </p>
+</div></section>
+
+<section class="slide shout dark"><div>
+  <h2>Пример верстки по БЭМ</h2>
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-1.png" alt="">
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-2.png" alt="">
 </div></section>
 
 <section class="slide shout"><div>
@@ -574,18 +629,6 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     <pre>
 <code>&lt;ul class="menu checkoutForm big <mark>myfuckingclass-bold"</mark>&gt;</code>
     </pre>
-</div></section>
-
-<section class="slide shout"><div>
-  <h2>Пример верстки по БЭМ</h2>
-</div></section>
-
-<section class="slide cover"><div>
-  <img src="pictures/example-bem-1.png" alt="">
-</div></section>
-
-<section class="slide cover"><div>
-  <img src="pictures/example-bem-2.png" alt="">
 </div></section>
 
 <section class="slide"><div>
