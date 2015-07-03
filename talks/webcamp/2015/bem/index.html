@@ -236,38 +236,6 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 -->
 </div></section>
 
-<section class="slide"><div>
-<!--
-Что делать фрилансеру, который верстает небольшой  сайт на Wordpress? Как ему черт возьми просто вывести текст из БД? Назначить класс каждому заголовку и абзацу? Но он же получает их из визига!
-К концу этого доклада вы будете знать ответ!
--->
-  <h2>Но как писать код вручную?</h2>
-    <figure>
-      <blockquote>
-        <p>Как назначаются стили для типографики? Не будешь же назначать каждому тегу какой-то класс?</p>
-      </blockquote>
-        <figcaption>Artur Kornakov, <a href="http://twitter.com/fliptheweb">@fliptheweb</a></figcaption>
-    </figure>
-</div></section>
-
-<section class="slide"><div>
-  <h2>Я не буду говорить о bem-tools</h2>
-  <ul>
-    <li class="next">и об абстрактных блоках</li>
-    <li class="next">…контекстных блоках</li>
-    <li class="next">…миксовании</li>
-    <li class="next">…глобальных модификаторах</li>
-  </ul>
-</div></section>
-
-<section class="slide"><div>
-  <h2>Не буду говорить о</h2>
-  <ul>
-    <li>видах префиксов, которых в современном БЭМ как бы нет.</li>
-    <li class="next">и про путь БЭМ - почему все так?</li>
-  </ul>
-</div></section>
-
 <section class="slide shout"><div>
   <h2>Методология не менялась, менялась реализация</h2>
 </div></section>
@@ -628,28 +596,33 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     </pre>
 </div></section>
 
+<section class="slide shout dark"><div>
+  <h2>Как мне?...</h2>
+</div></section>
+
 <section class="slide"><div>
-<h2>А как же выводить текст из БД?</h2>
+<!--
+Что делать фрилансеру, который верстает небольшой  сайт на Wordpress? Как ему черт возьми просто вывести текст из БД? Назначить класс каждому заголовку и абзацу? Но он же получает их из визига!
+К концу этого доклада вы будете знать ответ!
+-->
+  <h2>Вывести текст из WYSIWYG?</h2>
+    <figure>
+      <blockquote>
+        <p>Как назначаются стили для типографики? Не будешь же назначать каждому тегу какой-то класс?</p>
+      </blockquote>
+        <figcaption>Artur Kornakov, <a href="http://twitter.com/fliptheweb">@fliptheweb</a></figcaption>
+    </figure>
+</div></section>
+
+<section class="slide"><div>
+<h2>Добавить <code>.b-text</code> блоку родителю</h2>
+   <p>И использовать каскад.</p>
     <pre>
 <code><mark>.b-text</mark> h2 {}</code>
 <code><mark>.b-text</mark> p {}</code>
 <code><mark>.b-text</mark> img {}</code>
 <code><mark>.b-text</mark> ul li {}</code>
     </pre>
-</div></section>
-
-<section class="slide shout"><div>
-  <h2>Как мне?...</h2>
-</div></section>
-
-<section class="slide"><div>
-  <h2>Назвать элемент у блока с модификатором?</h2>
-  <p>Просто по имени блока:
-http://stackoverflow.com/questions/27343864/bem-block-with-modifier-elements-naming</p>
-</div></section>
-
-<section class="slide shout"><div>
-  <h2>...</h2>
 </div></section>
 
 <section class="slide"><div>
