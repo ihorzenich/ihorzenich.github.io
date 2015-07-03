@@ -188,7 +188,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 </div></section>
 
 <section class="slide shout"><div>
-  <h2>Как его сверстали изначально →</h2>
+  <h2>Изначальная вёрстка →</h2>
 </div></section>
 
 <section class="slide cover"><div>
@@ -237,7 +237,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 </div></section>
 
 <section class="slide shout"><div>
-  <h2>Методология не менялась, менялась реализация</h2>
+  <h2>Методология не менялась</h2>
 </div></section>
 
 <section class="slide shout"><div>
@@ -245,27 +245,26 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 </div></section>
 
 <section class="slide"><div>
-  <h2>Главное - понятие независимого блока</h2>
+  <h2>Независимый блок</h2>
     <figure>
       <blockquote>
-        <p>Независимый блок (НБ или просто блок) это самодостаточный элемент страницы, который при перемещении в другое место на странице или на другую страницу не теряет своей самодостаточности.</p>
+        <p>НБ или просто блок, это самодостаточный элемент страницы, который при перемещении в другое место на странице или на другую страницу не теряет своей самодостаточности.</p>
       </blockquote>
-        <figcaption>БЭМ.Клуб на Я.рушке, <a href="https://ru.bem.info/forum/-43/">Независимый блок</a></figcaption>
+        <figcaption>БЭМ.Форум, <a href="https://ru.bem.info/forum/-43/">Независимый блок</a></figcaption>
     </figure>
 </div></section>
 
 <section class="slide"><div>
-  <h2>Формальное определение</h2>
+  <h2>Правила независимости блока</h2>
     <figure>
       <blockquote>
-Правила независимости блока:
 <ol>
   <li>для описания элемента используется class, но не id</li>
   <li>каждый блок имеет префикс</li>
   <li>в таблице стилей нет классов вне блоков</li>
 </ol>
       </blockquote>
-        <figcaption>БЭМ.Клуб на Я.рушке, <a href="https://ru.bem.info/forum/-147/">История создания БЭМ (часть первая)</a></figcaption>
+        <figcaption>БЭМ.Форум, <a href="https://ru.bem.info/forum/-147/">История создания БЭМ (часть первая)</a></figcaption>
     </figure>
 <!--
 Формальное определение нужно только затем чтоб описать при каких условиях он должен таким стать.
@@ -287,6 +286,19 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <!--
 Главное что вы должны вынести с этого доклада - Не бывает элементов вложенных в элементы!
 -->
+</div></section>
+
+<section class="slide"><div>
+  <h2>Элемент</h2>
+    <figure>
+      <blockquote>
+        <p>
+          Элемент – это часть блока, отвечающая за отдельную функцию.<br>
+          <strong>Он может находиться только в составе блока и не имеет смысла в отрыве от него.</strong>
+        </p>
+      </blockquote>
+        <figcaption>bem.info, <a href="https://ru.bem.info/method/definitions/">Методология</a></figcaption>
+    </figure>
 </div></section>
 
   <section class="slide"><div>
@@ -341,7 +353,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   </div></section>
 
   <section class="slide"><div>
-    <h2>Есть два варианта как это переписать</h2>
+    <h2>Есть 2 варианта как это переписать</h2>
     <pre>
 <code>&lt;div class='block'&gt;</code>
 <code>    &lt;div class='block__elem1'&gt;</code>
@@ -381,7 +393,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     </pre>
   </div></section>
 
-<section class="slide shout"><div>
+<section class="slide shout dark"><div>
   <h2>Типичная ошибка</h2>
 </div></section>
 
@@ -641,7 +653,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 </div></section>
 
 <section class="slide shout"><div>
-  <h2>Диалекты БЭМ и JS-блоки.</h2>
+  <h2>Диалекты БЭМ и JS-блоки</h2>
 </div></section>
 
 <section class="slide"><div>
@@ -673,10 +685,6 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 Яндекс отказался от них потому что им вначале нужно было создать своё просторанство имен (т.к изначальный сайт был сверстан студией Лебедева и им нужно было отличать свой код от нового кода по БЭМ). Так они создали пространство имен и когда обнаружили, что весь код написан по БЭМ им префиксы оказались не нужны. Это просто совпало с тем, что пояилась сборка. Целенаправленно Яндекс сейчас не пишет префиксы (разве что они остались на старых проектах).
 Ну вы то живете не в своём замкнутом мире, у вас есть и legacy-код и сторонний код, вам нужно своё пространство имен, чтоб избегать конфликтов.
 -->
-</div></section>
-
-<section class="slide shout"><div>
-  <h2>Альтернативный синтаксис и camelCase.</h2>
 </div></section>
 
 <section class="slide"><div>
@@ -741,8 +749,8 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     </pre>
 </div></section>
 
-<section class="slide shout"><div>
-<h2>Это лишает вас возможности юзать Full Stack BEM</h2>
+<section class="slide shout dark"><div>
+<h2>!</h2>
 <!--
 Модифкаторы без именеми блока родителя - создают проблемы про миксовании, когда сложные миксы и ты не сможешь определить к какому блоку у тебя относится микс. Довод против - что мы связываем их внутри CSS как .block { &.-type_val}
 Тут рассказать что правильно писать полные модификаторы и что Яндекс так рекомендует настоятельно. Но если вы пишеет полные модификаторы знайте что их ни в коем случае нельзя исплользовать отдельно, нельзя писать <div class="block_type_login"> и все. И я рассказу про сокращенные и про то что если их юзать вы тереяете возможность юзать full stack BEM - нельзя будет из js узнать "есть ли модификатор у такого блока"
