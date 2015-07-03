@@ -207,6 +207,10 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   <img src="pictures/example-bem-2-css.png" alt="">
 </div></section>
 
+<section class="slide shout dark"><div>
+  <h2>Повышение специфичности</h2>
+</div></section>
+
 <section class="slide cover"><div>
   <img src="pictures/independent-blocks-by-cascade.png">
 </div></section>
@@ -313,11 +317,72 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 </div></section>
 
   <section class="slide"><div>
-    <h2>Я тоже раньше так писал</h2>
+<!--
+Вложенные html-элементы - это DOM-дерево.
+Имена классов, которые вы пишите - это БЭМ-дерево.
+Почувствуйте разницу!
+-->
+    <h2>DOM-дерево</h2>
     <pre>
-      <code>.form-buy-results__to-city__slider__tab__column_buy</code>
+<code>&lt;ul&gt;</code>
+<code>  &lt;li&gt;</code>
+<code>    &lt;a&gt;</code>
+<code>      &lt;span&gt;&lt;/span&gt;</code>
+<code>    &lt;/a&gt;</code>
+<code>  &lt;/li&gt;</code>
+<code>&lt;/ul&gt;</code>
     </pre>
-    <p class="note">Так делать нельзя</p>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>DOM-дерево</h2>
+    <pre>
+<code>.ul {}</code>
+<code>.ul > li {}</code>
+<code>.ul > li > a {}</code>
+<code>.ul > li > a > span {}</code>
+    </pre>
+  </div></section>
+
+<section class="slide cover"><div>
+    <img src="pictures/Tree.png" alt="">
+</div></section>
+
+  <section class="slide"><div>
+    <h2>БЭМ-дерево</h2>
+    <pre>
+<code>&lt;ul class=<mark>"menu"</mark>&gt;</code>
+<code>  &lt;li class=<mark>"menu__item"</mark>&gt;</code>
+<code>    &lt;a class=<mark>"menu__link"</mark>&gt;</code>
+<code>      &lt;span class=<mark>"menu__text"</mark>&gt;&lt;/span&gt;</code>
+<code>    &lt;/a&gt;</code>
+<code>  &lt;/li&gt;</code>
+<code>&lt;/ul&gt;</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>БЭМ-дерево</h2>
+    <pre>
+<code>.menu {}</code>
+<code>.menu__item {}</code>
+<code>.menu__link {}</code>
+<code>.menu__text {}</code>
+    </pre>
+  </div></section>
+
+<section class="slide cover"><div>
+    <img src="pictures/Tree-BEM.png" alt="">
+</div></section>
+
+<section class="slide"><div>
+  <h2>БЭМ дерево - чистая логика</h2>
+    <p>БЭМ-дерево не зависит ни от чего, даже от размещения в документе.</p>
+    <p>БЭМ-дерево не привязано к визуальному представлению блоков, оно отображает только логику, это и есть новый уровень семантики!</p>
+</div></section>
+
+  <section class="slide shout dark"><div>
+    <h2>.block__el__el__el</h2>
   </div></section>
 
   <section class="slide"><div>
@@ -326,10 +391,13 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   </div></section>
 
   <section class="slide"><div>
-    <h2>Прекратите писать block__el__el__el</h2>
-
+    <h2>Я тоже раньше так писал</h2>
+    <pre>
+      <code>.form-buy-results__to-city__slider__tab__column_buy</code>
+    </pre>
     <iframe src="embed/twitter-lehazyo_chatik.html"
-  id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" allowfullscreen="" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin: 50px auto; border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187); border-width: 1px; border-style: solid; box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px; position: static; visibility: visible; width: 500px;" title="Встроенный твит" height="257"></iframe>
+  id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" allowfullscreen="" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin: 50px auto; border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187); border-width: 1px; border-style: solid; box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px; position: static; visibility: visible; width: 500px;" title="Встроенный твит" height="200"></iframe>
+    <p class="note">Так делать нельзя</p>
   </div></section>
 
   <section class="slide"><div>
@@ -446,71 +514,6 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
       </blockquote>
         <figcaption>Vladimir Grinenko, <a href="http://twitter.com/tadatuta">@tadatuta</a></figcaption>
     </figure>
-</div></section>
-
-  <section class="slide"><div>
-<!--
-Вложенные html-элементы - это DOM-дерево.
-Имена классов, которые вы пишите - это БЭМ-дерево.
-Почувствуйте разницу!
--->
-    <h2>DOM-дерево</h2>
-    <pre>
-<code>&lt;ul&gt;</code>
-<code>  &lt;li&gt;</code>
-<code>    &lt;a&gt;</code>
-<code>      &lt;span&gt;&lt;/span&gt;</code>
-<code>    &lt;/a&gt;</code>
-<code>  &lt;/li&gt;</code>
-<code>&lt;/ul&gt;</code>
-    </pre>
-  </div></section>
-
-  <section class="slide"><div>
-    <h2>DOM-дерево</h2>
-    <pre>
-<code>.ul {}</code>
-<code>.ul > li {}</code>
-<code>.ul > li > a {}</code>
-<code>.ul > li > a > span {}</code>
-    </pre>
-  </div></section>
-
-<section class="slide cover"><div>
-    <img src="pictures/Tree.png" alt="">
-</div></section>
-
-  <section class="slide"><div>
-    <h2>БЭМ-дерево</h2>
-    <pre>
-<code>&lt;ul class=<mark>"menu"</mark>&gt;</code>
-<code>  &lt;li class=<mark>"menu__item"</mark>&gt;</code>
-<code>    &lt;a class=<mark>"menu__link"</mark>&gt;</code>
-<code>      &lt;span class=<mark>"menu__text"</mark>&gt;&lt;/span&gt;</code>
-<code>    &lt;/a&gt;</code>
-<code>  &lt;/li&gt;</code>
-<code>&lt;/ul&gt;</code>
-    </pre>
-  </div></section>
-
-  <section class="slide"><div>
-    <h2>БЭМ-дерево</h2>
-    <pre>
-<code>.menu {}</code>
-<code>.menu__item {}</code>
-<code>.menu__link {}</code>
-<code>.menu__text {}</code>
-    </pre>
-  </div></section>
-
-<section class="slide cover"><div>
-    <img src="pictures/Tree-BEM.png" alt="">
-</div></section>
-
-<section class="slide"><div>
-  <h2>БЭМ дерево - чистая логика</h2>
-    <p>БЭМ-дерево не зависит ни от чего, даже от размещения в документе.</p>
-    <p>БЭМ-дерево не привязано к визуальному представлению блоков, оно отображает только логику, это и есть новый уровень семантики!</p>
 </div></section>
 
 <section class="slide shout dark"><div>
