@@ -770,8 +770,22 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     </pre>
 </div></section>
 
-<section class="slide shout dark"><div>
-<h2>!</h2>
+<section class="slide cover" id="warning"><div>
+  <img src="pictures/warning.png" alt="">
+  <h2>
+    Миксы!<br>
+    Full BEM Stack!
+  </h2>
+  <style>
+    #warning h2 {
+      position: absolute;
+      top: 300px;
+      left: 150px;
+      font-size: 70px;
+      margin: 0;
+      color: #000;
+    }
+  </style>
 <!--
 Модифкаторы без именеми блока родителя - создают проблемы про миксовании, когда сложные миксы и ты не сможешь определить к какому блоку у тебя относится микс. Довод против - что мы связываем их внутри CSS как .block { &.-type_val}
 НО! Теряем миксы 2х блоков с модификаторами (непонятно - какой мод. к какому блоку относится).
