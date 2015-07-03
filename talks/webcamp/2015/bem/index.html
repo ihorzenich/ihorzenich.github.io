@@ -410,11 +410,11 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   <section class="slide"><div>
     <h2>Как надо?</h2>
     <pre>
-<code>&lt;div class='block'&gt;</code>
-<code>    &lt;div class='block__elem1'&gt;</code>
-<code>        &lt;div class='block__elem2'&gt;&lt;/div&gt;</code>
+<code>&lt;div class="block"&gt;</code>
+<code>    &lt;div class="block<mark>__elem1</mark>"&gt;</code>
+<code>        &lt;div class="block<mark>__elem2</mark>"&gt;&lt;/div&gt;</code>
 <code>    &lt;/div&gt;</code>
-<code>    &lt;div class='block__elem3'&gt;&lt;/div&gt;</code>
+<code>    &lt;div class="block<mark>__elem3</mark>"&gt;&lt;/div&gt;</code>
 <code>&lt;/div&gt;</code>
     </pre>
   </div></section>
@@ -441,9 +441,9 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   <section class="slide"><div>
     <h2>Есть 2 варианта как это переписать</h2>
     <pre>
-<code>&lt;div class='block'&gt;</code>
-<code>    &lt;div class='block__elem1'&gt;</code>
-<code>        &lt;div class='block__elem1__elem2'&gt;&lt;/div&gt;</code>
+<code>&lt;div class="block"&gt;</code>
+<code>    &lt;div class="block<mark>__elem1</mark>"&gt;</code>
+<code>        &lt;div class="block<mark class="important">__elem1__elem2</mark>"&gt;&lt;/div&gt;</code>
 <code>    &lt;/div&gt;</code>
 <code>&lt;/div&gt;</code>
     </pre>
@@ -456,9 +456,9 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   <section class="slide"><div>
     <h2>Делать новый блок</h2>
     <pre>
-<code>&lt;div class='block1'&gt;</code>
-<code>    &lt;div class='block2'&gt;</code>
-<code>        &lt;div class='block2__elem'&gt;&lt;/div&gt;</code>
+<code>&lt;div class="block1"&gt;</code>
+<code>    &lt;div class="<mark>block2</mark>"&gt;</code>
+<code>        &lt;div class="<mark>block2</mark>__elem"&gt;&lt;/div&gt;</code>
 <code>    &lt;/div&gt;</code>
 <code>&lt;/div&gt;</code>
     </pre>
@@ -471,9 +471,9 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   <section class="slide"><div>
     <h2>Делать БЭМ-дерево с 1-ой вложенностью элементов</h2>
     <pre>
-<code>&lt;div class='block1'&gt;</code>
-<code>    &lt;div class='block1__elem1'&gt;</code>
-<code>        &lt;div class='block1__elem2'&gt;&lt;/div&gt;</code>
+<code>&lt;div class="block1"&gt;</code>
+<code>    &lt;div class="block1<mark>__elem1</mark>"&gt;</code>
+<code>        &lt;div class="block1<mark>__elem2</mark>"&gt;&lt;/div&gt;</code>
 <code>    &lt;/div&gt;</code>
 <code>&lt;/div&gt;</code>
     </pre>
@@ -486,7 +486,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   <section class="slide"><div>
     <h2>Попытка вложить имя элемента в имя блока</h2>
     <p>
-      Чтоб "схитрить" и "как-будто не вложить", написать не `block__el1__el2` а `blockel1__el2` или `block__el1el2`.<br>
+      Чтоб «схитрить» и «как-будто не вложить», написать не `block__el1__el2` а `blockel1__el2` или `block__el1el2`.<br>
       Так нельзя.
     </p>
     <pre>
@@ -499,7 +499,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 
   <section class="slide"><div>
     <h2>Будут проблемы при переносе</h2>
-    <p>Попытались перенести "странный элемент" в другое место - получили элемент что завис "в воздухе" без блока-родителя</p>
+    <p>Попытались перенести «странный элемент» в другое место - получили элемент что завис «в воздухе» без блока-родителя</p>
     <pre>
 <code>&lt;div class='<mark>someblock</mark>'&gt;</code>
 <code>    &lt;div class='<mark>blockel1</mark>__el2'&gt;&lt;/div&gt;</code>
@@ -509,7 +509,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   </div></section>
 
   <section class="slide"><div>
-    <h2>element__element нельзя в CSS, но можно в HTML!</h2>
+    <h2>element > element нельзя в CSS, но можно в HTML!</h2>
         <p>Обратите внимание - вы не можете вкладывать элементы в элементы в CSS, но можете и должны вкладывать элементы в элементы в HTML! DOM-дерево и БЭМ-дерево могут быть разными.</p>
   </div></section>
 
@@ -559,7 +559,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     <pre>
 <code>&lt;div class=block-name__elem<mark>_key_value</mark>&gt;</code>
     </pre>
-  <p>А для элементов - делай каскад от модификатора.</p>
+  <p>А для элементов — делай каскад от модификатора.</p>
 </div></section>
 
 <section class="slide"><div>
@@ -574,7 +574,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   <h2>Булевые модификаторы</h2>
   <p>Кстати в таких простых случаях, можно писать модификаторы просто одним словом:</p>
     <pre>
-<code>&lt;a class=<mark>"menu__link menu__link--active"</mark>&gt;</code>
+<code>&lt;a class=<mark>"menu__link menu__link_active"</mark>&gt;</code>
     </pre>
 </div></section>
 
@@ -611,7 +611,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <section class="slide"><div>
   <h2>1. block__el__el</h2>
 <p>
-Например слайдеры очень часто верстают дикой вложенностью.
+Например, слайдеры очень часто верстают дикой вложенностью.
 </p>
 </div></section>
 
@@ -635,7 +635,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 
 <section class="slide"><div>
 <!--
-Что делать фрилансеру, который верстает небольшой сайт на Wordpress? Как ему черт возьми просто вывести текст из БД? Назначить класс каждому заголовку и абзацу? Но он же получает их из визига!
+Что делать фрилансеру, который верстает небольшой сайт на Wordpress? Как ему черт возьми просто вывести текст из БД? Назначить класс каждому заголовку и абзацу? Но он же получает их из визивига!
 -->
   <h2>Вывести текст из WYSIWYG?</h2>
     <figure>
@@ -655,7 +655,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <code><mark>.b-text</mark> img {}</code>
 <code><mark>.b-text</mark> ul li {}</code>
     </pre>
-    <p class="note">Конечно при <strong>большом</strong> желании можно настроить визиг, тот же TinyMCE, чтоб он добавлял нужные имена классов в тегах из визига.</p>
+    <p class="note">Конечно при <strong>большом</strong> желании можно настроить визивиг, тот же TinyMCE, чтоб он добавлял нужные имена классов в тегах из визивига.</p>
 </div></section>
 
 <section class="slide shout"><div>
@@ -708,13 +708,13 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 </div></section>
 
 <section class="slide"><div>
-  <h2>Альтернативный синтаксис и camelCase.</h2>
+  <h2>Альтернативный синтаксис и camelCase</h2>
   <p>Многим нравится зарубежный формат модификаторов, через „--“, он читабельней.</p>
 <code>&lt;a class=<mark>"block-name__element-name--state_active"</mark>&gt;</code>
 </div></section>
 
 <section class="slide"><div>
-  <h2>Альтернативный синтаксис и camelCase.</h2>
+  <h2>Альтернативный синтаксис и camelCase</h2>
   <p>А через camelCase – ещё читабельней!</p>
 <code>&lt;a class=<mark>"blockName__elementName--state_active"</mark>&gt;</code>
 </div></section>
@@ -737,7 +737,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 
 <section class="slide"><div>
 <h2>Сокращенные модификаторы</h2>
-  <p>Но некоторых из тех кто пишет код вручную, такие модификаторы бесят нечитабельностью кода:</p>
+  <p>Но некоторых из тех, кто пишет код вручную, такие модификаторы бесят нечитабельностью кода:</p>
 <code>&lt;div class="block-name <mark>block-name_key1_value1 block-name_key2_value2 block-name_key3_value3</mark>"&gt;</code>
 </div></section>
 
