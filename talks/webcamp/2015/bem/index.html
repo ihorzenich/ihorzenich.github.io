@@ -43,6 +43,8 @@
     .slide ol, .slide ul {margin-left: 20px;}
 
     .slide p.note {line-height: 1.5;}
+
+    mark.important {background: #C00; color: #FFF;}
   </style>
   <script src="node_modules/jquery-2.1.1.min.js"></script>
 </head>
@@ -501,13 +503,13 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   <section class="slide"><div>
     <h2>Попытка вложить имя элемента в имя блока</h2>
     <p>
-      Чтоб «схитрить» и «как-будто не вложить», написать не `block__el1__el2` а `block<mark>el1</mark>__el2` или `block__el1<mark>el2</mark>`.
+      Чтоб «схитрить» и «как-будто не вложить», написать не `block__el1__el2` а `block<mark class="important">el1</mark>__el2` или `block__el1<mark class="important">el2</mark>`.
       Так нельзя.
     </p>
     <pre>
 <code>.block {}</code>
-<code>.block<mark>el1</mark> {}</code>
-<code>.block<mark>el1</mark>__el2 {}</code>
+<code>.block<mark class="important">el1</mark> {}</code>
+<code>.block<mark class="important">el1</mark>__el2 {}</code>
     </pre>
     <p class="note">Будут проблемы при переносе</p>
   </div></section>
@@ -517,7 +519,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     <p>Попытались перенести «странный элемент» в другое место - получили элемент что завис «в воздухе» без блока-родителя</p>
     <pre>
 <code>&lt;div class='<mark>someblock</mark>'&gt;</code>
-<code>    &lt;div class='<mark>blockel1</mark>__el2'&gt;&lt;/div&gt;</code>
+<code>    &lt;div class='<mark class="important">blockel1</mark>__el2'&gt;&lt;/div&gt;</code>
 <code>&lt;/div&gt;</code>
     </pre>
     <p class="note">Так можно делать только если .blockelem сохранит логический смысл при переносе в другой блок.</p>
