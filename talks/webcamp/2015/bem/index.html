@@ -37,6 +37,11 @@
 
     .slide pre code.wrap {white-space: normal;}
 
+    .slide p {margin-bottom: 20px;}
+    .slide blockquote {margin-bottom: 50px;}
+
+    .slide ol, .slide ul {margin-left: 20px;}
+
     .slide p.note {line-height: 1.5;}
   </style>
   <script src="node_modules/jquery-2.1.1.min.js"></script>
@@ -689,8 +694,15 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 
 <section class="slide"><div>
   <h2>2. Повышение специфичности</h2>
+   <p>В html как-будто всё ok:
     <pre>
-<code>&lt;div class="block1 block2 block2__el"&gt;</code>
+<code>&lt;!-- HTML --&gt;</code>
+<code>&lt;div class="block2__el"&gt;</code>
+    </pre>
+    <p>А на деле сели в машину и сгорели:</p>
+    <pre>
+<code>/* CSS */</code>
+<code>.block2 .block2__el {}</code>
     </pre>
 </div></section>
 
