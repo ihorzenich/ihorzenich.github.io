@@ -306,7 +306,8 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <section class="slide"><div>
   <h2>Как проверить?</h2>
   <p>
-    Просто навести на блок в инспекторе кода. У него не должно быть каскада.
+    Просто навести на блок в инспекторе кода.<br>
+    У него не должно быть каскада.
   </p>
 </div></section>
 
@@ -501,7 +502,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   <section class="slide"><div>
     <h2>Попытка вложить имя элемента в имя блока</h2>
     <p>
-      Чтоб «схитрить» и «как-будто не вложить», написать не `block__el1__el2` а `block<mark class="important">el1</mark>__el2` или `block__el1<mark class="important">el2</mark>`.
+      Чтоб «схитрить» и «как-будто не вложить», написать не <code>.block__el1__el2</code> а <code>.block<mark class="important">el1</mark>__el2</code> или <code>.block__el1<mark class="important">el2</mark></code>.
       Так нельзя.
     </p>
     <pre>
@@ -702,7 +703,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     <p>А на деле сели в машину и сгорели:</p>
     <pre>
 <code>/* CSS */</code>
-<code><mark>.block2</mark> .block2__el {}</code>
+<code><mark class="important">.block2</mark> .block2__el {}</code>
     </pre>
 </div></section>
 
