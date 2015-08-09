@@ -35,7 +35,10 @@
 
     img {max-width: 100%;}
 
-    .slide>div {padding-top: 60px; height: 600px;}
+    .slide>div {padding-top: 15px; height: 625px;}
+    .slide h2  {padding-right: 50px;}
+    .slide pre {margin-bottom: 20px;}
+    .slide pre code {line-height: 1.9;}
     .slide pre code.wrap {white-space: normal;}
 
     .slide p {margin-bottom: 20px;}
@@ -452,6 +455,8 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 
   <section class="slide"><div>
     <h2>Так #b_ поняли и используют зарубежом</h2>
+    
+    <!-- убрать правую границу -->
     <img src="pictures/block__el__el.png" alt="">
   </div></section>
 
@@ -565,7 +570,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <code>    &lt;div class='<mark class="important">blockel1</mark>__el2'&gt;&lt;/div&gt;</code>
 <code>&lt;/div&gt;</code>
     </pre>
-    <p class="note">Так можно делать только если .blockelem сохранит логический смысл при переносе в другой блок.</p>
+    <p class="note">Так можно делать только если <code>.blockelem</code> сохранит логический смысл при переносе в другой блок.</p>
   </div></section>
 
   <section class="slide"><div>
@@ -841,13 +846,15 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 </div></section>
 
 <section class="slide"><div>
-  <h2>Писать BEM CSS в Saas?</h2>
+  <h2>Как писать BEM CSS в Saas</h2>
 <pre>
 <code><mark>.b-list</mark> {</code>
-<code>  // блок </code>
-<code>  <mark>&__</mark>item {…}</code>
+<code>  // стили блока </code>
+<code>  <mark>&__</mark>item {</code>
+<code>    // стили элемента </code>
+<code>    }</code>
 <code>  <mark>&__</mark>link {</code>
-<code>    // элемент </code>
+<code>    // элемент #2…</code>
 <code>    }</code>
 <code>  }</code>
 <code>}</code>
@@ -855,7 +862,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 </div></section>
   
 <section class="slide"><div>
-  <h2>Писать BEM CSS в Saas?</h2>
+  <h2>Как красиво писать модификаторы</h2>
 <pre>
 <code>.b-list {</code>
 <code>  // блок </code>
@@ -870,18 +877,18 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 </div></section>
   
 <section class="slide"><div>
-  <h2>Писать BEM CSS в Saas?</h2>
+  <h2>А как хранить модификации элемента от каскада снаружи?</h2>
 <pre>
 <code>.b-list {</code>
 <code>  <mark>$rootParent</mark>: &;</code>
 <code>  &<mark class="important">__item</mark> {// элемент}</code>
-<code>  &__link {</code>
-<code>    // элемент</code>
+<code>  &__link { // элемент</code>
 <code>    #<mark>{$rootParent}</mark><mark class="important">__item</mark>.-active & {</code>
 <code>      // наглый модификатор элемента </code>
 <code>  }</code>
 <code>}</code>
 </pre>
+  <p class="note"><sup>*</sup> Так делать неправильно. Модификация элемента элементом — нарушение правил! Но бывает нет выхода.</p>
 </div></section>
   
 <section class="slide shout"><div>
