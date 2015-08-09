@@ -46,6 +46,10 @@
     .slide p.note {line-height: 1.5;}
 
     mark.important {background: #C00; color: #FFF;}
+    
+    .slide .custom-numbered-list li:before {
+      content:attr(data-num)'.\00A0';
+    }
   </style>
   <script src="node_modules/jquery-2.1.1.min.js"></script>
 </head>
@@ -187,7 +191,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <code>  &lt;p class="body bio"&gt;...&lt;/p&gt;</code>
 <code>&lt;/div&gt;</code>
     </pre>
-<!--    
+<!--
 Наверное вы бы начали с `user`, но обо всем остальное вы должны были бы догадываться, изучать или пытаться разобраться как-то ещё.
 Однако, если мы перепишем это с помощью BEM:
 -->
@@ -196,17 +200,17 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <code>  &lt;img class="<mark>media__</mark>img <mark><mark class="important">user</mark>__</mark>photo avatar" src="" /&gt;</code>
 <code>  &lt;p class="<mark>media__</mark>body <mark><mark class="important">user</mark>__</mark>bio"&gt;...&lt;/p&gt;</code>
 <code>&lt;/div&gt;</code>
-    </pre>  
+    </pre>
     
 <!--
-Тут мы можем сразу увидеть что `user`, `user--premium`, `user__photo` и 
-`user__bio` взаимосвязанны. Также мы можем увидеть что `media`, 
+Тут мы можем сразу увидеть что `user`, `user--premium`, `user__photo` и
+`user__bio` взаимосвязанны. Также мы можем увидеть что `media`,
 `media__img` и `media__body` связанны, и что `avatar` это просто одинокий Блок без своих собственных Элементов или Модификаторов.
 
 
 Круто что мы можем узнать все это только лишь из имен наших классов!
-Это позволяет нам принимать более правильные и обдуманные решения про то как работает наш код и как мы можем это использовать, изменять и удалять. -->   
-</div></section>  
+Это позволяет нам принимать более правильные и обдуманные решения про то как работает наш код и как мы можем это использовать, изменять и удалять. -->
+</div></section>
 
 <section class="slide shout"><div>
   <h2>BEM CSS <sup>*</sup></h2>
@@ -581,7 +585,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   <h2>Хватит!<br>Мы не за теорией сюда пришли.</h2>
 </section>
 
-<!-- 
+<!--
   Переделать скриншоты, на каждом скрине выделять ярче новые классы, старые затемнять.
   Сделать слои документа видимыми - сделать сильнее прозрачность.
 -->
@@ -764,43 +768,44 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 
 <section class="slide shout dark"><div>
   <h2>Классификация ошибок BEM CSS</h2>
-  <p class="note">от Александра Корецкого <a href="https://twitter.com/n2j7">@n2j7</a> из Prom.ua</p>   
-</div></section>    
+  <p class="note">от Александра Корецкого <a href="https://twitter.com/n2j7">@n2j7</a> из Prom.ua</p>
+</div></section>
   
 <section class="slide"><div>
-  <h2>Проблемы со стилями:</h2>  
-  <ol start="1">       
-    <li class="next">CSS Frameworks</li>    
-    <li class="next">Инлайн стили</li>
-    <li class="next">!important</li>
-    <li class="next">Чрезмерно увеличенный вес селектора</li>
-    <li class="next">Позиция в очереди подключения</li>
+  <h2>Проблемы со стилями:</h2>
+  <ol class="custom-numbered-list">
+    <li data-num="1" class="next">CSS Frameworks</li>
+    <li data-num="2" class="next">Инлайн стили</li>
+    <li data-num="3" class="next">!important</li>
+    <li data-num="4" class="next">Чрезмерно увеличенный вес селектора</li>
+    <li data-num="5" class="next">Позиция в очереди подключения</li>
+  </ol>
+</div></section>
+  
+<section class="slide"><div>
+  <h2>Ошибки разработчиков:</h2>
+  <ol class="custom-numbered-list">
+    <li data-num="6" class="next">Элемент элемента</li>
+    <li data-num="7" class="next">Элемент вне блока</li>
+    <li data-num="8" class="next">Контекстная зависимость блоков</li>
+    <li data-num="9" class="next">Контекстная зависимость элемента</li>
+    <li data-num="10" class="next">Наглый модификатор элемента (кроме самого себя трогает еще и другие элементы этого же блока)</li>
+    <li data-num="11" class="next">Блок, вложенный в себя</li>
+    <li data-num="12" class="next">Использование стилевых классов в JS</li>
+  </ol>
+</div></section>
 
-  </ol>  
-</div></section>  
-  
 <section class="slide"><div>
   <h2>Ошибки разработчиков:</h2>
-  <ol start="6">
-    <li class="next">Элемент элемента</li>
-    <li class="next">Элемент вне блока</li>
-    <li class="next">Контекстная зависимость блоков</li>
-    <li class="next">Контекстная зависимость элемента</li>
-    <li class="next">Наглый модификатор элемента (кроме самого себя трогает еще и другие элементы этого же блока)</li>
-    <li class="next">Блок, вложенный в себя</li>
-    <li class="next">Использование стилевых классов в JS</li>        
-</div></section>    
-    
-<section class="slide"><div>
-  <h2>Ошибки разработчиков:</h2>
-  <ol start="13">        
-    <li class="next">Использование холстеров «как-бутстрап»: <code>&lt;ul class="b-list h-mt-20 h-mb-50 h-pointer h-left h-colorred"&gt;</code></li>
-    <li class="next">Неиспользование холстеров (модификаторы <code>--float_left</code>)</li>
-    <li class="next">Единоразовые элементы (создание одинаковых элементов с разными именами типа <code>.list__item1</code>,<code>.list__item2</code>,…)</li>
-    <li class="next">Oldschool reborn (высокая специфичность и класс только на блоке)</li>
-    <li class="next">Looooooooong naming</li>
-    <li class="next">Модификация элементами (смена имени элемента вместо добавления модификатора)</li>    
-</div></section>   
+  <ol class="custom-numbered-list">
+    <li data-num="13" class="next">Использование холстеров «как-бутстрап»: <code>&lt;ul class="b-list h-mt-20 h-mb-50 h-pointer h-left h-colorred"&gt;</code></li>
+    <li data-num="14" class="next">Неиспользование холстеров (модификаторы <code>--float_left</code>)</li>
+    <li data-num="15" class="next">Единоразовые элементы (создание одинаковых элементов с разными именами типа <code>.list__item1</code>,<code>.list__item2</code>,…)</li>
+    <li data-num="16" class="next">Oldschool reborn (высокая специфичность и класс только на блоке)</li>
+    <li data-num="17" class="next">Looooooooong naming</li>
+    <li data-num="18" class="next">Модификация элементами (смена имени элемента вместо добавления модификатора)</li>
+  </ol>
+</div></section>
   
 <section class="slide shout dark"><div>
   <h2>Как мне?...</h2>
@@ -830,6 +835,8 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     </pre>
     <p class="note">Конечно при <strong>большом</strong> желании можно настроить визивиг, тот же TinyMCE, чтоб он добавлял нужные имена классов в тегах из визивига.</p>
 </div></section>
+
+
   
 <section class="slide shout"><div>
 <h2>Задавайте вопросы: <a href="https://ru.bem.info/forum/">ru.bem.info/forum</a></p>
@@ -1006,9 +1013,9 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   <section class="slide"><div>
       <h2>Читать дальше</h2>
       <ul>
-        <li><a href="http://getbem.com/">BEM Quick Start Guide</a> — БЭМ: UnOfficial Team</li>        
-        <li><a href="https://ru.bem.info/blog/doc-release-1/">Мажорный релиз новой документации</a> — БЭМ: Яндекс Team</li>        
-        <li><a href="https://ru.bem.info/blog/bem-as-bootstrap/">Full BEM Stack в HTML — Владимир Гриненко</a></li>        
+        <li><a href="http://getbem.com/">BEM Quick Start Guide</a> — БЭМ: UnOfficial Team</li>
+        <li><a href="https://ru.bem.info/blog/doc-release-1/">Мажорный релиз новой документации</a> — БЭМ: Яндекс Team</li>
+        <li><a href="https://ru.bem.info/blog/bem-as-bootstrap/">Full BEM Stack в HTML — Владимир Гриненко</a></li>
         <li><a href="https://dl.dropboxusercontent.com/u/66873654/%D0%91%D0%AD%D0%9C%D0%BE%D1%81%D0%B8%D0%BF%D0%B5%D0%B4.pdf">Классификация ошибок BEM CSS</a> (со стр. 50) — Google</li>
         <li><a href="http://www.getmdl.io/started/">Material Design Lite CSS</a> — Google</li>
         <li><a href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> — Harry Roberts</li>
@@ -1016,7 +1023,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
         <li><a href="https://github.com/bevis-ui/docs">BEViS: документация</a> и <a href="http://bevis-ui.github.io/bevis-and-bt-speech/">доклад</a> — Вадим Макишвили</li>
         <li><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">Откуда взялся американский синтаксис</a> — Nicolas Gallagher</li>
       </ul>
-  </div></section>  
+  </div></section>
   
   <section class="slide" id="ThankYou"><div>
     <h2>Спасибо!</h2>
