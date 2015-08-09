@@ -836,7 +836,49 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     <p class="note">Конечно при <strong>большом</strong> желании можно настроить визивиг, тот же TinyMCE, чтоб он добавлял нужные имена классов в тегах из визивига.</p>
 </div></section>
 
-
+<section class="slide"><div>
+  <h2>Писать BEM CSS в Saas?</h2>
+<pre>
+<code><mark>.b-list</mark> {</code>
+<code>  // блок </code>
+<code>  <mark>&__</mark>item {…}</code>
+<code>  <mark>&__</mark>link {</code>
+<code>    // элемент </code>
+<code>    }</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+</div></section>
+  
+<section class="slide"><div>
+  <h2>Писать BEM CSS в Saas?</h2>
+<pre>
+<code>.b-list {</code>
+<code>  // блок </code>
+<code>  <mark>&__item</mark> {</code>
+<code>    // элемент </code>
+<code>    <mark>@at-root &--</mark>active {</code>
+<code>      // модификатор</code>
+<code>    }</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+</div></section>
+  
+<section class="slide"><div>
+  <h2>Писать BEM CSS в Saas?</h2>
+<pre>
+<code>.b-list {</code>
+<code>  <mark>$rootParent</mark>: &;</code>
+<code>  &<mark class="important">__item</mark> {// элемент}</code>
+<code>  &__link {</code>
+<code>    // элемент</code>
+<code>    #<mark>{$rootParent}</mark><mark class="important">__item</mark>.-active & {</code>
+<code>      // наглый модификатор элемента </code>
+<code>  }</code>
+<code>}</code>
+</pre>
+</div></section>
   
 <section class="slide shout"><div>
 <h2>Задавайте вопросы: <a href="https://ru.bem.info/forum/">ru.bem.info/forum</a></p>
