@@ -31,7 +31,7 @@
     .shout.dark {background:#000;}
     .shout.dark h2 {color:#FFF;}
 
-    .shout p.note {position: absolute; bottom: 0; left: 105px;}
+    .shout p.note {position: absolute; bottom: 20px; right: 0;}
 
     img {max-width: 100%;}
 
@@ -763,6 +763,46 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 </div></section>
 
 <section class="slide shout dark"><div>
+  <h2>Классификация ошибок BEM CSS</h2>
+  <p class="note">от Александра Корецкого <a href="https://twitter.com/n2j7">@n2j7</a> из Prom.ua</p>   
+</div></section>    
+  
+<section class="slide"><div>
+  <h2>Проблемы со стилями:</h2>  
+  <ol start="1">       
+    <li class="next">CSS Frameworks</li>    
+    <li class="next">Инлайн стили</li>
+    <li class="next">!important</li>
+    <li class="next">Чрезмерно увеличенный вес селектора</li>
+    <li class="next">Позиция в очереди подключения</li>
+
+  </ol>  
+</div></section>  
+  
+<section class="slide"><div>
+  <h2>Ошибки разработчиков:</h2>
+  <ol start="6">
+    <li class="next">Элемент элемента</li>
+    <li class="next">Элемент вне блока</li>
+    <li class="next">Контекстная зависимость блоков</li>
+    <li class="next">Контекстная зависимость элемента</li>
+    <li class="next">Наглый модификатор элемента (кроме самого себя трогает еще и другие элементы этого же блока)</li>
+    <li class="next">Блок, вложенный в себя</li>
+    <li class="next">Использование стилевых классов в JS</li>        
+</div></section>    
+    
+<section class="slide"><div>
+  <h2>Ошибки разработчиков:</h2>
+  <ol start="13">        
+    <li class="next">Использование холстеров «как-бутстрап»: <code>&lt;ul class="b-list h-mt-20 h-mb-50 h-pointer h-left h-colorred"&gt;</code></li>
+    <li class="next">Неиспользование холстеров (модификаторы <code>--float_left</code>)</li>
+    <li class="next">Единоразовые элементы (создание одинаковых элементов с разными именами типа <code>.list__item1</code>,<code>.list__item2</code>,…)</li>
+    <li class="next">Oldschool reborn (высокая специфичность и класс только на блоке)</li>
+    <li class="next">Looooooooong naming</li>
+    <li class="next">Модификация элементами (смена имени элемента вместо добавления модификатора)</li>    
+</div></section>   
+  
+<section class="slide shout dark"><div>
   <h2>Как мне?...</h2>
 </div></section>
 
@@ -790,7 +830,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     </pre>
     <p class="note">Конечно при <strong>большом</strong> желании можно настроить визивиг, тот же TinyMCE, чтоб он добавлял нужные имена классов в тегах из визивига.</p>
 </div></section>
-
+  
 <section class="slide shout"><div>
 <h2>Задавайте вопросы: <a href="https://ru.bem.info/forum/">ru.bem.info/forum</a></p>
 <!-- https://docs.google.com/document/d/1KD9tNdArCv1U1NvFX7rYPvUdbpPGVkuPZ2723KW5p4Y/edit">https://docs.google.com/document/d/1KD9tNdArCv1U1NvFX7rYPvUdbpPGVkuPZ2723KW5p4Y/edit -->
@@ -968,6 +1008,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
         <li><a href="http://getbem.com/">BEM Quick Start Guide</a> — БЭМ: UnOfficial Team</li>        
         <li><a href="https://ru.bem.info/blog/doc-release-1/">Мажорный релиз новой документации</a> — БЭМ: Яндекс Team</li>        
         <li><a href="https://ru.bem.info/blog/bem-as-bootstrap/">Full BEM Stack в HTML — Владимир Гриненко</a></li>        
+        <li><a href="https://dl.dropboxusercontent.com/u/66873654/%D0%91%D0%AD%D0%9C%D0%BE%D1%81%D0%B8%D0%BF%D0%B5%D0%B4.pdf">Классификация ошибок BEM CSS</a> (со стр. 50) — Google</li>
         <li><a href="http://www.getmdl.io/started/">Material Design Lite CSS</a> — Google</li>
         <li><a href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> — Harry Roberts</li>
         <li><a href="http://nano.sapegin.ru/all/opor-methodology">OPOR</a> — Артём Сапегин</li>
