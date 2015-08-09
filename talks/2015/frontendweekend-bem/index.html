@@ -877,18 +877,49 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 </div></section>
   
 <section class="slide"><div>
+  <h2>Как красиво писать модификаторы</h2>
+  <p>Скомпилируется в:</p>
+<pre>
+<code>.b-list {</code>
+<code>  /* блок */</code>
+<code>}</code>
+<code>.b-list<mark>__</mark>item {</code>
+<code>  /* элемент */</code>
+<code>}</code>
+<code>.b-list<mark>__</mark>item<mark>--</mark>active {</code>
+<code>  /* модификатор*/</code>
+<code>}</code>
+</pre>
+</div></section>
+  
+<section class="slide"><div>
   <h2>А как хранить модификации элемента от каскада снаружи?</h2>
 <pre>
 <code>.b-list {</code>
 <code>  <mark>$rootParent</mark>: &;</code>
-<code>  &<mark class="important">__item</mark> {// элемент}</code>
-<code>  &__link { // элемент</code>
-<code>    #<mark>{$rootParent}</mark><mark class="important">__item</mark>.-active & {</code>
+<code>  &<mark class="important">__item</mark> {/* элемент */}</code>
+<code>  &__link {/* элемент */</code>
+<code>    #<mark>{$rootParent}</mark><mark class="important">__item--active</mark> & {</code>
 <code>      // наглый модификатор элемента </code>
+<code>    }</code>
 <code>  }</code>
 <code>}</code>
 </pre>
   <p class="note"><sup>*</sup> Так делать неправильно. Модификация элемента элементом — нарушение правил! Но бывает нет выхода.</p>
+</div></section>
+  
+  
+<section class="slide"><div>
+  <h2>Модификация элемента элементом (это bad practice!)</h2>
+  <p>Скомпилируется в:</p>
+<pre>
+<code>.b-list {/* блок */}</code>
+<code>.b-list<mark class="important">__item</mark> {/* элемент */}</code>
+<code>.b-list<mark>__link</mark> {/* элемент */}</code>
+<code>.b-list<mark class="important">__item--active</mark> .b-list<mark>__link</mark> {</code>
+<code>  /* наглый модификатор элемента */</code>
+<code>}</code>
+</pre>
 </div></section>
   
 <section class="slide shout"><div>
