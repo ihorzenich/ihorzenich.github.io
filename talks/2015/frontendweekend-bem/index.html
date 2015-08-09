@@ -35,6 +35,7 @@
 
     img {max-width: 100%;}
 
+    .slide>div {padding-top: 60px; height: 600px;}
     .slide pre code.wrap {white-space: normal;}
 
     .slide p {margin-bottom: 20px;}
@@ -171,6 +172,41 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   Нет проблемы ухода сотрудника в отпуск или непонятности его кода.
 -->
 </div></section>
+
+<section class="slide"><div>
+    <h2>Код, который легко поддерживать</h2>
+  
+<!--
+Суть БЭМ в том чтобы сделать ваш код прозрачней и понятней. БЭМ показыват разработчикам как классы относятся один к одному,
+что особенно полезно в сложных или глубоких частях DOM. Например, если бы я попросил вас удалить все классы относящиеся к юзеру в этом куске кода,
+какие бы вы выбросили?
+-->
+    <pre>
+<code>&lt;div class="media user premium"&gt;</code>
+<code>  &lt;img class="img photo avatar" src="" /&gt;</code>
+<code>  &lt;p class="body bio"&gt;...&lt;/p&gt;</code>
+<code>&lt;/div&gt;</code>
+    </pre>
+<!--    
+Наверное вы бы начали с `user`, но обо всем остальное вы должны были бы догадываться, изучать или пытаться разобраться как-то ещё.
+Однако, если мы перепишем это с помощью BEM:
+-->
+    <pre>
+<code>&lt;div class="media <mark><mark class="important">user</mark>--</mark>premium"&gt;</code>
+<code>  &lt;img class="<mark>media__</mark>img <mark><mark class="important">user</mark>__</mark>photo avatar" src="" /&gt;</code>
+<code>  &lt;p class="<mark>media__</mark>body <mark><mark class="important">user</mark>__</mark>bio"&gt;...&lt;/p&gt;</code>
+<code>&lt;/div&gt;</code>
+    </pre>  
+    
+<!--
+Тут мы можем сразу увидеть что `user`, `user--premium`, `user__photo` и 
+`user__bio` взаимосвязанны. Также мы можем увидеть что `media`, 
+`media__img` и `media__body` связанны, и что `avatar` это просто одинокий Блок без своих собственных Элементов или Модификаторов.
+
+
+Круто что мы можем узнать все это только лишь из имен наших классов!
+Это позволяет нам принимать более правильные и обдуманные решения про то как работает наш код и как мы можем это использовать, изменять и удалять. -->   
+</div></section>  
 
 <section class="slide shout"><div>
   <h2>BEM CSS <sup>*</sup></h2>
