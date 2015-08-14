@@ -35,21 +35,21 @@
 
     img {max-width: 100%;}
 
-    .slide>div {padding-top: 15px; height: 625px;}
+    .slide.-compact >div {padding-top: 20px; height: 620px;}
     .slide h2  {padding-right: 50px;}
     .slide pre {margin-bottom: 20px;}
-    .slide pre code {line-height: 1.9;}
+    .slide pre code {line-height: 1.7;}
     .slide pre code.wrap {white-space: normal;}
 
     .slide p {margin-bottom: 20px;}
     .slide blockquote {margin-bottom: 50px;}
 
-    .slide ol, .slide ul {margin-left: 20px;}
+    .slide ol, .slide ul {margin-left: 20px; line-height: 1.7;}
 
     .slide p.note {line-height: 1.5;}
 
     mark.important {background: #C00; color: #FFF;}
-    
+
     .slide .custom-numbered-list li:before {
       content:attr(data-num)'.\00A0';
     }
@@ -182,7 +182,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 
 <section class="slide"><div>
     <h2>Код, который легко поддерживать</h2>
-  
+
 <!--
 Суть БЭМ в том чтобы сделать ваш код прозрачней и понятней. БЭМ показыват разработчикам как классы относятся один к одному,
 что особенно полезно в сложных или глубоких частях DOM. Например, если бы я попросил вас удалить все классы относящиеся к юзеру в этом куске кода,
@@ -204,7 +204,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <code>  &lt;p class="<mark>media__</mark>body <mark><mark class="important">user</mark>__</mark>bio"&gt;...&lt;/p&gt;</code>
 <code>&lt;/div&gt;</code>
     </pre>
-    
+
 <!--
 Тут мы можем сразу увидеть что `user`, `user--premium`, `user__photo` и
 `user__bio` взаимосвязанны. Также мы можем увидеть что `media`,
@@ -455,7 +455,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 
   <section class="slide"><div>
     <h2>Так #b_ поняли и используют зарубежом</h2>
-    
+
     <!-- убрать правую границу -->
     <img src="pictures/block__el__el.png" alt="">
   </div></section>
@@ -465,7 +465,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     <pre>
       <code>.form-buy-results__to-city__slider__tab__column_buy</code>
     </pre>
-    
+
     <!-- убрать рамку у твита -->
     <iframe src="embed/twitter-lehazyo_chatik.html"
   id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" allowfullscreen="" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin: 50px auto; border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187); border-width: 1px; border-style: solid; box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px; position: static; visibility: visible; width: 500px;" title="Встроенный твит" height="200"></iframe>
@@ -596,7 +596,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   Переделать скриншоты, на каждом скрине выделять ярче новые классы, старые затемнять.
   Сделать слои документа видимыми - сделать сильнее прозрачность.
 -->
-  
+
 <section class="slide cover"><div>
   <img src="pictures/example-bem-3-mod.png" alt="">
 </div></section>
@@ -716,7 +716,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 
 <section class="slide"><div>
   <h2>Но подумайте, может это новый блок?</h2>
-  
+
   <!-- убрать рамку у твита -->
   <iframe src="embed/twitter-bxxx.html"
 id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" allowfullscreen="" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin: 50px auto; border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187); border-width: 1px; border-style: solid; box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px; position: static; visibility: visible; width: 500px;" title="Встроенный твит" height="257"></iframe>
@@ -779,7 +779,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   <h2>Классификация ошибок BEM CSS</h2>
   <p class="note">от Александра Корецкого <a href="https://twitter.com/n2j7">@n2j7</a> из Prom.ua</p>
 </div></section>
-  
+
 <section class="slide"><div>
   <h2>Проблемы со стилями:</h2>
   <ol class="custom-numbered-list">
@@ -790,7 +790,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     <li data-num="5" class="next">Позиция в очереди подключения</li>
   </ol>
 </div></section>
-  
+
 <section class="slide"><div>
   <h2>Ошибки разработчиков:</h2>
   <ol class="custom-numbered-list">
@@ -815,7 +815,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
     <li data-num="18" class="next">Модификация элементами (смена имени элемента вместо добавления модификатора)</li>
   </ol>
 </div></section>
-  
+
 <section class="slide shout dark"><div>
   <h2>Как мне?...</h2>
 </div></section>
@@ -860,7 +860,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <code>}</code>
 </pre>
 </div></section>
-  
+
 <section class="slide"><div>
   <h2>Как красиво писать модификаторы</h2>
 <pre>
@@ -875,10 +875,9 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <code>}</code>
 </pre>
 </div></section>
-  
+
 <section class="slide"><div>
-  <h2>Как красиво писать модификаторы</h2>
-  <p>Скомпилируется в:</p>
+  <h2>Скомпилируется в:</h2>
 <pre>
 <code>.b-list {</code>
 <code>  /* блок */</code>
@@ -891,8 +890,8 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <code>}</code>
 </pre>
 </div></section>
-  
-<section class="slide"><div>
+
+<section class="slide -compact"><div>
   <h2>А как хранить модификации элемента от каскада снаружи?</h2>
 <pre>
 <code>.b-list {</code>
@@ -907,8 +906,8 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 </pre>
   <p class="note"><sup>*</sup> Так делать неправильно. Модификация элемента элементом — нарушение правил! Но бывает нет выхода.</p>
 </div></section>
-  
-  
+
+
 <section class="slide"><div>
   <h2>Модификация элемента элементом (это bad practice!)</h2>
   <p>Скомпилируется в:</p>
@@ -921,7 +920,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <code>}</code>
 </pre>
 </div></section>
-  
+
 <section class="slide shout"><div>
 <h2>Спрашивайте: <a href="https://ru.bem.info/forum/">ru.bem.info/forum</a></p>
 <!-- https://docs.google.com/document/d/1KD9tNdArCv1U1NvFX7rYPvUdbpPGVkuPZ2723KW5p4Y/edit">https://docs.google.com/document/d/1KD9tNdArCv1U1NvFX7rYPvUdbpPGVkuPZ2723KW5p4Y/edit -->
@@ -938,7 +937,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 
 <section class="slide shout dark"><div>
   <h2>Диалекты БЭМ</h2>
-  
+
   <iframe src="embed/twitter-harisov-dialect.html"
 id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" allowfullscreen="" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; margin: 50px auto; box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px; position: static; visibility: visible; width: 500px;" title="Встроенный твит" height="190"></iframe>
 </div></section>
@@ -983,7 +982,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <section class="slide"><div>
 <h2>BEMIT: Пространства имен</h2>
 </div></section>
-  
+
 <section class="slide"><div>
   <h2>Альтернативный синтаксис и camelCase</h2>
   <p>Многим нравится зарубежный формат модификаторов, через „--“, он читабельней.</p>
@@ -1088,20 +1087,20 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <section class="slide"><div>
 <h2>Альтернативные реализации: OPOR</h2>
 </div></section>
-  
+
 <section class="slide"><div>
 <h2>Альтернативные реализации: BEViS</h2>
 </div></section>
-  
+
 <section class="slide"><div>
 <h2>Альтернативные реализации: Google MDL</h2>
 </div></section>
-  
+
 <section class="slide"><div>
   <h2>Full BEM Stack в HTML</h2>
   <p>BEM project-stub HTML edition.</p>
 </div></section>
-  
+
 <section class="slide"><div>
   <h2>Вы можете создавать свои гайдлайны</h2>
   <p>БЭМ дает лишь базовый набор правил, конкретную реализацию и синтаксис вы выбираете сами.</p>
@@ -1114,7 +1113,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
 <section class="slide shout"><div>
   <h2>Это всё БЭМ</h2>
 </div></section>
-  
+
 <section class="slide shout dark"><div>
   <h2>Тонкости БЭМ</h2>
 </div></section>
@@ -1129,7 +1128,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
   </ul>
   </ul>
 </div></section>
-  
+
 <section class="slide"><div>
   <h2>Но многое осталось за кадром</h2>
   <ul>
@@ -1155,7 +1154,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
         <li><a href="https://ru.bem.info/method/history/">История БЭМ</a></li>
       </ul>
   </div></section>
-  
+
   <section class="slide"><div>
       <h2>…и дальше</h2>
       <ul>
@@ -1170,7 +1169,7 @@ id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" cl
         <li><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">Откуда взялся американский синтаксис</a> — Nicolas Gallagher</li>
       </ul>
   </div></section>
-  
+
   <section class="slide" id="ThankYou"><div>
     <h2>Спасибо!</h2>
     <p>Igor Zenich, iDeus</p>
