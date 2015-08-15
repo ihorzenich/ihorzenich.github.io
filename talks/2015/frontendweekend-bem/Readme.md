@@ -8,12 +8,13 @@
 
 Я знаком с БЭМ давно, и все эти годы встречался с множеством заблуждений и стереотипов в использовании. В докладе постарался развеять популярные мифы и рассказал о своём трехлетнем опыте внедрения и использования БЭМ и связанным с этим наступании на грабли.
 
-WebCamp: Front-end Developers Day
-Одесса
-4 июля 2015
-#WebCampOdessa
-#OIW2015
-#WebCamp2015
 
-Слайды: http://delka.github.io/talks/webcamp/2015/bem/
+Front–end Weekend
+http://frontendweekend.uwcua.com/
+Киев
+8 августа 2015
+#frontendweekend 
+#uwcua
+
+Слайды: http://delka.github.io/talks/2015/frontendweekend-bem
 (вы можете подглядеть текст доклада, если откроете его исходный код — там в комментах html написаны тезисы)
