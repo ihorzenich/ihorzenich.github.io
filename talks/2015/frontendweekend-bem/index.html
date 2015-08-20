@@ -705,8 +705,8 @@
         <h2>Делать новый блок</h2>
         <pre>
 <code>&lt;div class="block1"&gt;</code>
-<code>    &lt;div class="<mark>block2</mark>"&gt;</code>
-<code>        &lt;div class="<mark>block2</mark>__elem"&gt;&lt;/div&gt;</code>
+<code>    &lt;div class="<mark>block1__el</mark> <mark class="important">block2</mark>"&gt;</code>
+<code>        &lt;div class="<mark class="important">block2</mark>__elem"&gt;&lt;/div&gt;</code>
 <code>    &lt;/div&gt;</code>
 <code>&lt;/div&gt;</code>
     </pre>
@@ -865,11 +865,11 @@
       <div>
         <h2>Мы написали BEM-дерево:</h2>
         <pre>
-<code>&lt;div class="block"&gt;</code>
-<code>    &lt;div class="block<mark>__elem1</mark>"&gt;</code>
-<code>        &lt;div class="block<mark>__elem2</mark>"&gt;&lt;/div&gt;</code>
+<code>&lt;div class="block1"&gt;</code>
+<code>    &lt;div class="<mark>block1__elem1</mark> <mark class="important">block2</mark>"&gt;</code>
+<code>        &lt;div class="<mark class="important">block2</mark>__elem1"&gt;&lt;/div&gt;</code>
 <code>    &lt;/div&gt;</code>
-<code>    &lt;div class="block<mark>__elem3</mark>"&gt;&lt;/div&gt;</code>
+<code>    &lt;div class="block1<mark>__elem2</mark>"&gt;&lt;/div&gt;</code>
 <code>&lt;/div&gt;</code>
     </pre>
       </div>
@@ -879,10 +879,11 @@
       <div>
         <h2>Нет каскада:</h2>
         <pre>
-<code>.block {}</code>
-<code>.block__elem1 {}</code>
-<code>.block__elem2 {}</code>
-<code>.block__elem3 {}</code>
+<code>.block1 {}</code>
+<code>.block1__elem1 {}</code>
+<code>.block1__elem2 {}</code>
+<code>.block2 {}</code>
+<code>.block2__elem1 {}</code>
     </pre>
       </div>
     </section>
