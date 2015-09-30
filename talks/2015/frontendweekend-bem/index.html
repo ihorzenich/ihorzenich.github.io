@@ -49,7 +49,7 @@
     .shout p.note {
       position: absolute;
       bottom: 20px;
-      right: 0;
+      right: 10px;
     }
 
     img {
@@ -705,8 +705,8 @@
         <h2>Делать новый блок</h2>
         <pre>
 <code>&lt;div class="block1"&gt;</code>
-<code>    &lt;div class="<mark>block1__el</mark> <mark class="important">block2</mark>"&gt;</code>
-<code>        &lt;div class="<mark class="important">block2</mark>__elem"&gt;&lt;/div&gt;</code>
+<code>    &lt;div class="<mark>block1__elem1</mark> <mark class="important">block2</mark>"&gt;</code>
+<code>        &lt;div class="<mark class="important">block2</mark>__elem1"&gt;&lt;/div&gt;</code>
 <code>    &lt;/div&gt;</code>
 <code>&lt;/div&gt;</code>
     </pre>
@@ -718,9 +718,9 @@
         <h2>CSS будет линейным:</h2>
         <pre>
 <code>.block1 {}</code>
-<code>.block1__el {}</code>
+<code>.block1__elem1 {}</code>
 <code>.block2 {}</code>
-<code>.block2__elem {}</code>
+<code>.block2__elem1 {}</code>
     </pre>
       </div>
     </section>
@@ -877,11 +877,11 @@
       <div>
         <h2>Мы написали BEM-дерево:</h2>
         <pre>
-<code>&lt;div class="block1"&gt;</code>
+<code>&lt;div class="<mark>block1</mark>"&gt;</code>
 <code>    &lt;div class="<mark>block1__elem1</mark> <mark class="important">block2</mark>"&gt;</code>
-<code>        &lt;div class="<mark class="important">block2</mark>__elem1"&gt;&lt;/div&gt;</code>
+<code>        &lt;div class="<mark class="important">block2__elem1</mark>"&gt;&lt;/div&gt;</code>
 <code>    &lt;/div&gt;</code>
-<code>    &lt;div class="block1<mark>__elem2</mark>"&gt;&lt;/div&gt;</code>
+<code>    &lt;div class="<mark>block1__elem2</mark>"&gt;&lt;/div&gt;</code>
 <code>&lt;/div&gt;</code>
     </pre>
       </div>
@@ -1124,13 +1124,13 @@
         <h2>Как писать BEM CSS в Saas</h2>
         <pre>
 <code><mark>.b-list</mark> {</code>
-<code>  // стили блока </code>
+<code>  /* стили блока  */</code>
+<code>  //…</code>
 <code>  <mark>&__</mark>item {</code>
-<code>    // стили элемента </code>
-<code>    }</code>
+<code>    /* стили элемента */</code>
+<code>  }</code>
 <code>  <mark>&__</mark>link {</code>
-<code>    // элемент #2…</code>
-<code>    }</code>
+<code>    /* элемент #2… */</code>
 <code>  }</code>
 <code>}</code>
 </pre>
@@ -1139,14 +1139,59 @@
 
     <section class="slide">
       <div>
-        <h2>Как красиво писать модификаторы</h2>
+        <h2>Скомпилируется в:</h2>
+        <pre>
+<code><mark>.b-list</mark> {</code>
+<code>  /* стили блока  */</code>
+<code>}</code>
+<code><mark>.b-list__</mark>item {</code>
+<code>  /* стили элемента */</code>
+<code>}</code>
+<code><mark>.b-list__</mark>link {</code>
+<code>  /* элемент #2… */</code>
+<code>}</code>
+</pre>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Sass: модификаторы блоков</h2>
         <pre>
 <code>.b-list {</code>
-<code>  // блок </code>
-<code>  <mark>&__item</mark> {</code>
-<code>    // элемент </code>
-<code>    <mark>&--</mark>active {</code>
-<code>      // модификатор</code>
+<code>  /* стили блока */</code>
+<code>  &<mark>--style_numered</mark> {</code>
+<code>    /* стили модифицированного блока */</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Скомпилируется в:</h2>
+        <pre>
+<code>.b-list {</code>
+<code>  /* стили блока  */</code>
+<code>}</code>
+<code>.b-list<mark>--style_numered</mark> {</code>
+<code>  /* стили модифицированного блока */</code>
+<code>}</code>
+</pre>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Sass: модификаторы элементов</h2>
+        <pre>
+<code>.b-list {</code>
+<code>  /* стили блока */</code>
+<code>  &__item {</code>
+<code>    /* стили элемента */</code>
+<code>    &<mark>--active</mark> {</code>
+<code>      /* стили модифицированного элемента */</code>
 <code>    }</code>
 <code>  }</code>
 <code>}</code>
@@ -1159,13 +1204,48 @@
         <h2>Скомпилируется в:</h2>
         <pre>
 <code>.b-list {</code>
-<code>  /* блок */</code>
+<code>  /* стили блока */</code>
 <code>}</code>
-<code>.b-list<mark>__</mark>item {</code>
-<code>  /* элемент */</code>
+<code>.b-list__item {</code>
+<code>  /* стили элемента */</code>
 <code>}</code>
-<code>.b-list<mark>__</mark>item<mark>--</mark>active {</code>
-<code>  /* модификатор*/</code>
+<code>.b-list__item<mark>--active</mark> {</code>
+<code>  /* стили модифицированного элемента */</code>
+<code>}</code>
+</pre>
+      </div>
+    </section>
+
+    <section class="slide -compact">
+      <div>
+        <h2>Sass: модификация элемента от модификатора блока</h2>
+        <pre>
+<code>.b-list {</code>
+<code>  <mark>$rootParent</mark>: &;</code>
+<code>  &<mark class="important">__item</mark> {/* обычный элемент */}</code>
+<code>  &<mark class="important">--style_numered</mark> {/* модифицированный блок */</code>
+<code>    #<mark>{$rootParent}</mark><mark class="important">__item</mark> & {</code>
+<code>      /* элемент модифицированного блока */ </code>
+<code>    }</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+        <p class="note"><sup>*</sup> Это разрешённая практика в БЭМ, но изменение стилей не должно быть монструозным.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Скомпилируется в:</h2>
+        <pre>
+<code>.b-list {</code>
+<code>  /* стили блока */</code>
+<code>}</code>
+<code><mark>.b-list</mark><mark class="important">__item</mark> {</code>
+<code>  /* стили элемента */</code>
+<code>}</code>
+<code><mark>.b-list--style_numered</mark> b-list__<mark class="important">__item</mark> {</code>
+<code>  /* стили элемента модифицированного блока */</code>
 <code>}</code>
 </pre>
       </div>
@@ -1173,11 +1253,11 @@
 
       <section class="slide">
         <div>
-          <h2>Вкладывать блоки в блоки?</h2>
+          <h2>Как правильно вкладывать блоки в блоки?</h2>
           <pre>
 <code>.b-list {</code>
 <code>  // блок </code>
-<code>  <mark class="important">@at-root</mark> <mark>.b-someshit</mark> {</code>
+<code>  <mark>@at-root</mark> <mark>.b-someshit</mark> {</code>
 <code>    // ещё один блок </code>
 <code>  }</code>
 <code>}</code>
@@ -1185,9 +1265,23 @@
         </div>
       </section>
 
+    <section class="slide">
+      <div>
+        <h2>Скомпилируется в:</h2>
+        <pre>
+<code><mark>.</mark>b-list {</code>
+<code>  /* стили блока */</code>
+<code>}</code>
+<code><mark>.</mark>b-someshit {</code>
+<code>  /* ещё один блок */</code>
+<code>}</code>
+</pre>
+      </div>
+    </section>
+
     <section class="slide -compact">
       <div>
-        <h2>А как хранить модификации элемента от каскада снаружи?</h2>
+        <h2>Модификация элемента элементом? bad practice, но…</h2>
         <pre>
 <code>.b-list {</code>
 <code>  <mark>$rootParent</mark>: &;</code>
@@ -1206,8 +1300,7 @@
 
     <section class="slide">
       <div>
-        <h2>Модификация элемента элементом (это bad practice!)</h2>
-        <p>Скомпилируется в:</p>
+        <h2>Скомпилируется в:</h2>
         <pre>
 <code>.b-list {/* блок */}</code>
 <code>.b-list<mark class="important">__item</mark> {/* элемент */}</code>
@@ -1467,7 +1560,7 @@
 
     <section class="slide">
       <div>
-        <h2>Альтернативные реализации: Google MDL</h2>
+        <h2>Альтернативные реализации:<br>Google MDL</h2>
         <p>Библиотека блоков от Google, css-реализации их Material Design придуманного для Android.</p>
       </div>
     </section>
