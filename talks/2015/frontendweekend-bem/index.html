@@ -868,9 +868,47 @@
       </div>
     </section>
 
+    <section class="slide">
+      <div>
+        <h2>Бьём на максимально атомарные блоки!</h2>
+        <p><strong>NB:</strong> это и есть суть БЭМ, то, что многие не понимают.</p>
+        <p>
+          Погружаясь вглубь DOM, нужно стараться создавать новые и новые блоки, а не строить связи <code>родитель__элемент__элемент</code>.
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Вспоминаем как мы это делаем:</h2>
+        <pre>
+<code>&lt;div class="block1"&gt;</code>
+<code>    &lt;div class="<mark>block1__elem1</mark> <mark class="important">block2</mark>"&gt;</code>
+<code>        &lt;div class="<mark class="important">block2</mark>__elem1"&gt;&lt;/div&gt;</code>
+<code>    &lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+    </pre>
+      </div>
+    </section>
+
     <section class="slide cover">
       <div>
         <img src="pictures/example-bem-3-06.png" alt="">
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Связь между блоками создаст миксование!</h2>
+        <p>
+          В эту DOM-ноду приходят стили от 2-х разных блоков:
+        </p>
+        <ul>
+          <li>от одного (<code>.b-blog__item</code>) — стили раскладки, позиционирование,</li>
+          <li>а от второго (<code>.b-post</code>) — внешний вид самого блока.</li>
+        </ul>
+        <p>
+          Эти стили объединяются в одном html-элементе и создают таким образом связи между блоками.
+        </p>
       </div>
     </section>
 
