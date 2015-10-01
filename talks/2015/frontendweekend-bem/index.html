@@ -912,6 +912,34 @@
       </div>
     </section>
 
+      <section class="slide">
+        <div>
+          <h2>Как правильно вкладывать блоки в блоки?</h2>
+          <pre>
+<code>.b-blog {</code>
+<code>  // блок </code>
+<code>  <mark class="important">@at-root</mark> <mark>.b-post</mark> {</code>
+<code>    // ещё один блок </code>
+<code>  }</code>
+<code>}</code>
+</pre>
+        </div>
+      </section>
+
+    <section class="slide">
+      <div>
+        <h2>Скомпилируется в:</h2>
+        <pre>
+<code><mark>.</mark>b-blog {</code>
+<code>  /* стили блока */</code>
+<code>}</code>
+<code><mark>.</mark>b-post {</code>
+<code>  /* ещё один блок */</code>
+<code>}</code>
+</pre>
+      </div>
+    </section>
+
     <section class="slide cover">
       <div>
         <img src="pictures/example-bem-3-07.png" alt="">
@@ -1319,34 +1347,6 @@
 <code>}</code>
 <code><mark>.b-list--style_numered</mark> b-list__<mark class="important">__item</mark> {</code>
 <code>  /* стили элемента модифицированного блока */</code>
-<code>}</code>
-</pre>
-      </div>
-    </section>
-
-      <section class="slide">
-        <div>
-          <h2>Как правильно вкладывать блоки в блоки?</h2>
-          <pre>
-<code>.b-list {</code>
-<code>  // блок </code>
-<code>  <mark>@at-root</mark> <mark>.b-someshit</mark> {</code>
-<code>    // ещё один блок </code>
-<code>  }</code>
-<code>}</code>
-</pre>
-        </div>
-      </section>
-
-    <section class="slide">
-      <div>
-        <h2>Скомпилируется в:</h2>
-        <pre>
-<code><mark>.</mark>b-list {</code>
-<code>  /* стили блока */</code>
-<code>}</code>
-<code><mark>.</mark>b-someshit {</code>
-<code>  /* ещё один блок */</code>
 <code>}</code>
 </pre>
       </div>
