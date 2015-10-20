@@ -1676,10 +1676,10 @@
         <h2>БЭМ включает в себя много техник</h2>
         <p>Кое-что мы с вами обсудили/упомянули:</p>
         <ul>
+          <li>почему нельзя вкладывать блоки</li>
           <li class="next">bem-tools</li>
           <li class="next">миксование</li>
-          <li class="next">виды префиксов (включая <code>l-</code> и <code>js-</code> блоки)</li>
-        </ul>
+          <li class="next">зачем нужны пространства имен/префиксы (включая <code>js-</code> блоки)</li>
         </ul>
       </div>
     </section>
@@ -1688,7 +1688,9 @@
       <div>
         <h2>Но многое осталось за кадром</h2>
         <ul>
-          <li class="next">Я не рассказал вам о i-bem.js</li>
+          <li>Я не рассказал вам как разбивать блоки на файлы и складывать в файловой системе</li>
+          <li class="next">почему не нужно использовать не использовать @extend s Sass</li>
+          <li class="next">о i-bem.js</li>
           <li class="next">и об абстрактных блоках <code>(i-)</code></li>
           <li class="next">…контекстных блоках <code>(m-)</code></li>
           <li class="next">…холдер-блоках <code>(h-)</code></li>
@@ -1703,16 +1705,17 @@
       <div>
         <h2>Читать дальше</h2>
         <ul>
-          <li><a href="https://ru.bem.info/forum/-43/">что такое блок</a>, <a href="https://ru.bem.info/forum/-47/">префикс <code>b-</code></a> и <a href="https://ru.bem.info/forum/-46/">что такое независимый блок</a></li>
-          <li><a href="https://ru.bem.info/forum/-51/">контекстные блоки (темы)</a> (раздел «Внутри контекстного блока»)</li>
-          <li><a href="https://ru.bem.info/forum/-49/">layout-блоки</a></li>
-          <li><a href="https://ru.bem.info/forum/-48/">холдер-блоки</a></li>
-          <li><a href="http://bem.github.io/bem-method/html/all.ru.html">абстрактные блоки</a> (раздел „i-, от include“) и их реализация в Sass через <a href="https://github.com/FrontenderMagazine/bem-sass-modifiers/issues/1#issuecomment-69157993">%extend-only-selector+extend</a> или лучше через <a href="https://github.com/FrontenderMagazine/bem-sass-modifiers/issues/1#issuecomment-144463259">mixin+include</a></li>
-          <li><a href="https://ru.bem.info/forum/-51/">уровни переопределения</a> (раздел «Модификация файлами») и <a href="https://ru.bem.info/forum/-52/">структура блоков на файловой системе</a></li>
-          <li><a href="https://ru.bem.info/forum/-50/">глобальные модификаторы</a></li>
-          <li><a href="https://ru.bem.info/method/history/">История БЭМ</a></li>
-          <li><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">варианты использования префиксов от Гарри Робертса</a></li>
+          <li><a href="http://www.sitepoint.com/working-bem-scale-advice-top-developers">Cоветы от ведущих БЭМ-разработчиков: ошибки и best practices</a></li>
+          <li><a href="http://getbem.com/">BEM Quick Start Guide</a> — БЭМ: UnOfficial Team</li>
+          <li><a href="https://ru.bem.info/blog/doc-release-1/">Мажорный релиз новой документации</a> — БЭМ: Яндекс Team</li>
+          <li><a href="https://ru.bem.info/blog/bem-as-bootstrap/">Full BEM Stack в HTML</a> — Владимир Гриненко</li>
+          <li><a href="https://dl.dropboxusercontent.com/u/66873654/%D0%91%D0%AD%D0%9C%D0%BE%D1%81%D0%B8%D0%BF%D0%B5%D0%B4.pdf">Классификация ошибок BEM CSS</a> (со стр. 50) — Александр Корецкий <a href="http://twitter.com/n2j7">@n2j7</a></li>
+          <li><a href="http://www.getmdl.io/started/">Material Design Lite CSS</a> — Google</li>
           <li><a href="https://ru.bem.info/faq/#Зачем-использовать-i-bemjs-если-можно-писать-на-jquery">i-bem.js</a></li>
+          <li><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">варианты использования префиксов от Гарри Робертса</a></li>
+          <li><a href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> — Harry Roberts</li>
+          <li><a href="https://github.com/bevis-ui/docs">BEViS: документация</a> и <a href="http://bevis-ui.github.io/bevis-and-bt-speech/">доклад</a> — Вадим Макишвили</li>
+          <li><a href="https://ru.bem.info/method/history/">История БЭМ</a></li>
         </ul>
       </div>
     </section>
@@ -1721,15 +1724,14 @@
       <div>
         <h2>…и дальше</h2>
         <ul>
-          <li><a href="http://getbem.com/">BEM Quick Start Guide</a> — БЭМ: UnOfficial Team</li>
-          <li><a href="https://ru.bem.info/blog/doc-release-1/">Мажорный релиз новой документации</a> — БЭМ: Яндекс Team</li>
-          <li><a href="https://ru.bem.info/blog/bem-as-bootstrap/">Full BEM Stack в HTML</a> — Владимир Гриненко</li>
-          <li><a href="https://dl.dropboxusercontent.com/u/66873654/%D0%91%D0%AD%D0%9C%D0%BE%D1%81%D0%B8%D0%BF%D0%B5%D0%B4.pdf">Классификация ошибок BEM CSS</a> (со стр. 50) — Александр Корецкий <a href="http://twitter.com/n2j7">@n2j7</a></li>
-          <li><a href="http://www.getmdl.io/started/">Material Design Lite CSS</a> — Google</li>
-          <li><a href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> — Harry Roberts</li>
-          <li><a href="http://nano.sapegin.ru/all/opor-methodology">OPOR</a> — Артём Сапегин</li>
-          <li><a href="https://github.com/bevis-ui/docs">BEViS: документация</a> и <a href="http://bevis-ui.github.io/bevis-and-bt-speech/">доклад</a> — Вадим Макишвили</li>
-          <li><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">Откуда взялся зарубежный синтаксис модификаторов</a> — Nicolas Gallagher, этот синтаксис презентовали в <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding</a> — самой известной презентации БЭМ зарубежом от Гарри Робертса</li>
+          <li><a href="https://ru.bem.info/forum/-43/">что такое блок</a>, <a href="https://ru.bem.info/forum/-47/">префикс <code>b-</code></a> и <a href="https://ru.bem.info/forum/-46/">что такое независимый блок</a></li>
+          <li><a href="https://ru.bem.info/forum/-51/">контекстные блоки (темы)</a> (раздел «Внутри контекстного блока»)</li>
+          <li><a href="https://ru.bem.info/forum/-49/">layout-блоки</a></li>
+          <li><a href="https://ru.bem.info/forum/-48/">холдер-блоки</a></li>
+          <li><a href="http://bem.github.io/bem-method/html/all.ru.html">абстрактные блоки</a> (раздел „i-, от include“) и их реализация в Sass через <a href="https://github.com/FrontenderMagazine/bem-sass-modifiers/issues/1#issuecomment-69157993">%extend-only-selector+extend</a> или лучше через <a href="https://github.com/FrontenderMagazine/bem-sass-modifiers/issues/1#issuecomment-144463259">mixin+include</a></li>
+          <li><a href="https://ru.bem.info/forum/-51/">уровни переопределения</a> (раздел «Модификация файлами») и <a href="https://ru.bem.info/forum/-52/">структура блоков на файловой системе</a></li>
+          <li><a href="https://ru.bem.info/forum/-50/">глобальные модификаторы</a></li>
+          <li><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">Откуда взялся зарубежный синтаксис модификаторов и js-классы</a> — Nicolas Gallagher, его потом презентовали в <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding</a> — самой известной зарубежом презентации БЭМ от Гарри Робертса</li>
         </ul>
       </div>
     </section>
