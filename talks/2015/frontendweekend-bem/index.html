@@ -911,6 +911,18 @@
 
     <section class="slide">
       <div>
+        <h2>HTML: как правильно вкладывать блоки в блоки?</h2>
+        <pre>
+<code>&lt;div class="<mark>b-blog</mark>"&gt;</code>
+<code>    &lt;div class="<mark>b-blog_item</mark> <mark class="important">b-post</mark>"&gt;</code>
+<code>    &lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
         <h2>Связь между блоками создаст миксование!</h2>
         <p>
           В эту DOM-ноду приходят стили от 2-х разных блоков:
@@ -927,7 +939,7 @@
 
       <section class="slide">
         <div>
-          <h2>Как правильно вкладывать блоки в блоки?</h2>
+          <h2>CSS: как правильно вкладывать блоки в блоки?</h2>
           <pre>
 <code>.b-blog {</code>
 <code>  // блок </code>
@@ -950,6 +962,76 @@
 <code>  /* ещё один блок */</code>
 <code>}</code>
 </pre>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Мы написали вариант #1: микс элемента родителя + новый блок</h2>
+        <p>Позиционирование — на элементе родителя и блоке родителя, стили блока — на новом блоке.</p>
+        <pre>
+<code>&lt;div class="<mark>b-blog</mark>"&gt;</code>
+<code>    &lt;div class="<mark>b-blog_item</mark> <mark class="important">b-post</mark>"&gt;</code>
+<code>    &lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="slide shout">
+      <div>
+        <h2>Как можно было по-другому?</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>#2: Микс блоков и сетки</h2>
+        <p>Позиционирование — на классах сетки, стили блоков — на самих блоках.</p>
+        <pre>
+<code>&lt;div class="b-blog <mark>b-grid</mark>"&gt;</code>
+<code>    &lt;div class="<mark>b-grid__col</mark> <mark class="important">b-post</mark>"&gt;</code>
+<code>    &lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="slide -compact">
+      <div>
+        <h2>#2.1: Не жалеем div: блоки внутри сетки</h2>
+        <p>Позиционирование — на классах сетки, стили блоков — на самих блоках.</p>
+        <pre>
+<code>&lt;div class="b-blog"&gt;</code>
+<code>    &lt;div class="<mark>b-grid</mark>"&gt;</code>
+<code>        &lt;div class="<mark>b-grid__col</mark>"&gt;</code>
+<code>            &lt;div class="<mark class="important">b-post</mark>"&gt;</code>
+<code>            &lt;/div&gt;</code>
+<code>        &lt;/div&gt;</code>
+<code>    &lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="slide -compact">
+      <div>
+        <h2>#3: Блоки-врапперы (<code>l-</code>, <code>h-</code>)</h2>
+        <p>
+          Позиционирование — на блоках-врапперах.<br>
+          <strong>Связей между блоками (блок—элемент) больше нет!</strong>
+        </p>
+        <p class="note">Яндекс НЕ рекомендует! Но этот вариант часто встречается в жизни.</p>
+        <pre>
+<code>&lt;div class="<mark class="important">l-</mark>blog"&gt;</code>
+<code>    &lt;div class="<mark>b-</mark>blog"&gt;</code>
+<code>        &lt;div class="<mark class="important">l-</mark>post"&gt;</code>
+<code>            &lt;div class="<mark>b-</mark>post"&gt;</code>
+<code>            &lt;/div&gt;</code>
+<code>        &lt;/div&gt;</code>
+<code>    &lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+        </pre>
       </div>
     </section>
 
