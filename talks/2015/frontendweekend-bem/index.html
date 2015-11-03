@@ -142,21 +142,21 @@
     </section>
 
     <section class="slide cover shout" id="why">
+      <style>
+        #why h2 {
+          position: absolute;
+          top: 130px;
+          left: 20px;
+          text-align: left;
+          font-size: 70px;
+          margin: 0;
+          color: #fff;
+          text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        }
+      </style>
       <div>
         <img src="pictures/why.jpg" alt="Зачем?">
         <h2>ещё один доклад про БЭМ…</h2>
-        <style>
-          #why h2 {
-            position: absolute;
-            top: 130px;
-            left: 20px;
-            text-align: left;
-            font-size: 70px;
-            margin: 0;
-            color: #fff;
-            text-shadow: 0 0 10px rgba(0, 0, 0, .5);
-          }
-        </style>
         <!--
 Цель моего доклада - рассказать про то, как верстать по БЭМ и про ошибки ручной верстки.
 - Скажите, кто в этом зале пробовал верстать что-то «по БЭМ»?
@@ -175,47 +175,47 @@
     </section>
 
     <section class="slide cover" id="pepelsbey">
+      <style>
+        #pepelsbey h2 {
+          position: absolute;
+          top: 100px;
+          right: 0;
+          font-family: 'Marck Script', cursive;
+          font-size: 70px;
+          margin: 0;
+          border: 1px solid #000;
+          border-radius: 50%;
+          padding: 30px;
+          background-color: #fff;
+        }
+
+        #pepelsbey h2:before {
+          content: '';
+          position: absolute;
+          top: 150px;
+          right: 300px;
+          width: 50px;
+          height: 50px;
+          border: 1px solid #000;
+          border-radius: 50%;
+          background-color: #fff;
+        }
+
+        #pepelsbey h2:after {
+          content: '';
+          position: absolute;
+          top: 200px;
+          right: 350px;
+          width: 30px;
+          height: 30px;
+          border: 1px solid #000;
+          border-radius: 50%;
+          background-color: #fff;
+        }
+      </style>
       <div>
         <h2>Что он несёт?!</h2>
         <img src="pictures/pepelsbey.jpg" alt="Pepelsbey">
-        <style>
-          #pepelsbey h2 {
-            position: absolute;
-            top: 100px;
-            right: 0;
-            font-family: 'Marck Script', cursive;
-            font-size: 70px;
-            margin: 0;
-            border: 1px solid #000;
-            border-radius: 50%;
-            padding: 30px;
-            background-color: #fff;
-          }
-
-          #pepelsbey h2:before {
-            content: '';
-            position: absolute;
-            top: 150px;
-            right: 300px;
-            width: 50px;
-            height: 50px;
-            border: 1px solid #000;
-            border-radius: 50%;
-            background-color: #fff;
-          }
-
-          #pepelsbey h2:after {
-            content: '';
-            position: absolute;
-            top: 200px;
-            right: 350px;
-            width: 30px;
-            height: 30px;
-            border: 1px solid #000;
-            border-radius: 50%;
-            background-color: #fff;
-          }
-        </style>
       </div>
     </section>
 
@@ -434,9 +434,22 @@
       </div>
     </section>
 
-    <section class="slide cover">
+    <section class="slide cover" id="mdl">
+      <style>
+        #mdl h2 {
+          position: absolute;
+          top: 50px;
+          left: 20px;
+          text-align: center;
+          font-size: 40px;
+          line-height: 1.2;
+          margin: 0;
+          color: #fff;
+          text-shadow: 0 0 100px rgba(0, 0, 0, 1), 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+      </style>
       <div>
-        <!-- Даже разработчики Google Material Design не смогли с первого раза правильно написать имена классов по БЭМ :) -->
+        <h2>Даже разработчики Google Material Design не смогли с первого раза правильно написать имена классов по БЭМ :)</h2>
         <img src="pictures/google-mdl-issues.png" alt="">
       </div>
     </section>
@@ -1402,18 +1415,16 @@
     </section>
 
     <section class="slide shout dark" id="dialects">
-     <style>
-
-       #dialects h2 {
-         position: absolute;
-         top: 100px;
-         right: 0;
-         margin: 0;
-       }
-     </style>
+      <style>
+        #dialects h2 {
+          position: absolute;
+          top: 100px;
+          right: 0;
+          margin: 0;
+        }
+      </style>
       <div>
         <h2>Диалекты БЭМ</h2>
-
         <iframe src="embed/twitter-harisov-dialect.html" id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" allowfullscreen="" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; margin: 100px auto; box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px; position: static; visibility: visible; width: 500px;" title="Встроенный твит" height="190"></iframe>
       </div>
     </section>
@@ -1567,22 +1578,22 @@
     </section>
 
     <section class="slide cover" id="warning">
+      <style>
+        #warning h2 {
+          position: absolute;
+          top: 300px;
+          left: 150px;
+          font-size: 70px;
+          margin: 0;
+          color: #000;
+        }
+      </style>
       <div>
         <img src="pictures/warning.png" alt="">
         <h2>
-    — Теряем миксы блоков с модификаторами!<br>
-    — Не можем использовать Full BEM Stack!
-  </h2>
-        <style>
-          #warning h2 {
-            position: absolute;
-            top: 300px;
-            left: 150px;
-            font-size: 70px;
-            margin: 0;
-            color: #000;
-          }
-        </style>
+          — Теряем миксы блоков с модификаторами!<br>
+          — Не можем использовать Full BEM Stack!
+        </h2>
         <!--
 Модифкаторы без именеми блока родителя - создают проблемы про миксовании, когда сложные миксы и ты не сможешь определить к какому блоку у тебя относится микс. Довод против - что мы связываем их внутри CSS как .block { &.-type_val}
 НО! Теряем миксы 2х блоков с модификаторами (непонятно - какой мод. к какому блоку относится).
@@ -1737,6 +1748,19 @@
     </section>
 
     <section class="slide -compact" id="ThankYou">
+      <style>
+        #ThankYou .video {
+          float: right;
+        }
+        #ThankYou h3 {
+          margin-bottom: 50px;
+          line-height: normal;
+        }
+        #ThankYou h3 small {
+          font-size: 20px;
+          color: #888;
+        }
+      </style>
       <div>
         <h2>Спасибо!</h2>
         <iframe class="video" width="480" height="270" src="https://www.youtube.com/embed/kBgHdSOj33A?rel=0" frameborder="0" allowfullscreen></iframe>
@@ -1754,19 +1778,6 @@
           Видео доклада: <a href="https://www.youtube.com/watch?v=kBgHdSOj33A">youtube.com/watch?v=kBgHdSOj33A</a>
         </p>
         <p class="note">Презентация, которую вы смотрите, содержит больше слайдов и примеров, чем оригинальное видео.</p>
-        <style>
-          #ThankYou .video {
-            float: right;
-          }
-          #ThankYou h3 {
-            margin-bottom: 50px;
-            line-height: normal;
-          }
-          #ThankYou h3 small {
-            font-size: 20px;
-            color: #888;
-          }
-        </style>
       </div>
     </section>
 
