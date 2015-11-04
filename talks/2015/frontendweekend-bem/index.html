@@ -81,6 +81,13 @@
       margin-bottom: 20px;
     }
 
+    .slide pre+p,.slide code+p {
+      margin-top: 20px;
+    }
+    .slide p+pre,.slide p+code {
+      margin-top: -10px;
+    }
+
     .slide blockquote {
       margin-bottom: 50px;
     }
@@ -1532,8 +1539,8 @@
         <ul>
           <li>Префиксы (b-)</li>
           <li>Пространства имен (BEMIT)</li>
-          <li>Английский синтаксис и camelCase</li>
-          <li>Сокращённые модификаторы</li>
+          <li>Стиль Гарри Робертса, camelCase и «без подчеркиваний»</li>
+          <li>Сокращённые модификаторы (стиль „No-namespace“)</li>
           <li>JS-блоки</li>
           <li>OPOR</li>
           <li>BEViS</li>
@@ -1599,7 +1606,7 @@
 
     <section class="slide">
       <div>
-        <h2>Английский синтаксис и camelCase</h2>
+        <h2>Стиль Гарри Робертса</h2>
         <p>Многим нравится зарубежный формат модификаторов, через „--“, он читабельней.</p>
         <code>&lt;a class="block-name__element-name<mark>--state_active</mark>"&gt;</code>
       </div>
@@ -1607,9 +1614,17 @@
 
     <section class="slide">
       <div>
-        <h2>Альтернативный синтаксис и camelCase</h2>
+        <h2>Стиль CamelCase</h2>
         <p>А через camelCase – ещё читабельней!</p>
         <code>&lt;a class="<mark>blockName__elementName</mark>--state_active"&gt;</code>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Стиль без подчеркиваний</h2>
+        <p>Некоторые идут ещё дальше и заменяют „__“ на „-“. camelCase единственный гарантирует что вы поймете где блок, а где элемент.</p>
+        <code>&lt;a class="<mark>blockName-elementName</mark>--state_active"&gt;</code>
       </div>
     </section>
 
@@ -1635,33 +1650,25 @@
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide -compact">
       <div>
-        <h2>Сокращенные модификаторы</h2>
-        <p>Но некоторых из тех, кто пишет код вручную, такие модификаторы бесят нечитабельностью кода:</p>
-        <code>&lt;div class="block-name <mark>block-name_key1_value1 block-name_key2_value2 block-name_key3_value3</mark>"&gt;</code>
+        <h2>Но такие имена классов тяжело читать</h2>
+        <code>&lt;div class="block-name <mark>block-name_key1_val1 block-name_key2_val2 block-name_key3_val3</mark>"&gt;</code>
+        <p>Нет дуракоустойчивости, модификатор могут перенести без блока:</p>
+        <code>&lt;div class="<mark class="important">block-name_key1_val1</mark> some-another-block"&gt;</code>
+        <p>Хочется так:</p>
+        <code>&lt;div class="block-name <mark>-key1_val1 -key2_val2 -key3_val3</mark>"&gt;</code>
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide -compact">
       <div>
         <h2>Сокращенные модификаторы</h2>
-        <p>…и отсутствием дуракоустойчивости:</p>
-        <code>&lt;div class="<mark class="important">block-name_key1_value1</mark> some-another-block"&gt;</code>
-      </div>
-    </section>
-
-    <section class="slide">
-      <div>
-        <h2>Сокращенные модификаторы</h2>
-        <p>Им хочется так:</p>
-        <code>&lt;div class="block-name <mark>-key1_value1 -key2_value2 -key3_value3</mark>"&gt;</code>
-      </div>
-    </section>
-
-    <section class="slide">
-      <div>
-        <h2>Сокращенные модификаторы</h2>
+        <p>
+          Зарубежом их назвали „<a href="https://viget.com/extend/bem-sass-modifiers">Individual modifiers: a shorter syntax</a>“.
+          У нас перевели как «<a href="http://frontender.info/bem-sass-modifiers/#obosoblennemodifikatorsokrashtennysintaksis">Обособленные модификаторы: сокращенный синтаксис</a>».
+          Яндекс в официальной документации называет их «<a href="https://ru.bem.info/method/naming-convention/#Альтернативные-схемы-именования">Стиль No-namespace</a>».
+        </p>
         <pre>
 <code>&lt;div class="blockName__elem<mark>.-key_value</mark>"&gt;</code>
 <code>.blockName {</code>
@@ -1700,7 +1707,7 @@
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide -compact">
       <div>
         <h2>Решением может быть запись модификаторов в столбик</h2>
         <code>&lt;div class="block-name <mark>block-name_key1_value1 block-name_key2_value2 block-name_key3_value3</mark>"&gt;</code>
@@ -1710,6 +1717,7 @@
 <code>            <mark>block-name_key2_value2</mark></code>
 <code>            <mark>block-name_key3_value3</mark>"&gt;</code>
 </pre>
+     <p class="note">А ещё можно юзать Jade, а в Яндексе вообще не пишут html-код руками, у них BEMJSON.</p>
       </div>
     </section>
 
