@@ -1482,6 +1482,16 @@
       </div>
     </section>
 
+    <section class="slide">
+      <div>
+        <h2>Как «правильно» модифицировать блоки (внешний вид) от контекста?</h2>
+        <ol>
+          <li><strong>Можно юзать каскад</strong>, но это тонкая работа — для случая «перебить чуть-чуть стилей, ведь этот блок нам не понадобится переносить в изменённом виде куда-то отдельно».</li>
+          <li><strong>Добавить модификатор блоку</strong> — просто и надежно, но не создает логической связи между блоком-родителем и вложенным в него блоком, что должен изменятся.</li>
+          <li><strong>Использовать миксование</strong>: создать элемент родителя, навесить на него нужные стили и смиксовать с вложенным блоком.</li>
+      </div>
+    </section>
+
     <section class="slide shout">
       <div>
         <h2>Спрашивайте: <a href="https://ru.bem.info/forum/">ru.bem.info/forum</a></p>
@@ -1491,9 +1501,12 @@
 <section class="slide"><div>
 <h2>Пример переверстки по БЭМ (упрощенный)</h2>
         <ul>
-          <li><a href="http://net-craft.com/old">http://net-craft.com/old</a></li>
-          <li><a href="http://net-craft.com/">http://net-craft.com/</a></li>
-          <li><a href="http://net-craft.com/wp-content/themes/netcraft/dev/sass/main.scss">http://net-craft.com/wp-content/themes/netcraft/dev/sass/main.scss</a></li>
+          <li>Было: <a href="http://net-craft.com/old">http://net-craft.com/old</a></li>
+          <li>Стало: <a href="http://net-craft.com/">http://net-craft.com/</a>
+            <ul>
+              <li><a href="http://net-craft.com/wp-content/themes/netcraft/dev/sass/main.scss">http://net-craft.com/wp-content/themes/netcraft/dev/sass/main.scss</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </section>
