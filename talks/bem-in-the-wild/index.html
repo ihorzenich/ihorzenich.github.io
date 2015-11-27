@@ -6,17 +6,91 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=792, user-scalable=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <link href='http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
+  <!-- Custom Presentation Fonts -->
+  <link rel="stylesheet" href="assets/css/epam-fonts__oswald.css">
+  <!-- /Custom Presentation Fonts -->
   <style>
-    .caption h3 .name {
+    /*
+    EPAM COLOR PALETTE:
+
+    PRIMARY COLORS:
+      SHARP BLUE: #39C2D7
+      LIME GREEN: #A3C644
+      GRAPHITE: #464547
+      WHITE: #FFFFFF
+
+    SECONDARY COLORS:
+      Raspberry: #B22746
+      Plum: #8E244D
+      Dark Blue: #1A9CB0
+      Dark Green: #7F993A
+
+      Medium Gray: #666666
+      Gray: #999999
+      Light Gray: #CCCCCC
+
+    EPAM FONTS:
+      Oswald: 300,400,600+italic
+      Trebuchet MS
+    */
+
+    /* Branding */
+    .badge a {
+      background: #8E244D;
+    }
+
+    body {
+      font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",'PT Sans',sans-serif;
+    }
+
+    .caption {
+      color: #464547;
+      text-shadow: 0 1px 10px #fff
+    }
+
+    .caption a {
+      color: #1A9CB0;
+      text-shadow: 0 -1px 1px #464547;
+    }
+
+    .caption a:hover {
+      color: #39C2D7;
+    }
+
+    .caption h1 {
+      font: 600 50px/1 'Oswald', 'PT Sans Narrow', sans-serif;
+      color: #39C2D7;
+      text-shadow: 0 1px 1px #464547;
+    }
+
+    .caption a.hashtag {
+      color: #1A9CB0;
+    }
+
+    .caption h3 a.name {
+      color: #A3C644;
       text-shadow: none;
     }
 
-    .caption h3 .work {
-      color: #000;
+    .caption h3 a.work {
+      color: #7F993A;
       text-shadow: none;
     }
+
+    .slide h2 {
+      font: 600 50px/1 'Oswald',sans-serif
+    }
+
+    .shout.dark {
+      background: #464547;
+    }
+
+    .shout.dark h2 {
+      color: #FFF;
+    }
+    /* /Branding */
+
 
     #Cover h2 {
       margin: 30px 0 0;
@@ -47,14 +121,6 @@
     }
 
     #Cover p a {
-      color: #FFF;
-    }
-
-    .shout.dark {
-      background: #000;
-    }
-
-    .shout.dark h2 {
       color: #FFF;
     }
 
@@ -149,7 +215,7 @@
 <!--
 Здравствуйте! Меня зовут Игорь Зенич и я занимаюсь версткой для компании EPAM.
 -->
-        <a href="http://epam.com"><img src="pictures/EPAM-vizitka.png" alt="EPAM"></a>
+        <a href="http://epam.com"><img src="pictures/EPAM-business-card.jpg" alt="EPAM"></a>
       </div>
     </section>
 
@@ -157,7 +223,7 @@
       <div>
         <h2>В исходниках этой презентации спрятались подсказки!</h2>
         <p>В комментах html написаны тезисы доклада и комментарии к слайдам требующим пояснений.</p>
-        <p>Презентация: <a href="http://delka.github.io/talks/bem-in-the-wild/">delka.github.io/talks/bem-in-the-wild/</a></p>
+        <p>Презентация: <a href="http://bit.ly/bem-in-the-wild">bit.ly/bem-in-the-wild</a></p>
       </div>
     </section>
 
@@ -662,11 +728,8 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       </div>
     </section>
 
-    <section class="slide -compact" id="ThankYou">
+    <section class="slide" id="ThankYou">
       <style>
-        #ThankYou .video {
-          float: right;
-        }
         #ThankYou h3 {
           margin-bottom: 50px;
           line-height: normal;
@@ -678,7 +741,7 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       </style>
       <div>
         <h2>Спасибо!</h2>
-        <iframe class="video" width="480" height="270" src="https://www.youtube.com/embed/kBgHdSOj33A?rel=0" frameborder="0" allowfullscreen></iframe>
+        <img src="assets/img/epam-logo--primary.svg" alt="EPAM logo" style="float: right; width: 400px" />
         <h3>
           Igor Zenich<br>
           <small>EPAM</small>
@@ -688,9 +751,7 @@ Each time we have to understand what exactly BEM we are talking about. Both with
           <li><a href="http://twitter.com/delaz">twitter.com/delaz</a></li>
           <li><a href="mailto:igor@delka.name">igor@delka.name</a></li>
         </ul>
-        <p>
-          Презентация: <a href="http://delka.github.io/talks/2015/frontendweekend-bem/">delka.github.io/talks/2015/frontendweekend-bem/</a><br>
-        </p>
+        <p>Презентация: <a href="http://bit.ly/bem-in-the-wild">bit.ly/bem-in-the-wild</a></p>
       </div>
     </section>
 
