@@ -472,8 +472,8 @@ Each time we have to understand what exactly BEM we are talking about. Both with
         $(window).on('hashchange',function(){
             var hash = location.hash.slice(1);
             if (hash == 'fullstackbem') {
+              $("#fullstackbem_video")[0].playbackRate = 2;
               $("#fullstackbem_video")[0].src += "&autoplay=1";
-              $("#fullstackbem_video")[0].playbackRate = 10;
             }
         });
       </script>
