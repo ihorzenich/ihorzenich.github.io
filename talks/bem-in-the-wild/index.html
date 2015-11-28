@@ -466,13 +466,13 @@ Each time we have to understand what exactly BEM we are talking about. Both with
 То, что я вам сейчас показываю - называется Full BEM Stack в HTML, один из промежуточных вариантов между ручным написанием БЭМ и полной генерацией всего.
 Круто, но для большинства непонятно.
         -->
-        <iframe id="fullstackbem_video" width="100%" height="100%" src="https://www.youtube.com/embed/VKzIFOxkqC4" frameborder="0" allowfullscreen></iframe>
+        <iframe id="fullstackbem_video" width="100%" height="100%" src="https://www.youtube.com/embed/VKzIFOxkqC4?t=3m0s" frameborder="0" allowfullscreen></iframe>
       </div>
       <script>
         $(window).on('hashchange',function(){
             var hash = location.hash.slice(1);
             if (hash == 'fullstackbem') {
-              $("#fullstackbem_video")[0].src += "?&autoplay=1";
+              $("#fullstackbem_video")[0].src += "&autoplay=1";
               $("#fullstackbem_video")[0].playbackRate = 10;
             }
         });
@@ -1012,7 +1012,7 @@ Each time we have to understand what exactly BEM we are talking about. Both with
 
     <section class="slide shout">
       <div>
-        <h2>Это всё БЭМ</h2>
+        <h2><a href="http://bem.info">bem.info</a></h2>
       </div>
     </section>
 
@@ -1029,17 +1029,8 @@ Each time we have to understand what exactly BEM we are talking about. Both with
 
     <section class="slide shout">
       <div>
-        <h2><a href="http://bem.info">bem.info</a></h2>
+        <h2>Это всё БЭМ</h2>
       </div>
-    </section>
-
-    <section class="slide shout grow">
-      <div>
-        <h2>Пробуйте!</h2>
-      </div>
-<!--
-Не бойтесь придумывать своё!
--->
     </section>
 
     <section class="slide shout">
@@ -1068,6 +1059,17 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       </div>
     </section>
 
+<section class="slide"><div>
+  <h2>MCSS → BEM</h2>
+    <figure>
+      <blockquote>
+        <p>Как автор MCSS, рекоммендую теперь уже использовать именно БЭМ. С тех пор он стал менее строгим, и более понятным.
+MCSS может пригодится только на очень большом, монолитном проекте.</p>
+      </blockquote>
+        <figcaption>Роберт Харитонов</figcaption>
+    </figure>
+</div></section>
+
      <section class="slide cover -shadow -bright">
       <div>
         <h2>Джонатан Снук</h2>
@@ -1085,17 +1087,6 @@ Each time we have to understand what exactly BEM we are talking about. Both with
     </figure>
 </div></section>
 
-<section class="slide"><div>
-  <h2>MCSS → BEM</h2>
-    <figure>
-      <blockquote>
-        <p>Как автор MCSS, рекоммендую теперь уже использовать именно БЭМ. С тех пор он стал менее строгим, и более понятным.
-MCSS может пригодится только на очень большом, монолитном проекте.</p>
-      </blockquote>
-        <figcaption>Роберт Харитонов</figcaption>
-    </figure>
-</div></section>
-
     <section class="slide shout">
       <div>
         <h2><a href="https://ru.bem.info/forum/">ru.bem.info/<br>forum/</a></h2>
@@ -1104,8 +1095,17 @@ MCSS может пригодится только на очень большом
 
     <section class="slide shout">
       <div>
-        <h2><a href="https://web-standards-org.slack.com/messages/wsd/">Slack WSD</a></h2>
+        <h2><a href="https://web-standards-org.slack.com/messages/wsd/">Slack WSD<br>/bem</a></h2>
       </div>
+    </section>
+
+    <section class="slide shout grow">
+      <div>
+        <h2>Пробуйте!</h2>
+      </div>
+<!--
+Не бойтесь придумывать своё!
+-->
     </section>
 
     <section class="slide shout dark">
