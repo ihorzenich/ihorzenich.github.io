@@ -419,6 +419,9 @@
     </section>
 
     <section class="slide">
+     <!--
+Недавно у меня с коллегами возникла проблема: мы отправили друг другу множество писем и только лишь после созвона разобрались о каком БЭМ мы говорим.
+     -->
       <div>
         <figure>
           <blockquote>
@@ -485,6 +488,7 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       <div>
         <!--
 Проблема в том, что Яндекс придумал крутую методологию, но ему некогда было формулировать и объяснять теорию. Во первых они ещё сами искали верный путь, а во вторых - они решали практические задачи и в своих докладах говорили про то, как они их решают, эти свои задачи, обсуждали свою Яндекс-специфику, которая у большинства не возникнет. В примерах они показывали то, как они сами используют БЭМ, для своих специфических задач. Ну и  развивали они его конечно же для решения своих задач, что логично.
+Слишком сосредоточились на инструментах.
 Первая крайне сырая документация появилась только спустя 4 года.
 Выглядела она примерно вот так
    -->
@@ -692,17 +696,16 @@ Each time we have to understand what exactly BEM we are talking about. Both with
         <h2>OPOR</h2>
         <p>Известный пример использования методологии БЭМ сторонним разработчиком - Артёмом Сапегиным</p>
         <pre>
-<code>({</code>
-<code>  block : 'page',</code>
-<code>  title : 'hello',</code>
-<code>  head : [</code>
-<code>    { elem : 'css', url : 'hello.min.css' }</code>
-<code>  ],</code>
-<code>  scripts : [{ elem : 'js', url : 'hello.min.js' }],</code>
-<code>  mods : { theme : 'islands' },</code>
-<code>  content : [</code>
-<code>    {</code>
-<code>      block : 'hello',</code>
+<code>.logo { color:saddlebrown; }</code>
+<code>.page_about .logo { color:ghostwhite; }</code>
+<code>social-button i {}</code>
+<code>&lt;div class="social-button"&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;</code>
+<code>.scrollable</code>
+<code>a.fake</code>
+<code>.is-expanded</code>
+<code>.js-select</code>
+<code>.header</code>
+<code>  .header-i</code>
     </pre>
       </div>
     </section>
@@ -727,19 +730,6 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       <div>
         <h2>BEViS</h2>
         <p>Диалект БЭМ, с более строгими правилами для максимальной надежности верстки, придуманный Вадимом Макишвили для Яндекс.Карт.</p>
-        <pre>
-<code>({</code>
-<code>  block : 'page',</code>
-<code>  title : 'hello',</code>
-<code>  head : [</code>
-<code>    { elem : 'css', url : 'hello.min.css' }</code>
-<code>  ],</code>
-<code>  scripts : [{ elem : 'js', url : 'hello.min.js' }],</code>
-<code>  mods : { theme : 'islands' },</code>
-<code>  content : [</code>
-<code>    {</code>
-<code>      block : 'hello',</code>
-    </pre>
       </div>
     </section>
 
@@ -764,18 +754,11 @@ Each time we have to understand what exactly BEM we are talking about. Both with
         <h2>BEMIT: Пространства имен</h2>
         <p>Продвинутое использование префиксов и суффиксов от Гарри Робертса.
           Попытка описать взаимосвязь между независимыми блоками с точки зрения SMACSS и OOCSS.</p>
-        <pre>
-<code>({</code>
-<code>  block : 'page',</code>
-<code>  title : 'hello',</code>
-<code>  head : [</code>
-<code>    { elem : 'css', url : 'hello.min.css' }</code>
-<code>  ],</code>
-<code>  scripts : [{ elem : 'js', url : 'hello.min.js' }],</code>
-<code>  mods : { theme : 'islands' },</code>
-<code>  content : [</code>
-<code>    {</code>
-<code>      block : 'hello',</code>
+    <pre>
+<code>&lt;div class="o-media@md  c-user  c-user--premium"&gt;</code>
+<code>  &lt;img src="" alt="" class="o-media__img@md  c-user__photo" /&gt;</code>
+<code>  &lt;p class="o-media__body@md  c-user__bio">...&gt;/p&gt;</code>
+<code>&lt;/div&gt;</code>
     </pre>
       </div>
     </section>
@@ -797,22 +780,12 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       </div>
     </section>
 
-    <section class="slide -compact">
+    <section class="slide">
       <div>
         <h2>БЁМ: шутка всерьез</h2>
         <p>БЭМ в котором можно писать как хочешь. Хоть с элементами элементов.</p>
         <pre>
-<code>({</code>
-<code>  block : 'page',</code>
-<code>  title : 'hello',</code>
-<code>  head : [</code>
-<code>    { elem : 'css', url : 'hello.min.css' }</code>
-<code>  ],</code>
-<code>  scripts : [{ elem : 'js', url : 'hello.min.js' }],</code>
-<code>  mods : { theme : 'islands' },</code>
-<code>  content : [</code>
-<code>    {</code>
-<code>      block : 'hello',</code>
+<code>.block__el__el</code>
     </pre>
       </div>
     </section>
@@ -850,22 +823,15 @@ Each time we have to understand what exactly BEM we are talking about. Both with
           </tr>
         </table>
       </div>
-      </section>
-
-      <section class="slide">
-        <div>
-          <h2>Префиксы</h2>
-        <p>
+        <!--
           Были в раннем БЭМ.
           Сейчас пропагандируются Гарри Робертсом и используются многими не-Яндекс разработчиками.
           Используются для создания своего пространства имен и логического разделения блоков.
-        </p>
-        <!--
+
 Яндекс отказался от них потому что им вначале нужно было создать своё пространство имен (т.к изначальный сайт был сверстан студией Лебедева и им нужно было отличать свой код от нового кода по БЭМ). Так они создали пространство имен и когда обнаружили, что весь код написан по БЭМ им префиксы оказались не нужны. Это просто совпало с тем, что пояилась сборка. Целенаправленно Яндекс сейчас не пишет префиксы (разве что они остались на старых проектах).
 Ну вы то живете не в своём замкнутом мире, у вас есть и legacy-код и сторонний код, вам нужно своё пространство имен, чтоб избегать конфликтов.
 -->
-      </div>
-    </section>
+      </section>
 
     <section class="slide shout dark">
       <div>
@@ -960,9 +926,25 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       </div>
     </section>
 
-    <section class="slide shout dark">
+    <section class="slide cover shout dark">
       <div>
         <h2>Госдеп</h2>
+        <img src="pictures/bem-gov.png" alt="">
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>U.S. Goverment</h2>
+        <pre>
+<code>.accordion</code>
+<code>.accordion-item</code>
+<code>.accordion-item-selected</code>
+<code> </code>
+<code>.nav_bar</code>
+<code>.nav_bar-link</code>
+<code>.nav_bar-link-clicked</code>
+    </pre>
       </div>
     </section>
 
@@ -972,7 +954,46 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       </div>
     </section>
 
+    <section class="slide">
+      <div>
+        <h2>BEML</h2>
+        <p>Препроцессор BEM для HTML через Grunt/Gulp</p>
+        <pre>
+<code>&lt;div block="b-animals"&gt;</code>
+<code>  &lt;div elem="cat" mod="size:big, color:red"&gt;&lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+    </pre>
+      </div>
+    </section>
 
+    <section class="slide">
+      <div>
+        <h2>posthtml-bem</h2>
+        <p>Препроцессор BEM для HTML через PostHTML.<br>
+        Синтаксис почти такой же, но с отличиями!</p>
+        <pre>
+<code>&lt;div block="MadTeaParty"&gt;</code>
+<code>  &lt;div elem="march-hare" mods="type:mad">March Hare&lt;/div&gt;</code>
+<code>  &lt;div elem="march-hare" mods="mad">March Hare&lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+    </pre>
+        <p class="note">Please use "mods" for the attribute modifiers instead of "mod" and a space as a separator of modifiers instead of a comma.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>BEMto</h2>
+        <p>Написание BEM в Jade.</p>
+        <pre>
+<code>+b.block1</code>
+<code>  +e.element1 Foo</code>
+<code>  +b.block2</code>
+<code>    +e('a')(href="#bar").element Bar</code>
+<code>  +e.element2 Baz</code>
+    </pre>
+      </div>
+    </section>
 
     <section class="slide">
       <div>
@@ -1017,6 +1038,25 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       </div>
 <!--
 Не бойтесь придумывать своё!
+-->
+    </section>
+
+    <section class="slide shout">
+      <div>
+        <h2>Методология и реализации</h2>
+      </div>
+<!--
+Есть методология, а есть реализации.
+-->
+    </section>
+
+    <section class="slide shout dark">
+      <div>
+        <h2>BEM is like Agile</h2>
+      </div>
+<!--
+Не бойтесь придумывать своё!
+БЭМ на самом деле не требует даже классов вида  .block__element
 -->
     </section>
 
@@ -1065,6 +1105,15 @@ MCSS может пригодится только на очень большом
       <div>
         <h2><a href="https://web-standards-org.slack.com/messages/wsd/">Slack WSD</a></h2>
       </div>
+    </section>
+
+    <section class="slide shout dark">
+      <div>
+        <h2>%Company% BEM</h2>
+      </div>
+<!--
+Нам не хватает имен. BEM workflow в отличие от Git workflow ещё не написан. У вас есть шансы сделать название вашей реализации нарицательной.
+-->
     </section>
 
     <section class="slide -compact">
