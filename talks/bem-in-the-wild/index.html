@@ -630,6 +630,14 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       </div>
     </section>
 
+    <section class="slide">
+      <div>
+        <!-- убрать рамку у твита -->
+        <iframe src="embed/twitter-jsunderhood-1.html" id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" allowfullscreen="" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin: 0px auto 20px; border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187); border-width: 1px; border-style: solid; box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px; position: static; visibility: visible; width: 500px;" title="Встроенный твит" height="220"></iframe>
+        <iframe src="embed/twitter-jsunderhood-2.html" id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" allowfullscreen="" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin: 20px auto; border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187); border-width: 1px; border-style: solid; box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px; position: static; visibility: visible; width: 500px;" title="Встроенный твит" height="220"></iframe>
+      </div>
+    </section>
+
     <section class="slide cover" id="mdl">
       <style>
         #mdl h2 {
@@ -647,14 +655,6 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       <div>
         <h2>Даже разработчики Google Material Design не смогли с первого раза правильно написать имена классов по БЭМ :)</h2>
         <img src="pictures/google-mdl-issues.png" alt="">
-      </div>
-    </section>
-
-    <section class="slide">
-      <div>
-        <!-- убрать рамку у твита -->
-        <iframe src="embed/twitter-jsunderhood-1.html" id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" allowfullscreen="" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin: 0px auto 20px; border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187); border-width: 1px; border-style: solid; box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px; position: static; visibility: visible; width: 500px;" title="Встроенный твит" height="220"></iframe>
-        <iframe src="embed/twitter-jsunderhood-2.html" id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" allowfullscreen="" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin: 20px auto; border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187); border-width: 1px; border-style: solid; box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px; position: static; visibility: visible; width: 500px;" title="Встроенный твит" height="220"></iframe>
       </div>
     </section>
 
@@ -770,8 +770,8 @@ Each time we have to understand what exactly BEM we are talking about. Both with
           Попытка описать взаимосвязь между независимыми блоками с точки зрения SMACSS и OOCSS.</p>
     <pre>
 <code>&lt;div class="o-media@md  c-user  c-user--premium"&gt;</code>
-<code>  &lt;img src="" alt="" class="o-media__img@md  c-user__photo" /&gt;</code>
-<code>  &lt;p class="o-media__body@md  c-user__bio">...&gt;/p&gt;</code>
+<code>  &lt;img src="" class="o-media__img@md  c-user__photo" /&gt;</code>
+<code>  &lt;p class="o-media__body@md  c-user__bio">...&lt;/p&gt;</code>
 <code>&lt;/div&gt;</code>
     </pre>
       </div>
@@ -878,7 +878,7 @@ Each time we have to understand what exactly BEM we are talking about. Both with
     <section class="slide">
       <div>
         <h2>Стиль без подчеркиваний</h2>
-        <p>Некоторые идут ещё дальше и заменяют „__“ на „-“. camelCase единственный гарантирует что вы поймете где блок, а где элемент.</p>
+        <p>Некоторые идут ещё дальше и заменяют <code>__</code> на <code>-</code>. camelCase единственный гарантирует что вы поймете где блок, а где элемент.</p>
         <code>&lt;a class="<mark>blockName-elementName</mark>--state_active"&gt;</code>
       </div>
     </section>
@@ -939,10 +939,19 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide -compact">
       <div>
         <h2>Альтернативные реализации:<br>Google MDL</h2>
         <p>Библиотека блоков от Google, css-реализации их Material Design придуманного для Android.</p>
+        <pre>
+<code>&lt;!-- Accent-colored raised button with ripple --&gt;</code>
+<code>&lt;button class="mdl-button mdl-js-button&gt;</code>
+<code>                  mdl-button--raised&gt;</code>
+<code>                  mdl-js-ripple-effect&gt;</code>
+<code>                  mdl-button--accent"&gt;</code>
+<code>  Button</code>
+<code>&lt;/button&gt;</code>
+    </pre>
       </div>
     </section>
 
