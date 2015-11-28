@@ -563,12 +563,10 @@ Each time we have to understand what exactly BEM we are talking about. Both with
 <code>content : [</code>
 <code>  {</code>
 <code>    block : 'hello',</code>
-<code>    content : [</code>
-<code>      {</code>
+<code>    content : [{</code>
 <code>        elem : 'greeting',</code>
 <code>        content : 'Привет, %пользователь%!'</code>
-<code>      },</code>
-<code>      {</code>
+<code>      },{</code>
 <code>        block : 'input',</code>
 <code>        mods : {theme : 'islands', size : 'm'},</code>
 <code>        name : 'name',</code>
@@ -584,7 +582,8 @@ Each time we have to understand what exactly BEM we are talking about. Both with
         <pre>
 <code>      {</code>
 <code>        block : 'button',</code>
-<code>        mods : {theme : 'islands', size : 'm', type : 'submit'},</code>
+<code>        mods : {theme : 'islands', size : 'm',</code>
+<code>                type : 'submit'},</code>
 <code>        text : 'Нажать'</code>
 <code>      }</code>
 <code>    ]</code>
@@ -665,8 +664,17 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       <style>
         #dialects h2 {
           position: absolute;
-          top: 100px;
+          top: 200px;
           right: 0;
+          margin: 0;
+        }
+        #dialects iframe {
+          position: absolute !important;
+          top: 200px;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
           margin: 0;
         }
       </style>
@@ -727,7 +735,7 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       </div>
     </section>
 
-    <section class="slide -compact">
+    <section class="slide">
       <div>
         <h2>BEViS</h2>
         <p>Диалект БЭМ, с более строгими правилами для максимальной надежности верстки, придуманный Вадимом Макишвили для Яндекс.Карт.</p>
@@ -750,7 +758,7 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       </div>
     </section>
 
-    <section class="slide -compact">
+    <section class="slide">
       <div>
         <h2>BEMIT: Пространства имен</h2>
         <p>Продвинутое использование префиксов и суффиксов от Гарри Робертса.
@@ -788,6 +796,12 @@ Each time we have to understand what exactly BEM we are talking about. Both with
         <pre>
 <code>.block__el__el</code>
     </pre>
+    <figure>
+      <blockquote>
+        <p>Теперь я использую БЁМ — это примерно как БЭМ, только вы можете писать его как хотите, а не как укажет партия или церковь. Ура!     </p>
+      </blockquote>
+        <figcaption>Роман Комаров</figcaption>
+    </figure>
       </div>
     </section>
 
@@ -1081,7 +1095,7 @@ MCSS может пригодится только на очень большом
   <h2>SMACSS → BEM</h2>
     <figure>
       <blockquote>
-        <p>Most common misspelling is “SMACCS”. I should just rename it to BEM.</p>
+        <p>Most common misspelling is “SMACCS”.<br>I should just rename it to BEM.</p>
       </blockquote>
         <figcaption>Jonathan Snook</figcaption>
     </figure>
@@ -1147,7 +1161,7 @@ MCSS может пригодится только на очень большом
           <li><a href="http://bem.github.io/bem-method/html/all.ru.html">абстрактные блоки</a> (раздел „i-, от include“) и их реализация в Sass через <a href="https://github.com/FrontenderMagazine/bem-sass-modifiers/issues/1#issuecomment-69157993">%extend-only-selector+extend</a> или лучше через <a href="https://github.com/FrontenderMagazine/bem-sass-modifiers/issues/1#issuecomment-144463259">mixin+include</a></li>
           <li><a href="https://ru.bem.info/forum/-51/">уровни переопределения</a> (раздел «Модификация файлами») и <a href="https://ru.bem.info/forum/-52/">структура блоков на файловой системе</a></li>
           <li><a href="https://ru.bem.info/forum/-50/">глобальные модификаторы</a></li>
-          <li><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">Откуда взялся зарубежный синтаксис модификаторов и js-классы</a> — Nicolas Gallagher, его потом презентовали в <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding</a> — самой известной зарубежом презентации БЭМ от Гарри Робертса</li>
+          <li><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">Откуда взялся зарубежный синтаксис модификаторов и js-классы</a> — Nicolas Gallagher</li>
         </ul>
       </div>
     </section>
