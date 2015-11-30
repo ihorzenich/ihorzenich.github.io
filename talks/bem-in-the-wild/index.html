@@ -459,7 +459,7 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       </div>
     </section>
 
-    <section class="slide cover" id="fullstackbem">
+    <section class="slide cover" id="fullstackbem" data-timing="10">
       <style>
         #fullstackbem iframe {
           z-index: 1;
@@ -711,11 +711,11 @@ Each time we have to understand what exactly BEM we are talking about. Both with
 
     <section class="slide -compact">
       <div>
-        <h2>OPOR</h2>
-        <p>Известный пример использования методологии БЭМ сторонним разработчиком - Артёмом Сапегиным</p>
+        <h2><a href="http://nano.sapegin.ru/all/opor-methodology">OPOR</a></h2>
+        <p>Известный пример использования методологии БЭМ сторонним разработчиком - Артёмом Сапегиным.</p>
         <pre>
-<code>.logo { color:saddlebrown; }</code>
-<code>.page_about .logo { color:ghostwhite; }</code>
+<code>.logo {color: saddlebrown;}</code>
+<code>.page_about .logo {color: ghostwhite;}</code>
 <code>social-button i {}</code>
 <code>&lt;div class="social-button"&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;</code>
 <code>.scrollable</code>
@@ -744,10 +744,20 @@ Each time we have to understand what exactly BEM we are talking about. Both with
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide -compact">
       <div>
-        <h2>BEViS</h2>
+        <h2><a href="https://github.com/bevis-ui/docs">BEViS</a></h2>
         <p>Диалект БЭМ, с более строгими правилами для максимальной надежности верстки, придуманный Вадимом Макишвили для Яндекс.Карт.</p>
+        <p>
+          Нет миксов.<br>
+          Нет модификаторов.<br>
+          Есть состояния:
+        </p>
+    <pre>
+<code>&lt;div class="popup _orientation_top"&gt;&lt;/div&gt;</code>
+<code>&lt;button class="button _pressed _focused"&gt;&lt;/div&gt;</code>
+<code>.button._pressed {}</code>
+    </pre>
       </div>
     </section>
 
@@ -769,7 +779,7 @@ Each time we have to understand what exactly BEM we are talking about. Both with
 
     <section class="slide">
       <div>
-        <h2>BEMIT: пространства имен</h2>
+        <h2><a href="http://frontender.info/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a>: пространства имен</h2>
         <p>Продвинутое использование префиксов и суффиксов от Гарри Робертса.
           Попытка описать взаимосвязь между независимыми блоками с точки зрения SMACSS и OOCSS.</p>
     <pre>
@@ -800,10 +810,10 @@ Each time we have to understand what exactly BEM we are talking about. Both with
 
     <section class="slide">
       <div>
-        <h2>БЁМ: шутка всерьез</h2>
+        <h2><a href="https://twitter.com/ki_zu/status/641515643628593152">БЁМ</a>: шутка всерьез</h2>
         <p>БЭМ в котором можно писать как хочешь. Хоть с элементами элементов.</p>
         <pre>
-<code>.block__el__el</code>
+<code>.block__element__subelement</code>
     </pre>
     <figure>
       <blockquote>
@@ -945,7 +955,7 @@ Each time we have to understand what exactly BEM we are talking about. Both with
 
     <section class="slide">
       <div>
-        <h2>Google MDL</h2>
+        <h2><a href="http://www.getmdl.io/started/">Google MDL</a></h2>
         <p>Библиотека блоков от Google, css-реализации их Material Design придуманного для Android.</p>
         <pre>
 <code>&lt;!-- Accent-colored raised button with ripple --&gt;</code>
@@ -968,7 +978,7 @@ Each time we have to understand what exactly BEM we are talking about. Both with
 
     <section class="slide">
       <div>
-        <h2>U.S. Goverment</h2>
+        <h2>U.S. Goverment: <a href="https://pages.18f.gov/frontend/css-coding-styleguide/naming/">18F BEM</a></h2>
         <pre>
 <code>.accordion</code>
 <code>.accordion-item</code>
@@ -1074,6 +1084,23 @@ Each time we have to understand what exactly BEM we are talking about. Both with
 -->
     </section>
 
+    <section class="slide">
+      <div>
+        <h2>Реализации БЭМ:</h2>
+        <ul>
+          <li><a href="http://nano.sapegin.ru/all/opor-methodology">OPOR</a></li>
+          <li><a href="https://github.com/bevis-ui/docs">BEViS</a></li>
+          <li><a href="http://frontender.info/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a></li>
+          <li><a href="https://twitter.com/ki_zu/status/641515643628593152">БЁМ</a></li>
+          <li><a href="https://pages.18f.gov/frontend/css-coding-styleguide/naming/">18F BEM</a></li>
+          <li><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">Harry Roberts BEM</a></li>
+          <li><a href="https://github.com/ideus-team/guidelines/blob/master/frontend/bem.md">iDeus BEM</a></li>
+          <li><a href="https://github.com/coderiver/sass">Coderiver BEM</a></li>
+          <li><a href="http://azagroup.ru/azabem-css-method/">AzaBEM</a></li>
+        </ul>
+      </div>
+    </section>
+
     <section class="slide shout dark">
       <div>
         <h2>BEM is like Agile</h2>
@@ -1095,7 +1122,7 @@ Each time we have to understand what exactly BEM we are talking about. Both with
     </section>
 
 <section class="slide"><div>
-  <h2>MCSS → BEM</h2>
+  <h2><a href="https://operatino.github.io/MCSS/">MCSS</a> → BEM</h2>
     <figure>
       <blockquote>
         <p>Как автор MCSS, рекоммендую теперь уже использовать именно БЭМ. С тех пор он стал менее строгим, и более понятным.
@@ -1113,7 +1140,7 @@ MCSS может пригодится только на очень большом
     </section>
 
 <section class="slide"><div>
-  <h2>SMACSS → BEM</h2>
+  <h2><a href="https://smacss.com/">SMACSS</a> → BEM</h2>
     <figure>
       <blockquote>
         <p>Most common misspelling is “SMACCS”.<br>I should just rename it to BEM.</p>
