@@ -1,0 +1,165 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald-demibold-webfont.eot");
+  src: url("../fonts/oswald-demibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-demibold-webfont.woff2") format("woff2"), url("../fonts/oswald-demibold-webfont.woff") format("woff"), url("../fonts/oswald-demibold-webfont.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald-regular-webfont.eot");
+  src: url("../fonts/oswald-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-regular-webfont.woff2") format("woff2"), url("../fonts/oswald-regular-webfont.woff") format("woff"), url("../fonts/oswald-regular-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald-light-webfont.eot");
+  src: url("../fonts/oswald-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-light-webfont.woff2") format("woff2"), url("../fonts/oswald-light-webfont.woff") format("woff"), url("../fonts/oswald-light-webfont.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald-demi-bolditalic-webfont.eot");
+  src: url("../fonts/oswald-demi-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-demi-bolditalic-webfont.woff2") format("woff2"), url("../fonts/oswald-demi-bolditalic-webfont.woff") format("woff"), url("../fonts/oswald-demi-bolditalic-webfont.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic; }
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald-regularitalic-webfont.eot");
+  src: url("../fonts/oswald-regularitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-regularitalic-webfont.woff2") format("woff2"), url("../fonts/oswald-regularitalic-webfont.woff") format("woff"), url("../fonts/oswald-regularitalic-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald-lightitalic-webfont.eot");
+  src: url("../fonts/oswald-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-lightitalic-webfont.woff2") format("woff2"), url("../fonts/oswald-lightitalic-webfont.woff") format("woff"), url("../fonts/oswald-lightitalic-webfont.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+body {
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "PT Sans", sans-serif; }
+
+.badge a {
+  background: #8E244D; }
+
+.caption {
+  color: #464547;
+  text-shadow: 0 1px 10px #fff; }
+  .caption a {
+    color: #1A9CB0;
+    text-shadow: 0 -1px 1px #464547; }
+    .caption a:hover {
+      color: #39C2D7; }
+
+.caption h1 {
+  font: 600 50px/1 'Oswald', 'PT Sans Narrow', sans-serif;
+  color: #39C2D7;
+  text-shadow: 0 1px 1px #464547; }
+.caption h3 a.name {
+  color: #A3C644;
+  text-shadow: none; }
+.caption h3 a.work {
+  color: #7F993A;
+  text-shadow: none; }
+.caption a.hashtag {
+  color: #1A9CB0; }
+
+.slide h2 {
+  font: 600 50px/1 'Oswald',sans-serif; }
+
+.shout.dark {
+  background: #464547; }
+  .shout.dark h2 {
+    color: #FFF; }
+
+#Cover h2 {
+  margin: 30px 0 0;
+  color: #FFF;
+  text-align: center;
+  font-size: 70px;
+  text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3); }
+#Cover .subheader {
+  position: absolute;
+  bottom: 50px;
+  right: 180px; }
+#Cover pre {
+  color: #FFF;
+  text-shadow: 0 0 20px black;
+  white-space: pre; }
+#Cover p {
+  margin: 10px 0 0;
+  text-align: center;
+  color: #FFF;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 1.5; }
+  #Cover p a {
+    color: #FFF; }
+
+.slide.shout h2 {
+  line-height: 1.2; }
+.slide.-compact > div {
+  padding-top: 20px;
+  height: 620px; }
+.slide.-shadow pre code:before {
+  text-shadow: none; }
+.slide.-shadow.-bright {
+  color: #B22746;
+  text-shadow: 2px 2px 0px #fff, 0 0 30px black; }
+  .slide.-shadow.-bright h2 {
+    color: #A3C644;
+    text-shadow: 2px 2px 0px #fff, 0 0 40px rgba(0, 0, 0, 0.5); }
+  .slide.-shadow.-bright kbd,
+  .slide.-shadow.-bright code,
+  .slide.-shadow.-bright samp {
+    color: inherit; }
+.slide.-shadow.-dark {
+  text-shadow: 1px 1px 0px #fff;
+  color: #39C2D7; }
+  .slide.-shadow.-dark h2 {
+    color: #A3C644;
+    text-shadow: 2px 2px 0px #fff, 0 0 40px rgba(0, 0, 0, 0.5); }
+  .slide.-shadow.-dark kbd,
+  .slide.-shadow.-dark code,
+  .slide.-shadow.-dark samp {
+    color: inherit; }
+.slide h2 {
+  padding-right: 50px; }
+.slide pre {
+  margin-bottom: 20px; }
+  .slide pre code {
+    line-height: 1.7; }
+    .slide pre code.wrap {
+      white-space: normal; }
+.slide p {
+  margin-bottom: 20px; }
+  .slide p.note {
+    line-height: 1.5; }
+  .slide pre + .slide p, .slide code + .slide p {
+    margin-top: 20px; }
+  .slide p + .slide pre, .slide p + .slide code {
+    margin-top: -10px; }
+.slide blockquote {
+  margin-bottom: 50px; }
+.slide ol,
+.slide ul {
+  margin-left: 20px;
+  line-height: 1.7; }
+.slide .custom-numbered-list li:before {
+  content: attr(data-num) ". "; }
+
+.shout p.note {
+  position: absolute;
+  bottom: 20px;
+  right: 10px; }
+
+img {
+  max-width: 100%; }
+
+mark.important {
+  background: #C00;
+  color: #FFF; }
+
+.wbr {
+  white-space: nowrap; }
+
+/*# sourceMappingURL=style.css.map */
