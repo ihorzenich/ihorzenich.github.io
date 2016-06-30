@@ -1438,6 +1438,24 @@
       </div>
     </section>
 
+    <section class="slide -compact">
+      <div>
+        <h2>или вложим эти стили в сам элемент…</h2>
+        <pre>
+<code>.b-list {</code>
+<code>  <mark>$rootParent</mark>: &;</code>
+<code>  &<mark class="important">__item</mark> {</code>
+<code>    /* обычный элемент */</code>
+<code>    #<mark>{$rootParent}</mark><mark class="important">--style_numered</mark> <mark class="important">&</mark> {</code>
+<code>      /* элемент модифицированного блока */ </code>
+<code>    }</code>
+<code>  }</code>
+<code>}</code>
+</pre>
+        <p class="note"><sup>*</sup> Это разрешённая практика в БЭМ, но изменение стилей не должно быть монструозным.</p>
+      </div>
+    </section>
+
     <section class="slide">
       <div>
         <h2>Скомпилируется в:</h2>
@@ -1903,7 +1921,7 @@
     <!-- Copyright © 2014 Yours Truly, Famous Inc. -->
     <!-- Photos by John Carey, fiftyfootshadows.net -->
 
-        
+
      <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -1912,6 +1930,6 @@
 
       ga('create', 'UA-6535082-3', 'auto');
       ga('send', 'pageview');
-    </script>        
-    </body>    
+    </script>
+    </body>
 </html>
