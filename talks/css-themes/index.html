@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>CSS Themes</h1>
+		<h2><a class="hashtag" href="https://twitter.com/hashtag/KharkivCSS?src=hash">#KharkivCSS</a>, September 17, 2016</h2>
+    <h3><a class="name" href="http://twitter.com/ihorzenich">Ihor Zenich</a>, <a class="work" href="http://epam.com">EPAM</a></h3>
+	</header>
+	<section class="slide" id="cover">
+		<h2>CSS Themes</h2>
+		<p>
+		  <a class="hashtag" href="https://twitter.com/hashtag/KharkivCSS?src=hash">#KharkivCSS</a>, September 17, 2016<br>
+		  <a class="name" href="http://twitter.com/ihorzenich">Ihor Zenich</a>, <a class="work" href="http://epam.com">EPAM</a>
+		</p>
+		<img src="pictures/cover.jpg" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+          #cover {
+            background-color: #000;
+          }
+          #cover img {
+            opacity: 0.6;
+          }
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+                text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+				}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+                text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+				}
+				#cover p a {
+					color:#FFF;
+					}
+		</style>
+	</section>
+	<section class="slide">
+		<h2>Что такое CSS-темы?</h2>
+		<p>Что мы вообще понимаем под этим словом? Вариантов много.</p>
+		<ul>
+			<li class="next">Когда подменяем весь css</li>
+			<li class="next">Когда меняем стили по каскаду одним правилом</li>
+			<li class="next">Когда меняем внешний вид модификаторами</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Но 2016 год, где же хипстерские штуки?</h2>
+		<p>Хочется написать что-то крутое и магическое в sass, пусть оно непонятно как компилируется и назвать это каким-то фреймворком.</p>
+	</section>
+	<section class="slide">
+		<h2>Да у нас любой проект и так магия</h2>
+		<p>Webpack, Angular, сборка в Gulp, и всё это на бутстрапе.</p>
+		<p>Мы не знаем где что лежит и что от чего заивист. И тут нам нужны темы</p>
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">Магия в css — любой проект!</h2>
+	</section>
+	<section class="slide">
+		<h2>Как мы докатились до этого?</h2>
+		<p>У нас без тем хоть есть порядок? Слышали что-то про ITCSS? Bandit?</p>
+	</section>
+	<section class="slide">
+		<h2>Давайте начнём с простого - как стайлить Bootstrap?</h2>
+		SHA-1: 210e02764a687e174580b50e193cceba744b37ac
+	</section>
+	<section class="slide">
+		<h2>А если хочется полноценных тем?</h2>
+		<p>Налепить переменных в столбик? А как же объекты?</p>
+	</section>
+	<section class="slide">
+		<h2>Есть варианты с генерацией тем</h2>
+	</section>
+	<section class="slide">
+		<h2>Красиво в постах на Medium…</h2>
+        <p>Но неудобно в жизни</p>
+	</section>
+
+	<section class="slide">
+		<h2>Что же делать?</h2>
+		<p>Юзать варианты от простого к сложному.</p>
+	</section>
+
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
