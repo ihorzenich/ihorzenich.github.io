@@ -1,0 +1,936 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Пишем БЭМ правильно</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link href='http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
+  <style>
+    .caption h3 .name {color: #000; text-shadow: none;}
+    .caption h3 .work {color: #000; text-shadow: none;}
+
+    #Cover h2 {
+      margin:30px 0 0;
+      color:#FFF;
+      text-align:center;
+      font-size:70px;
+    }
+    #Cover p {
+      margin:10px 0 0;
+      text-align:center;
+      color:#FFF;
+      font-style:italic;
+      font-size:20px;
+    }
+    #Cover p a {
+      color:#FFF;
+    }
+
+    .shout.dark {background:#000;}
+    .shout.dark h2 {color:#FFF;}
+
+    .shout p.note {position: absolute; bottom: 0; left: 105px;}
+
+    img {max-width: 100%;}
+
+    .slide pre code.wrap {white-space: normal;}
+
+    .slide p {margin-bottom: 20px;}
+    .slide blockquote {margin-bottom: 50px;}
+
+    .slide ol, .slide ul {margin-left: 20px;}
+
+    .slide p.note {line-height: 1.5;}
+
+    mark.important {background: #C00; color: #FFF;}
+  </style>
+  <script src="node_modules/jquery-2.1.1.min.js"></script>
+</head>
+<body class="list">
+  <header class="caption">
+      <h1>Пишем БЭМ правильно</h1>
+      <h2><a class="hashtag" href="https://twitter.com/hashtag/WebCampOdessa?src=hash">#WebCampOdessa</a>
+      <h3><a class="name" href="http://twitter.com/delaz">Igor Zenich</a>, <a class="work" href="http://ideus.biz">iDeus</a>.</h3>
+  </header>
+
+<section class="slide cover" id="Cover"><div>
+  <h2>Пишем БЭМ правильно</h2>
+
+<!-- harisov twit -->
+<iframe src="embed/twitter-harisov.html"
+id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" allowfullscreen="" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; margin: 50px auto; box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px; position: static; visibility: visible; width: 500px;" title="Встроенный твит" height="190"></iframe>
+<!-- /harisov twit -->
+</div></section>
+
+<section class="slide cover" id="ideus"><div>
+  <!--
+Здравствуйте! Меня зовут Игорь, я работаю в харьковской аутсорс-компании iDeus.
+Я изучаю BEM с момента его появления и 3 года как пишу на нем. Я прочитал и пересмотрел наверное почти все, что Яндекс сказал про БЭМ в докладах, статьях, обсуждениях в я.ру, а что не понял - спросил лично. И я имею вам кое что сказать.
+  -->
+  <a href="http://ideus.biz"><img src="pictures/iDeus-vizitka.png" alt="iDeus"></a>
+</div></section>
+
+<section class="slide cover shout" id="why"><div>
+  <img src="pictures/why.jpg" alt="Зачем?">
+  <h2>ещё один доклад про БЭМ…</h2>
+  <style>
+    #why h2 {
+      position: absolute;
+      top: 130px;
+      left: 20px;
+      text-align: left;
+      font-size: 70px;
+      margin: 0;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0,0,0,.5);
+    }
+  </style>
+<!--
+Цель моего доклада - рассказать про то, как верстать по БЭМ и про ошибки ручной верстки.
+- Скажите, кто в этом зале пробовал верстать что-то «по БЭМ»?
+Отлично.
+- А кому было все понятно и никаких вопросов не возникло? :)
+- Я так понимаю есть некоторые вопросы вида «как правильно сверстать вот этот чертов блок 5-кратной вложенности по БЭМ?» :). Значит мой доклад будет актуален.
+Кстати кроме как об ошибках - я расскажу вам ещё и о дополнительной семантике БЭМ. БЭМ - он такой, он семантичный.
+-->
+</div></section>
+
+<section class="slide shout grow"><div>
+  <h2>БЭМ — семантичный!</h2>
+</div></section>
+
+<section class="slide cover" id="pepelsbey"><div>
+  <h2>Что он несёт?!</h2>
+  <img src="pictures/pepelsbey.jpg" alt="Pepelsbey">
+  <style>
+    #pepelsbey h2 {
+      position: absolute;
+      top: 100px;
+      right: 0;
+      font-family: 'Marck Script', cursive;
+      font-size: 70px;
+      margin: 0;
+      border: 1px solid #000;
+      border-radius: 50%;
+      padding: 30px;
+      background-color: #fff;
+    }
+    #pepelsbey h2:before {
+      content: '';
+      position: absolute;
+      top: 150px;
+      right: 300px;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+    #pepelsbey h2:after {
+      content: '';
+      position: absolute;
+      top: 200px;
+      right: 350px;
+      width: 30px;
+      height: 30px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  </style>
+</div></section>
+
+<section class="slide"><div>
+<!--
+Обычно имена классов описывают что из себя представляет каждый блок, хорошим тоном считается называть их семантично - не „big-red-button“ например, а „order-button“. Это называют сематикой. А если мы добавим имя класса типа „b-checkout__submit“ - мы покажем связи между боками на странице. Чувствуетет разницу - обычно имена классов описывают конкретные кусочки, а BEM-описывает связи между блоками.
+-->
+  <h2>Имена БЭМ-классов создают дополнительный уровень логики</h2>
+   <p>Есть DOM-дерево, а есть БЭМ-дерево.</p>
+    <pre>
+<code class="next">&lt;input class="<s>big_red_button</s> <mark>order-button</mark>"&gt;</code>
+<code class="next">&lt;input class="<mark>order-button</mark> <mark class="important">b-checkout__submit</mark>"&gt;</code>
+    </pre>
+</div></section>
+
+<section class="slide"><div>
+  <h2>О чём будем говорить?</h2>
+  <ol>
+    <li>Как вручную сверстать «по-БЭМ»</li>
+    <li>Как не писать классы типа <code>device-template-generic-indicator-control-slider-bar-d</code> :)</li>
+  </ol>
+</div></section>
+
+<section class="slide shout"><div>
+  <h2>Кстати, а зачем нужен БЭM?</h2>
+<!--
+  Понятно Яндексу, а нам зачем?
+  Даже лендинги удобно верстать по BEM - меньше думаешь нд именами классов, нет конфликтов, легко поддерживать, расширять.
+  Легко заменять разработчиков! :)
+  Нет проблемы ухода сотрудника в отпуск или непонятности его кода.
+-->
+</div></section>
+
+<section class="slide shout"><div>
+  <h2>BEM CSS <sup>*</sup></h2>
+  <p class="note"><sup>*</sup> CSS подмножество БЭМ</p>
+<!--
+Ручная верстка по БЭМ называется «BEM CSS». Точнее официльного названия нет, ну я предложил такое.
+Если совсем официально - то «CSS подмножество БЭМ», потому что БЭМ он не только про CSS.
+-->
+</div></section>
+
+<section class="slide shout"><div>
+<!--
+ Ещё существует
+ -->
+  <h2>Full stack BEM</h2>
+  <p class="note">bemjson, bemhtml, bem-tools, вот это вот всё…</p>
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/full-bem-stack.png" alt="">
+</div></section>
+
+<section class="slide"><div>
+  <h2>Full stack BEM?</h2>
+  <p>
+    <strong>Когда он будет вам нужен — вы это сами поймёте.</strong><br>
+    Это будет момент, когда вам надоест писать html руками и вы захотите его генерировать.
+  </p>
+</div></section>
+
+<section class="slide shout dark"><div>
+  <h2>Пример верстки по БЭМ</h2>
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-1.png" alt="">
+</div></section>
+
+<section class="slide shout"><div>
+  <h2>Изначальная вёрстка →</h2>
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-2.png" alt="">
+</div></section>
+
+<section class="slide shout"><div>
+  <h2>Похоже на БЭМ, да?</h2>
+</div></section>
+
+<section class="slide"><div>
+  <h2>Давайте приглядимся</h2>
+  <img src="pictures/example-bem-2-css.png" alt="">
+</div></section>
+
+<section class="slide shout dark"><div>
+  <h2>Повышение специфичности</h2>
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/independent-blocks-by-cascade.png">
+</div></section>
+
+<section class="slide shout dark"><div>
+  <h2>:(</h2>
+</div></section>
+
+<section class="slide shout"><div>
+  <h2><a href="http://bit.ly/not-bem">bit.ly/not-bem</a></h2>
+</div></section>
+
+<section class="slide shout"><div>
+  <h2>Непонятость БЭМ</h2>
+</div></section>
+
+<section class="slide cover"><div>
+<!--
+БЭМ рос настолько быстро, что первая крайне сырая документация появилась только спустя 4 года.
+Выглядела она примерно вот так:
+   -->
+    <img src="pictures/Owl-1.png" alt="">
+</div></section>
+
+<section class="slide cover"><div>
+    <img src="pictures/Owl-2.png" alt="">
+<!--
+И кстати к сегодняшнему дню мало изменилась. Именно поэтому я рассказываю вам это все сегодня.
+Яндекс придумал свой шаблонизатор и язык, а мы, простые верстальщики только в прошлом году всерьез задумались о том, что стоит писать код по БЭМ.
+-->
+</div></section>
+
+<section class="slide shout"><div>
+  <h2>Методология не менялась</h2>
+</div></section>
+
+<section class="slide shout"><div>
+  <h2>.block</h2>
+</div></section>
+
+<section class="slide cover"><div>
+    <img src="pictures/block.png" alt="">
+</div></section>
+
+<section class="slide"><div>
+  <h2>Независимый блок</h2>
+    <figure>
+      <blockquote>
+        <p>НБ или просто блок, это самодостаточный элемент страницы, который при перемещении в другое место на странице или на другую страницу не теряет своей самодостаточности.</p>
+      </blockquote>
+        <figcaption>БЭМ.Форум, <a href="https://ru.bem.info/forum/-43/">Независимый блок</a></figcaption>
+    </figure>
+</div></section>
+
+<section class="slide"><div>
+  <h2>Правила независимости блока</h2>
+    <figure>
+      <blockquote>
+      <ol>
+        <li>для описания элемента используется class, но не id</li>
+        <li>каждый блок имеет префикс</li>
+        <li>в таблице стилей нет классов вне блоков</li>
+      </ol>
+      </blockquote>
+        <figcaption>БЭМ.Форум, <a href="https://ru.bem.info/forum/-147/">История создания БЭМ (часть первая)</a></figcaption>
+    </figure>
+</div></section>
+
+<section class="slide"><div>
+  <h2>Как его таким написать?</h2>
+  <p>Просто писать стили тупо на каждый блок.</p>
+  <p>БЭМ хорош тем, что позволяет не забивать голову ерундой с каскадом, а сосредоточимся на семантике и логике кода.</p>
+  <p>А с препроцессорами БЭМ позволяет писать еще и очень чистый и логичный код.</p>
+</div></section>
+
+<section class="slide"><div>
+  <h2>Как проверить?</h2>
+  <p>
+    Просто навести на блок в инспекторе кода.<br>
+    У него не должно быть каскада.
+  </p>
+</div></section>
+
+<section class="slide shout"><div>
+  <h2>.block__element</h2>
+<!--
+Главное что вы должны вынести с этого доклада - Не бывает элементов вложенных в элементы!
+-->
+</div></section>
+
+<section class="slide cover"><div>
+    <img src="pictures/element.png" alt="">
+</div></section>
+
+<section class="slide"><div>
+  <h2>Элемент</h2>
+    <figure>
+      <blockquote>
+        <p>
+          Элемент – это часть блока, отвечающая за отдельную функцию.<br>
+          <strong>Он может находиться только в составе блока и не имеет смысла в отрыве от него.</strong>
+        </p>
+      </blockquote>
+        <figcaption>bem.info, <a href="https://ru.bem.info/method/definitions/">Методология</a></figcaption>
+    </figure>
+
+<!--
+  Можете себе представить что это как папки в файловой системе, способ организации кода, чтобы было понятно, что к чему относится.
+-->
+</div></section>
+
+  <section class="slide"><div>
+<!--
+Вложенные html-элементы - это DOM-дерево.
+Имена классов, которые вы пишите - это БЭМ-дерево.
+Почувствуйте разницу!
+-->
+    <h2>DOM-дерево</h2>
+    <pre>
+<code>&lt;ul&gt;</code>
+<code>  &lt;li&gt;</code>
+<code>    &lt;a&gt;</code>
+<code>      &lt;span&gt;&lt;/span&gt;</code>
+<code>    &lt;/a&gt;</code>
+<code>  &lt;/li&gt;</code>
+<code>&lt;/ul&gt;</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>DOM-дерево</h2>
+    <pre>
+<code>.ul {}</code>
+<code>.ul > li {}</code>
+<code>.ul > li > a {}</code>
+<code>.ul > li > a > span {}</code>
+    </pre>
+  </div></section>
+
+<section class="slide cover"><div>
+    <img src="pictures/Tree.png" alt="">
+</div></section>
+
+  <section class="slide"><div>
+    <h2>БЭМ-дерево</h2>
+    <pre>
+<code>&lt;ul class="<mark>menu</mark>"&gt;</code>
+<code>  &lt;li class="<mark>menu__item</mark>"&gt;</code>
+<code>    &lt;a class="<mark>menu__link</mark>"&gt;</code>
+<code>      &lt;span class="<mark>menu__text</mark>"&gt;&lt;/span&gt;</code>
+<code>    &lt;/a&gt;</code>
+<code>  &lt;/li&gt;</code>
+<code>&lt;/ul&gt;</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>БЭМ-дерево</h2>
+    <pre>
+<code>.menu {}</code>
+<code>.menu__item {}</code>
+<code>.menu__link {}</code>
+<code>.menu__text {}</code>
+    </pre>
+  </div></section>
+
+<section class="slide cover"><div>
+    <img src="pictures/Tree-BEM.png" alt="">
+</div></section>
+
+<section class="slide"><div>
+  <h2>БЭМ дерево — чистая логика</h2>
+    <p>БЭМ-дерево не зависит ни от чего, даже от размещения в документе.</p>
+    <p>БЭМ-дерево не привязано к визуальному представлению блоков, оно отображает только логику, это и есть новый уровень семантики!</p>
+</div></section>
+
+  <section class="slide shout dark"><div>
+    <h2>.block__el__el__el</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Так #b_ поняли и используют зарубежом</h2>
+    <img src="pictures/block__el__el.png" alt="">
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Я тоже раньше так писал</h2>
+    <pre>
+      <code>.form-buy-results__to-city__slider__tab__column_buy</code>
+    </pre>
+    <iframe src="embed/twitter-lehazyo_chatik.html"
+  id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" allowfullscreen="" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin: 50px auto; border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187); border-width: 1px; border-style: solid; box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px; position: static; visibility: visible; width: 500px;" title="Встроенный твит" height="200"></iframe>
+    <p class="note">Так делать нельзя</p>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Как надо?</h2>
+    <pre>
+<code>&lt;div class="block"&gt;</code>
+<code>    &lt;div class="block<mark>__elem1</mark>"&gt;</code>
+<code>        &lt;div class="block<mark>__elem2</mark>"&gt;&lt;/div&gt;</code>
+<code>    &lt;/div&gt;</code>
+<code>    &lt;div class="block<mark>__elem3</mark>"&gt;&lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>А в CSS</h2>
+    <pre>
+<code>.block {}</code>
+<code>.block__elem1 {}</code>
+<code>.block__elem2 {}</code>
+<code>.block__elem3 {}</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Элемент у элемента?</h2>
+    Если вам нужно сделать элемент у элемента, значит вам нужно:
+    <ul>
+      <li>или создать новый блок</li>
+      <li>или сделать ваше БЭМ-дерево с одинарной вложенностью элементов</li>
+    </ul>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Есть 2 варианта как это переписать</h2>
+    <pre>
+<code>&lt;div class="block"&gt;</code>
+<code>    &lt;div class="block<mark>__elem1</mark>"&gt;</code>
+<code>        &lt;div class="block<mark class="important">__elem1__elem2</mark>"&gt;&lt;/div&gt;</code>
+<code>    &lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+    </pre>
+  </div></section>
+
+<section class="slide shout"><div>
+  <h2>1. Бить на блоки!</h2>
+</div></section>
+
+  <section class="slide"><div>
+    <h2>Делать новый блок</h2>
+    <pre>
+<code>&lt;div class="block1"&gt;</code>
+<code>    &lt;div class="<mark>block2</mark>"&gt;</code>
+<code>        &lt;div class="<mark>block2</mark>__elem"&gt;&lt;/div&gt;</code>
+<code>    &lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+    </pre>
+  </div></section>
+
+<section class="slide shout"><div>
+  <h2>2. Рубить ветки!</h2>
+</div></section>
+
+  <section class="slide"><div>
+    <h2>Делать БЭМ-дерево с 1-ой вложенностью элементов</h2>
+    <pre>
+<code>&lt;div class="block1"&gt;</code>
+<code>    &lt;div class="block1<mark>__elem1</mark>"&gt;</code>
+<code>        &lt;div class="block1<mark>__elem2</mark>"&gt;&lt;/div&gt;</code>
+<code>    &lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+    </pre>
+  </div></section>
+
+<section class="slide shout dark"><div>
+  <h2>Типичная ошибка</h2>
+</div></section>
+
+  <section class="slide"><div>
+    <h2 style="white-space: nowrap">Попытка вложить имя элемента в имя блока</h2>
+    <p>
+      Чтоб «схитрить» и «как-будто не вложить», написать не <code>.block__el1__el2</code> а <code>.block<mark class="important">el1</mark>__el2</code> или <code>.block__el1<mark class="important">el2</mark></code>.
+      Так нельзя.
+    </p>
+    <pre>
+<code>.block {}</code>
+<code>.block<mark class="important">el1</mark> {}</code>
+<code>.block<mark class="important">el1</mark>__el2 {}</code>
+    </pre>
+    <p class="note">Будут проблемы при переносе</p>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Будут проблемы при переносе</h2>
+    <p>Попытались перенести «странный элемент» в другое место - получили элемент что завис «в воздухе» без блока-родителя</p>
+    <pre>
+<code>&lt;div class='<mark>someblock</mark>'&gt;</code>
+<code>    &lt;div class='<mark class="important">blockel1</mark>__el2'&gt;&lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+    </pre>
+    <p class="note">Так можно делать только если .blockelem сохранит логический смысл при переносе в другой блок.</p>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>element > element нельзя в CSS, но можно в HTML!</h2>
+        <p>Обратите внимание - вы не можете вкладывать элементы в элементы в CSS, но можете и должны вкладывать элементы в элементы в HTML! DOM-дерево и БЭМ-дерево могут быть разными.</p>
+  </div></section>
+
+<section class="slide"><div>
+  <h2>Запрет есть исключительно про нейминг!</h2>
+    <figure>
+      <blockquote>
+        <p>БЭМ-дерево на то и дерево, что поддерживает вложенность, поэтому в БЭМ-дереве, разумеется, разрешается вкладывать элементы в элементы, блоки в блоки, блоки в элементы.</p>
+      </blockquote>
+        <figcaption>Vladimir Grinenko, <a href="http://twitter.com/tadatuta">@tadatuta</a></figcaption>
+    </figure>
+</div></section>
+
+<section class="slide shout dark"><div>
+  <h2>Хватит!<br>Мы не за теорией сюда пришли.</h2>
+</section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-3-mod.png" alt="">
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-3-01.png" alt="">
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-3-02.png" alt="">
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-3-03.png" alt="">
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-3-04.png" alt="">
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-3-05.png" alt="">
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-3-06.png" alt="">
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-3-07.png" alt="">
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-3-08.png" alt="">
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-3-09.png" alt="">
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-3-10-mf.png" alt="">
+</div></section>
+
+  <section class="slide"><div>
+    <h2>Мы написали BEM-дерево:</h2>
+    <pre>
+<code>&lt;div class="block"&gt;</code>
+<code>    &lt;div class="block<mark>__elem1</mark>"&gt;</code>
+<code>        &lt;div class="block<mark>__elem2</mark>"&gt;&lt;/div&gt;</code>
+<code>    &lt;/div&gt;</code>
+<code>    &lt;div class="block<mark>__elem3</mark>"&gt;&lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Нет каскада:</h2>
+    <pre>
+<code>.block {}</code>
+<code>.block__elem1 {}</code>
+<code>.block__elem2 {}</code>
+<code>.block__elem3 {}</code>
+    </pre>
+  </div></section>
+
+<section class="slide shout"><div>
+  <h2>Модификация</h2>
+</section>
+
+<section class="slide"><div>
+  <h2>6 видов</h2>
+<ol>
+<li>Модификатором
+<ul>
+  <li>модификатором блока</li>
+  <li>модификатором элемента</li>
+</ul>
+</li>
+<li>Контекстом (т.е. каскадом от блока выше)</li>
+<li>Уровнем переопределения (добавлением-перезаписью файла стилей)</li>
+<li>Миксованием (добавлением классов других блоков)
+  <ul>
+    <li>включая глобальный класс</li>
+  </ul>
+</li>
+</ol>
+</section>
+
+<section class="slide"><div>
+  <h2>Просто добавляйте модификатор!</h2>
+    <pre>
+<code>&lt;div class="block-name__elem<mark>_key_value</mark>"&gt;</code>
+    </pre>
+  <p>А для элементов — делай каскад от модификатора.</p>
+</div></section>
+
+<section class="slide"><div>
+  <h2>Модификаторы для элементов, можно?</h2>
+  <p>Если речь идет о простых правках, типа «активный пункт меню», то да, можно:</p>
+    <pre>
+<code>&lt;a class="menu__link menu__link<mark>_state_active</mark>"&gt;</code>
+    </pre>
+</div></section>
+
+<section class="slide"><div>
+  <h2>Булевые модификаторы</h2>
+  <p>Кстати в таких простых случаях, можно писать модификаторы просто одним словом:</p>
+    <pre>
+<code>&lt;a class="menu__link menu__link<mark>_active</mark>"&gt;</code>
+    </pre>
+</div></section>
+
+<section class="slide cover"><div>
+  <img src="pictures/example-bem-3-mod.png" alt="">
+</div></section>
+
+<section class="slide"><div>
+  <h2>Но подумайте, может это новый блок?</h2>
+  <iframe src="embed/twitter-bxxx.html"
+id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" allowfullscreen="" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin: 50px auto; border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187); border-width: 1px; border-style: solid; box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px; position: static; visibility: visible; width: 500px;" title="Встроенный твит" height="257"></iframe>
+<!--
+На самом деле в случае ручной верстки это сигнал об ошибках в вашей логике разбиения на блоки.
+Признак неудачного проектирования родительского блока.
+Если вам нужен модификатор на элемент - вам скорее нужно сделать из этого элемента новый блок.
+-->
+</div></section>
+
+<!--
+<section class="slide"><div>
+    <h2>Статья на Frontender Magazine</h2>
+    <p><a href="https://github.com/FrontenderMagazine/bem-css-methodology-complete-guide/blob/master/rus.md">https://github.com/FrontenderMagazine/bem-css-methodology-complete-guide/blob/master/rus.md</a></p>
+</div></section>
+-->
+
+<section class="slide shout"><div>
+  <h2>БЭМ допускает ошибки</h2>
+</div></section>
+
+<section class="slide shout dark"><div>
+  <h2>Самые популярные ошибки</h2>
+</div></section>
+
+<section class="slide"><div>
+  <h2>1. block__el__el</h2>
+<p>
+Например, слайдеры очень часто верстают дикой вложенностью.
+</p>
+</div></section>
+
+<section class="slide"><div>
+  <h2>2. Повышение специфичности</h2>
+   <p>В html как-будто всё ok:
+    <pre>
+<code>&lt;div class="block"&gt;</code>
+<code>  &lt;div class="block__el"&gt;</code>
+    </pre>
+    <p>А на деле сели в машину и сгорели:</p>
+    <pre>
+<code>/* CSS */</code>
+<code><mark class="important">.block</mark> .block__el {}</code>
+    </pre>
+</div></section>
+
+<section class="slide"><div>
+  <h2>3. Стили вне блоков</h2>
+    <pre>
+<code>&lt;ul class="menu checkoutForm big <mark class="important">myfuckingclass-bold</mark>"&gt;</code>
+    </pre>
+</div></section>
+
+<section class="slide"><div>
+  <h2>Почему это ошибки?</h2>
+  <p>Да потому что из-за этого потом тяжелей вносить правки и сложно переместить блок в другое место.</p>
+</div></section>
+
+<section class="slide shout dark"><div>
+  <h2>Как мне?...</h2>
+</div></section>
+
+<section class="slide"><div>
+<!--
+Что делать фрилансеру, который верстает небольшой сайт на Wordpress? Как ему черт возьми просто вывести текст из БД? Назначить класс каждому заголовку и абзацу? Но он же получает их из визивига!
+-->
+  <h2>Вывести текст из WYSIWYG?</h2>
+    <figure>
+      <blockquote>
+        <p>Как назначаются стили для типографики? Не будешь же назначать каждому тегу какой-то класс?</p>
+      </blockquote>
+        <figcaption>Artur Kornakov, <a href="http://twitter.com/fliptheweb">@fliptheweb</a></figcaption>
+    </figure>
+</div></section>
+
+<section class="slide"><div>
+<h2>Добавить <code>.b-text</code> блоку родителю</h2>
+   <p>И использовать каскад.</p>
+    <pre>
+<code><mark>.b-text</mark> h2 {}</code>
+<code><mark>.b-text</mark> p {}</code>
+<code><mark>.b-text</mark> img {}</code>
+<code><mark>.b-text</mark> ul li {}</code>
+    </pre>
+    <p class="note">Конечно при <strong>большом</strong> желании можно настроить визивиг, тот же TinyMCE, чтоб он добавлял нужные имена классов в тегах из визивига.</p>
+</div></section>
+
+<section class="slide shout"><div>
+<h2>Задавайте вопросы: <a href="https://ru.bem.info/forum/">ru.bem.info/forum</a></p>
+<!-- https://docs.google.com/document/d/1KD9tNdArCv1U1NvFX7rYPvUdbpPGVkuPZ2723KW5p4Y/edit">https://docs.google.com/document/d/1KD9tNdArCv1U1NvFX7rYPvUdbpPGVkuPZ2723KW5p4Y/edit -->
+</div></section>
+
+<section class="slide"><div>
+<h2>Пример переверстки по БЭМ (упрощенный)</h2>
+<ul>
+  <li><a href="http://net-craft.com/old">http://net-craft.com/old</a></li>
+  <li><a href="http://net-craft.com/">http://net-craft.com/</a></li>
+  <li><a href="http://net-craft.com/wp-content/themes/netcraft/dev/sass/main.scss">http://net-craft.com/wp-content/themes/netcraft/dev/sass/main.scss</a></li>
+</ul>
+</div></section>
+
+<section class="slide shout dark"><div>
+  <h2>Диалекты БЭМ</h2>
+</div></section>
+
+<section class="slide"><div>
+<h2>Вот это вот всё на 5 минут:</h2>
+<ul>
+<li>Использование префиксов</li>
+<li>Альтернативный синтаксис</li>
+<li>Сокращённые модификаторы</li>
+<li>JS-блоки</li>
+</ul>
+</div></section>
+
+<section class="slide"><div>
+<h2>Префиксы</h2>
+<p>
+  <code>b-</code>,
+  <code>l-</code>,
+  <code>g-</code>,
+  <code>i-</code>,
+  <code>h-</code>,
+  <code>m-</code>,
+  <code>js-</code>…
+</p>
+  <p>
+    Придумывайте любые правила<br>
+    Они нужны вам только для пространства имен.
+  </p>
+<!--
+Яндекс отказался от них потому что им вначале нужно было создать своё пространство имен (т.к изначальный сайт был сверстан студией Лебедева и им нужно было отличать свой код от нового кода по БЭМ). Так они создали пространство имен и когда обнаружили, что весь код написан по БЭМ им префиксы оказались не нужны. Это просто совпало с тем, что пояилась сборка. Целенаправленно Яндекс сейчас не пишет префиксы (разве что они остались на старых проектах).
+Ну вы то живете не в своём замкнутом мире, у вас есть и legacy-код и сторонний код, вам нужно своё пространство имен, чтоб избегать конфликтов.
+-->
+</div></section>
+
+<section class="slide"><div>
+  <h2>Альтернативный синтаксис и camelCase</h2>
+  <p>Многим нравится зарубежный формат модификаторов, через „--“, он читабельней.</p>
+<code>&lt;a class="block-name__element-name<mark>--state_active</mark>"&gt;</code>
+</div></section>
+
+<section class="slide"><div>
+  <h2>Альтернативный синтаксис и camelCase</h2>
+  <p>А через camelCase – ещё читабельней!</p>
+<code>&lt;a class="<mark>blockName__elementName</mark>--state_active"&gt;</code>
+</div></section>
+
+<section class="slide shout"><div>
+<h2>Сокращенные модификаторы</h2>
+</div></section>
+
+<section class="slide"><div>
+<h2>Сокращенные модификаторы</h2>
+  <p>
+    Правильно писать так:<br>
+    <code>.block-name__elem<mark>_key_value</mark></code>
+  </p>
+  <p>
+    Или так:<br>
+    <code>.blockName__elem<mark>--key_value</mark></code>
+  </p>
+</div></section>
+
+<section class="slide"><div>
+<h2>Сокращенные модификаторы</h2>
+  <p>Но некоторых из тех, кто пишет код вручную, такие модификаторы бесят нечитабельностью кода:</p>
+<code>&lt;div class="block-name <mark>block-name_key1_value1 block-name_key2_value2 block-name_key3_value3</mark>"&gt;</code>
+</div></section>
+
+<section class="slide"><div>
+<h2>Сокращенные модификаторы</h2>
+  <p>…и отсутствием дуракоустойчивости:</p>
+<code>&lt;div class="<mark class="important">block-name_key1_value1</mark> some-another-block"&gt;</code>
+</div></section>
+
+<section class="slide"><div>
+<h2>Сокращенные модификаторы</h2>
+  <p>Им хочется так:</p>
+<code>&lt;div class="block-name <mark>-key1_value1 -key2_value2 -key3_value3</mark>"&gt;</code>
+</div></section>
+
+<section class="slide"><div>
+<h2>Сокращенные модификаторы</h2>
+    <pre>
+<code>&lt;div class="blockName__elem<mark>.-key_value</mark>"&gt;</code>
+<code>.blockName {</code>
+<code>  &__elem {</code>
+<code>    &<mark>.-key_value {</mark></code>
+<code><mark>    }</mark></code>
+<code>  }</code>
+<code>}</code>
+    </pre>
+</div></section>
+
+<section class="slide cover" id="warning"><div>
+  <img src="pictures/warning.png" alt="">
+  <h2>
+    Миксы!<br>
+    Full BEM Stack!
+  </h2>
+  <style>
+    #warning h2 {
+      position: absolute;
+      top: 300px;
+      left: 150px;
+      font-size: 70px;
+      margin: 0;
+      color: #000;
+    }
+  </style>
+<!--
+Модифкаторы без именеми блока родителя - создают проблемы про миксовании, когда сложные миксы и ты не сможешь определить к какому блоку у тебя относится микс. Довод против - что мы связываем их внутри CSS как .block { &.-type_val}
+НО! Теряем миксы 2х блоков с модификаторами (непонятно - какой мод. к какому блоку относится).
+
+Правильно писать полные модификаторы и Яндекс так рекомендует настоятельно. Вы тереяете возможность юзать full stack BEM - нельзя будет из js узнать "есть ли модификатор у такого блока"
+-->
+</div></section>
+
+<section class="slide"><div>
+<h2>JS-блоки</h2>
+    <pre>
+<code>$('<mark>.js-</mark>fancybox').fancybox();</code>
+    </pre>
+</div></section>
+
+<section class="slide"><div>
+  <h2>Вы можете создавать свои гайдлайны</h2>
+<ul>
+  <li><a href="https://github.com/ideus-team/guidelines/blob/master/frontend/bem.md">https://github.com/ideus-team/guidelines/blob/master/frontend/bem.md</a></li>
+  <li><a href="http://nano.sapegin.ru/all/opor-methodology">http://nano.sapegin.ru/all/opor-methodology</a></li>
+</ul>
+</div></section>
+
+<section class="slide shout"><div>
+  <h2>Это всё БЭМ</h2>
+</div></section>
+
+  <section class="slide" id="ThankYou"><div>
+    <h2>Спасибо!</h2>
+    <p>Igor Zenich, iDeus</p>
+    <ul>
+      <li><a href="http://delka.name">delka.name</a></li>
+      <li><a href="http://twitter.com/delaz">twitter.com/delaz</a></li>
+      <li><a href="mailto:igor@delka.name">igor@delka.name</a></li>
+    </ul>
+    <p>Презентация: <a href="http://delka.github.io/talks/webcamp/2015/bem/">delka.github.io/talks/webcamp/2015/bem/</a></p>
+  </div></section>
+
+  <p class="badge"><a href="https://github.com/shower/shower">Powered by Shower</a></p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress"><div></div></div>
+  <script src="node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+        
+     <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-6535082-3', 'auto');
+      ga('send', 'pageview');
+    </script>        
+    </body>    
+</html>
