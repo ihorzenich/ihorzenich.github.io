@@ -1,105 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <title>CSS Themes</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="shower list">
-	<header class="caption">
-		<h1>CSS Themes</h1>
-		<h2><a class="hashtag" href="https://twitter.com/hashtag/KharkivCSS?src=hash">#KharkivCSS</a>, September 17, 2016</h2>
-    <h3><a class="name" href="http://twitter.com/ihorzenich">Ihor Zenich</a>, <a class="work" href="http://epam.com">EPAM</a></h3>
-	</header>
-	<section class="slide" id="cover">
-		<h2>CSS Themes</h2>
-		<p>
-		  <a class="hashtag" href="https://twitter.com/hashtag/KharkivCSS?src=hash">#KharkivCSS</a>, September 17, 2016<br>
-		  <a class="name" href="http://twitter.com/ihorzenich">Ihor Zenich</a>, <a class="work" href="http://epam.com">EPAM</a>
-		</p>
-		<img src="pictures/cover.jpg" alt="" class="cover">
-		<!--
-			To apply styles to the certain slides
-			set slide ID to get needed elements
-			-->
-		<style>
-          #cover {
-            background-color: #000;
-          }
-          #cover img {
-            opacity: 0.6;
-          }
-			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-                text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
-				}
-			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-                text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
-				}
-				#cover p a {
-					color:#FFF;
-					}
-		</style>
-	</section>
-	<section class="slide">
-		<h2>Что такое CSS-темы?</h2>
-		<p>Что мы вообще понимаем под этим словом? Вариантов много.</p>
-		<ul>
-			<li class="next">Когда подменяем весь css</li>
-			<li class="next">Когда меняем стили по каскаду одним правилом</li>
-			<li class="next">Когда меняем внешний вид модификаторами</li>
-		</ul>
-	</section>
-	<section class="slide">
-		<h2>Но 2016 год, где же хипстерские штуки?</h2>
-		<p>Хочется написать что-то крутое и магическое в sass, пусть оно непонятно как компилируется и назвать это каким-то фреймворком.</p>
-	</section>
-	<section class="slide">
-		<h2>Да у нас любой проект и так магия</h2>
-		<p>Webpack, Angular, сборка в Gulp, и всё это на бутстрапе.</p>
-		<p>Мы не знаем где что лежит и что от чего заивист. И тут нам нужны темы</p>
-	</section>
-	<section class="slide">
-		<h2 class="shout shrink">Магия в css — любой проект!</h2>
-	</section>
-	<section class="slide">
-		<h2>Как мы докатились до этого?</h2>
-		<p>У нас без тем хоть есть порядок? Слышали что-то про ITCSS? Bandit?</p>
-	</section>
-	<section class="slide">
-		<h2>Давайте начнём с простого - как стайлить Bootstrap?</h2>
-		SHA-1: 210e02764a687e174580b50e193cceba744b37ac
-	</section>
-	<section class="slide">
-		<h2>А если хочется полноценных тем?</h2>
-		<p>Налепить переменных в столбик? А как же объекты?</p>
-	</section>
-	<section class="slide">
-		<h2>Есть варианты с генерацией тем</h2>
-	</section>
-	<section class="slide">
-		<h2>Красиво в постах на Medium…</h2>
-        <p>Но неудобно в жизни</p>
-	</section>
+    <header class="caption">
+      <h1>CSS Themes</h1>
+      <h2><a class="hashtag" href="https://twitter.com/hashtag/KharkivCSS?f=tweets&src=hash">#KharkivCSS</a>, Kharkiv, September 17, 2016</h2>
+      <h3><a class="name" href="http://twitter.com/ihorzenich">Ihor Zenich</a>, <a class="work" href="http://epam.com">EPAM</a></h3>
+    </header>
 
-	<section class="slide">
-		<h2>Что же делать?</h2>
-		<p>Юзать варианты от простого к сложному.</p>
-	</section>
+  <section class="slide" id="cover">
+    <h2>CSS Themes</h2>
+    <p>
+      <a class="hashtag" href="https://twitter.com/hashtag/KharkivCSS?src=hash">#KharkivCSS</a>, September 17, 2016<br>
+      <a class="name" href="http://twitter.com/ihorzenich">Ihor Zenich</a>, <a class="work" href="http://epam.com">EPAM</a>
+    </p>
+    <img src="pictures/cover.jpg" alt="" class="cover">
+    <!--
+      To apply styles to the certain slides
+      set slide ID to get needed elements
+      -->
+    <style>
+      #cover {
+        background-color: #000;
+      }
+      #cover img {
+        opacity: 0.6;
+      }
+      #cover h2 {
+        margin:30px 0 0;
+        color:#FFF;
+        text-align:center;
+        font-size:70px;
+                text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+        }
+      #cover p {
+        margin:10px 0 0;
+        text-align:center;
+        color:#FFF;
+        font-style:italic;
+        font-size:20px;
+                text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+        }
+        #cover p a {
+          color:#FFF;
+          }
+    </style>
+  </section>
 
-	<div class="progress"></div>
-	<script src="shower/shower.min.js"></script>
-	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
-	<!-- Photos by John Carey, fiftyfootshadows.net -->
+    <section class="slide" id="epam">
+        <a href="https://twitter.com"><img src="pictures/EPAM-business-card.jpg" alt="EPAM" class="cover"></a>
+    </section>
+
+    <section class="slide">
+         <h2 class="shout"><a href="http://bit.ly/css-themes">bit.ly/css-themes</a></h2>
+    </section>
+
+  <section class="slide">
+    <h2>Что такое CSS-темы?</h2>
+    <p>Что мы вообще понимаем под этим словом? Вариантов много.</p>
+    <ol>
+      <li class="next">Когда подменяем весь css</li>
+      <li class="next">Когда меняем стили по каскаду одним правилом</li>
+      <li class="next">Когда меняем внешний вид модификаторами</li>
+    </ol>
+  </section>
+  <section class="slide -dark">
+    <h2 class="shout shrink">Где же хипстерские штуки?</h2>
+  </section>
+  <section class="slide">
+      <a href="http://twitter.com/ihorzenich"><img src="pictures/magic.png" alt="Магия" class="cover"></a>
+<!--
+    <h2>Да у нас любой проект и так магия</h2>
+    <p>Webpack, Angular, сборка в Gulp, и всё это на бутстрапе.</p>
+    <p>Мы не знаем где что лежит и что от чего заивист. И тут нам нужны темы</p>
+
+    <h2>Как мы докатились до этого?</h2>
+-->
+  </section>
+  <section class="slide" id="itcss">
+    <style>
+      #itcss .title {
+        margin-top: -50px;
+        margin-left: -30px;
+      }
+      #itcss h2 a {
+        color: #FFF;
+      }
+    </style>
+    <div class="title">
+      <h2><a href="https://www.google.com.ua/search?q=Managing_CSS_Projects_with_ITCSS_-_Harry_Roberts&ie=&oe=">ITCSS</a></h2>
+      <h2><a href="https://medium.com/@albinotonnina/happy-with-your-css-files-in-your-big-app-ca03d51ed5bd#.xv19ttoj8">Bandit</a></h2>
+    </div>
+    <img src="pictures/itcss.png" alt="ITCSS" class="cover">
+  </section>
+  <section class="slide">
+    <h2>Bootstrap styling</h2>
+    <pre>
+        <code>$navbar-height: $mainNavbar-height;</code>
+        <code>$navbar-inverse-bg: $project-header-bg;</code>
+        <code>$navbar-inverse-link-color: $project-header-link-color;</code>
+        <code>ну вы поняли…</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2><a href="http://www.ian-thomas.net/a-sassy-approach-to-theming-components/">А если хочется полноценных тем?</a></h2>
+    <pre>
+        <code>$themes: (</code>
+        <code>  codepen: (</code>
+        <code>    foreground: #CCCCCC,</code>
+        <code>  ),</code>
+        <code>codepen-light: (</code>
+        <code>…</code>
+        <code>  )</code>
+        <code>);</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Красиво в постах на Medium…</h2>
+    <p>А как в жизни?</p>
+    <code>&lt;button class="btn btn-primary <mark>btn-t-codepen-light</mark>" type="button"&gt;Ok&lt;/button&gt;</code>
+  </section>
+
+  <section class="slide">
+    <h2>Что же делать?</h2>
+    <p>Юзать варианты от простого к сложному.</p>
+  </section>
+
+  <section class="slide" id="ThankYou">
+    <style>
+      #ThankYou h3 {
+        margin-bottom: 50px;
+        line-height: normal;
+      }
+      #ThankYou h3 small {
+        font-size: 20px;
+        color: #888;
+      }
+
+      #ThankYou img {
+        float: right;
+        width: 400px
+      }
+    </style>
+
+    <h2>Спасибо!</h2>
+    <img src="assets/img/epam-logo--primary.svg" alt="EPAM logo" />
+    <h3>
+      Igor Zenich<br>
+      <small>EPAM</small>
+    </h3>
+    <ul>
+      <li><a href="http://delka.name">delka.name</a></li>
+      <li><a href="http://twitter.com/ihorzenich">twitter.com/ihorzenich</a></li>
+      <li><a href="mailto:igor@delka.name">igor@delka.name</a></li>
+    </ul>
+    <p>Презентация: <a href="http://bit.ly/bem-in-the-wild">bit.ly/css-themes</a></p>
+  </section>
+
+  <div class="progress"></div>
+  <script src="shower/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
 </body>
 </html>
