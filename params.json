@@ -1,7 +1,0 @@
-{
-  "name": "Ihor Zenich",
-  "tagline": "ex delka.github.io",
-  "body": "## Projects\r\n* [Чеклист верстки](https://github.com/ihorzenich/html5checklist)\r\n* [Чек-лист оптимизации скорости загрузки](https://github.com/ihorzenich/WebPerformanceChecklist)\r\n* [Сравнение верстки OOCSS, SMACSS, Atomic и БЭМ](https://github.com/AleshaOleg/holy-grail-markup)\r\n* [CSS Browser Selector - дэтект браузеров и устройств в css через классы в html](https://github.com/ridjohansen/css_browser_selector)\r\n* [Список гайдлайнов запрещающих табы в коде](https://github.com/ideus-team/guidelines/blob/master/frontend/tabs.md)\r\n* [Сайт-просьба сбросить кэш](http://clearyourcache.info/)\r\n\r\n## Talks\r\n* [БЭМ CSS — объединённый доклад, 2014-2015](http://ihorzenich.github.io/talks/bem-css)\r\n  * [Пишем БЭМ правильно — Киев, WSD, 2014](http://ihorzenich.github.io/talks/bem-wsd)\r\n  * [Пишем БЭМ правильно — Одесса, WebCamp, 2015](http://ihorzenich.github.io/talks/bem-webcamp)\r\n  * [Пишем БЭМ правильно — Киев, FrontendWeekend, 2015](http://ihorzenich.github.io/talks/bem-frontendweekend)\r\n* [БЭМ в дикой природе — Киев, WSD, 2015](http://ihorzenich.github.io/talks/bem-in-the-wild)\r\n* [CSS Themes — Харьков, KharkivCSS, 2016](http://ihorzenich.github.io/talks/css-themes)\r\n\r\n---\r\n* https://twitter.com/ihorzenich\r\n* http://delka.name\r\n* ihor.zenich@gmail.com",
-  "google": "UA-6535082-3",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}

@@ -1,0 +1,8 @@
+title: Ihor Zenich
+description: ex delka.github.io
+google_analytics: UA-6535082-3
+show_downloads: true
+theme: jekyll-theme-leap-day
+
+gems:
+  - jekyll-mentions
