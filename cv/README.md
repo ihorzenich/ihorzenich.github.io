@@ -1,4 +1,4 @@
-My name is Ihor Zenich. I'm living in Kharkiv, Ukraine.
+My name is Ihor Zenich. I'm frontend developer for EPAM in Kharkiv, Ukraine.
 I'm known as author of [HTML5Checklist](https://github.com/ihorzenich/html5checklist), co-author of [CSS-methodologies "101" examples](https://github.com/aleshaOleg/holy-grail-markup), [CSS Browser Selector +](https://github.com/ridjohansen/css_browser_selector) and [BEM evangelist](http://ihorzenich.github.io/talks/bem-css/).
 
 Photos:
