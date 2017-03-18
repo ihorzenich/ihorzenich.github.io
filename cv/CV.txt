@@ -1,0 +1,31 @@
+I'm known as author of “HTML5Checklist”: https://github.com/ihorzenich/html5checklist,
+co-author of “CSS-methodologies "101" examples”: https://github.com/aleshaOleg/holy-grail-markup),
+“CSS Browser Selector +”: https://github.com/ridjohansen/css_browser_selector and BEM evangelist.
+
+ — 10+ years of experience in commercial webdev (8 as TL, 5 as PM)
+ — 200+ projects in past.
+ — Speaker at #wstdays, #WebCampOdessa and #frontendweekend #uwcua conferences.
+ — Translator for “Frontender Magazine”
+ — 1st at the “Best use of technology”​ on WebHiTech’2008.
+
+Professional interests: frontend-developers management, ways to speedup html markup and it's quality.
+
+Major domains: e-commerce, medical, avia, online training, video streaming, digital, landings.
+
+Specialization and skills:
+ — CSS project architecture
+ — HTML developers team management, in-company standards, coaching, sometimes creation/editing of interfaces.
+ — Expert Knowledge HTML5/Jade/CSS3/Sass/Stylus
+ — RWD, Retina
+ — Site performance optimization
+ — Bulletproof semantic markup, mobile adaptation, email templates, print version
+ — JS/jQuery
+ — Grunt/Gulp/Webpack
+ — HTML/CSS frameworks: Bootstrap, H5Boilerplate, MDL and experience of customizing it and creating new
+ — Video encoding (including Avisynth and DRM)
+ — Really had the experience with: UI/UX, WAI-ARIA/WCAG2, Microformats (1 and 2)/Microdata, SEO, Adobe Edge
+
+Links:
+ — My projects: http://ihorzenich.github.io/
+ — Twitter: https://twitter.com/ihorzenich
+ — LinkedIn: https://www.linkedin.com/in/ihorzenich
