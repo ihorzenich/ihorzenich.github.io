@@ -14,6 +14,10 @@
 * [БЭМ в дикой природе — Киев, WSD, 2015](http://ihorzenich.github.io/talks/bem-in-the-wild)
 * [CSS Themes — Харьков, KharkivCSS, 2016](http://ihorzenich.github.io/talks/css-themes)
 
+## CV
+* [About me + photos](https://github.com/ihorzenich/ihorzenich.github.io/tree/master/cv)
+* [LinkedIn](https://www.linkedin.com/in/ihorzenich/) 
+
 ---
 * https://twitter.com/ihorzenich
 * http://delka.name
