@@ -6,6 +6,7 @@ Photos:
  - [1670x1670 JPG](https://raw.githubusercontent.com/ihorzenich/ihorzenich.github.io/master/cv/photo/Ihor-Zenich-photo-2016.jpg)
  - [556x556 JPG](https://raw.githubusercontent.com/ihorzenich/ihorzenich.github.io/master/cv/photo/Ihor-Zenich-photo-2016--small.jpg)
 
+Short bio:
  - 10+ years of experience in commercial webdev (8 as TL, 5 as PM)
  - 200+ projects in past.
  - Speaker at #wstdays, #WebCampOdessa and #frontendweekend #uwcua conferences.
