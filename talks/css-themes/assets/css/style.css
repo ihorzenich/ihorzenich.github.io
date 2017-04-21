@@ -34,8 +34,10 @@
   src: url("../fonts/oswald-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-lightitalic-webfont.woff2") format("woff2"), url("../fonts/oswald-lightitalic-webfont.woff") format("woff"), url("../fonts/oswald-lightitalic-webfont.ttf") format("truetype");
   font-weight: 300;
   font-style: italic; }
-body {
-  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "PT Sans", sans-serif; }
+body.shower.list {
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "PT Sans", sans-serif;
+  background-image: url(../img/bg.png);
+  background-size: 256px; }
 
 .badge a {
   background: #8E244D; }

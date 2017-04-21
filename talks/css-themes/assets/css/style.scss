@@ -21,8 +21,10 @@
   $TrebuchetMS: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",'PT Sans',sans-serif;
   $Oswald: Oswald, $TrebuchetMS; // 300,400,600+italic
 
-body {
+body.shower.list {
   font-family: $TrebuchetMS;
+  background-image: url(../img/bg.png);
+  background-size: 256px;
 }
 
 .badge {
