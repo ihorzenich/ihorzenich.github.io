@@ -34,17 +34,26 @@
   src: url("../fonts/oswald-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-lightitalic-webfont.woff2") format("woff2"), url("../fonts/oswald-lightitalic-webfont.woff") format("woff"), url("../fonts/oswald-lightitalic-webfont.ttf") format("truetype");
   font-weight: 300;
   font-style: italic; }
-body.shower.list {
-  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "PT Sans", sans-serif;
-  background-image: url(../img/bg.png);
-  background-size: 256px; }
+body {
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "PT Sans", sans-serif; }
+  body.shower.list {
+    background-color: #464547;
+    background-image: none; }
+
+.full {
+  background-color: #464547; }
 
 .badge a {
   background: #8E244D; }
+  .badge a:hover {
+    background: #B22746; }
+
+.slide:after {
+  background-image: url("../img/ribbon--epam.svg"); }
 
 .caption {
-  color: #464547;
-  text-shadow: 0 1px 10px #fff; }
+  color: #666666;
+  text-shadow: 0 1px 1px #000; }
   .caption a {
     color: #1A9CB0;
     text-shadow: 0 -1px 1px #464547; }
@@ -54,26 +63,25 @@ body.shower.list {
 .caption h1 {
   font: 600 50px/1 'Oswald', 'PT Sans Narrow', sans-serif;
   color: #39C2D7;
-  text-shadow: 0 1px 1px #464547; }
-.caption h2 {
-  font-size: 25px; }
-.caption h3 {
-  font-size: 25px; }
-  .caption h3 a.name {
-    color: #A3C644;
-    text-shadow: none; }
-  .caption h3 a.work {
-    color: #7F993A;
-    text-shadow: none; }
+  text-shadow: 0 1px 1px #464547;
+  padding-bottom: 0; }
+.caption h3 a.name {
+  color: #A3C644;
+  text-shadow: none; }
+.caption h3 a.work {
+  color: #FFFFFF;
+  text-shadow: none; }
 .caption a.hashtag {
-  color: #1A9CB0; }
+  color: #999999; }
 
 .slide h2 {
-  font: 600 50px/1 'Oswald',sans-serif; }
+  font: 600 50px/1.2 'Oswald',sans-serif; }
+  .slide h2.shout {
+    line-height: 1.5; }
 .slide.-dark {
   background: #464547; }
   .slide.-dark h2 {
-    color: #FFF; }
+    color: #FFFFFF; }
 
 p.note.-cover {
   position: absolute;

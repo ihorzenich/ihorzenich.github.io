@@ -38,11 +38,11 @@
 body {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "PT Sans", sans-serif; }
   body.list {
-    background-color: #3a3a39;
+    background-color: #464547;
     background-image: none; }
 
 .full {
-  background-color: #3a3a39; }
+  background-color: #464547; }
 
 .badge a {
   background: #8E244D; }
@@ -81,6 +81,8 @@ body {
 
 .slide h2 {
   font: 600 50px/1.2 'Oswald',sans-serif; }
+.slide.shout h2 {
+  line-height: 1.5; }
 
 .shout.dark {
   background: #464547; }
@@ -111,8 +113,6 @@ body {
   #Cover p a {
     color: #FFFFFF; }
 
-.slide.shout h2 {
-  line-height: 1.5; }
 .slide.-compact > div {
   padding-top: 20px;
   height: 620px; }

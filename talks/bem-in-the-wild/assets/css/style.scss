@@ -16,7 +16,7 @@
   $GRAY: #999999;
   $LIGHT_GRAY: #CCCCCC;
 
-  $BG: #3a3a39;
+  $BG: $GRAPHITE;
 
 //EPAM FONTS:
 @import 'epam-fonts__oswald';
@@ -101,6 +101,11 @@ body {
     font: 600 50px/1.2 'Oswald',sans-serif;
   }
 
+  &.shout {
+    h2 {
+      line-height: 1.5;
+    }
+  }
 }
 
 .shout {
@@ -148,11 +153,6 @@ body {
 }
 
 .slide {
-  &.shout {
-    h2 {
-      line-height: 1.5;
-    }
-  }
   &.-compact {
     > div {
       padding-top: 20px;

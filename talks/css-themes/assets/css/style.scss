@@ -16,33 +16,50 @@
   $GRAY: #999999;
   $LIGHT_GRAY: #CCCCCC;
 
+  $BG: $GRAPHITE;
+
 //EPAM FONTS:
 @import 'epam-fonts__oswald';
   $TrebuchetMS: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",'PT Sans',sans-serif;
   $Oswald: Oswald, $TrebuchetMS; // 300,400,600+italic
 
-body.shower.list {
+body {
   font-family: $TrebuchetMS;
-  background-image: url(../img/bg.png);
-  background-size: 256px;
+
+  &.shower.list {
+    background-color: $BG;
+    background-image: none;
+  }
+}
+
+.full {
+  background-color: $BG;
 }
 
 .badge {
   a {
-    background: #8E244D;
+    background: $PLUM;
+
+    &:hover {
+      background: $RASPBERRY;
+    }
   }
 }
 
+.slide:after {
+  background-image: url('../img/ribbon--epam.svg');
+}
+
 .caption {
-  color: #464547;
-  text-shadow: 0 1px 10px #fff;
+  color: $MEDIUM_GRAY;
+  text-shadow: 0 1px 1px #000;
 
   a {
-    color: #1A9CB0;
-    text-shadow: 0 -1px 1px #464547;
+    color: $DARK_BLUE;
+    text-shadow: 0 -1px 1px $GRAPHITE;
 
     &:hover {
-      color: #39C2D7;
+      color: $SHARP_BLUE;
     }
   }
 }
@@ -50,44 +67,44 @@ body.shower.list {
 .caption {
   h1 {
     font: 600 50px/1 'Oswald', 'PT Sans Narrow', sans-serif;
-    color: #39C2D7;
-    text-shadow: 0 1px 1px #464547;
-  }
-
-  h2 {
-    font-size: 25px;
+    color: $SHARP_BLUE;
+    text-shadow: 0 1px 1px $GRAPHITE;
+    padding-bottom: 0;
   }
 
   h3 {
-    font-size: 25px;
 
     a {
       &.name {
-        color: #A3C644;
+        color: $LIME_GREEN;
         text-shadow: none;
       }
       &.work {
-        color: #7F993A;
+        color: $WHITE;
         text-shadow: none;
       }
     }
   }
 
   a.hashtag {
-    color: #1A9CB0;
+    color: $GRAY;
   }
 }
 
 .slide {
   h2 {
-    font: 600 50px/1 'Oswald',sans-serif;
+    font: 600 50px/1.2 'Oswald',sans-serif;
+
+    &.shout {
+      line-height: 1.5;
+    }
   }
 
   &.-dark {
-    background: #464547;
+    background: $GRAPHITE;
 
     h2 {
-      color: #FFF;
+      color: $WHITE;
     }
   }
 }
