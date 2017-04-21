@@ -65,12 +65,16 @@ body {
   color: #39C2D7;
   text-shadow: 0 1px 1px #464547;
   padding-bottom: 0; }
-.caption h3 a.name {
-  color: #A3C644;
-  text-shadow: none; }
-.caption h3 a.work {
-  color: #FFFFFF;
-  text-shadow: none; }
+.caption h2 {
+  font-size: 25px; }
+.caption h3 {
+  font-size: 25px; }
+  .caption h3 a.name {
+    color: #A3C644;
+    text-shadow: none; }
+  .caption h3 a.work {
+    color: #FFFFFF;
+    text-shadow: none; }
 .caption a.hashtag {
   color: #999999; }
 
