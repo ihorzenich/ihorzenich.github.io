@@ -16,6 +16,8 @@
   $GRAY: #999999;
   $LIGHT_GRAY: #CCCCCC;
 
+  $BG: #3a3a39;
+
 //EPAM FONTS:
 @import 'epam-fonts__oswald';
   $TrebuchetMS: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",'PT Sans',sans-serif;
@@ -23,24 +25,46 @@
 
 body {
   font-family: $TrebuchetMS;
+
+  &.list {
+    background-color: $BG;
+    background-image: none;
+  }
+}
+
+.full {
+  background-color: $BG;
 }
 
 .badge {
   a {
-    background: #8E244D;
+    background: $PLUM;
+
+    &:hover {
+      background: $RASPBERRY;
+    }
   }
 }
 
+.list .slide:after {
+  color: $MEDIUM_GRAY;
+  text-shadow: 0 1px 1px #000;
+}
+
+.slide:after {
+  background-image: url('../img/ribbon--epam.svg');
+}
+
 .caption {
-  color: #464547;
-  text-shadow: 0 1px 10px #fff;
+  color: $MEDIUM_GRAY;
+  text-shadow: 0 1px 1px #000;
 
   a {
-    color: #1A9CB0;
-    text-shadow: 0 -1px 1px #464547;
+    color: $DARK_BLUE;
+    text-shadow: 0 -1px 1px $GRAPHITE;
 
     &:hover {
-      color: #39C2D7;
+      color: $SHARP_BLUE;
     }
   }
 }
@@ -48,52 +72,53 @@ body {
 .caption {
   h1 {
     font: 600 50px/1 'Oswald', 'PT Sans Narrow', sans-serif;
-    color: #39C2D7;
-    text-shadow: 0 1px 1px #464547;
+    color: $SHARP_BLUE;
+    text-shadow: 0 1px 1px $GRAPHITE;
+    padding-bottom: 0;
   }
 
   h3 {
+
     a {
       &.name {
-        color: #A3C644;
+        color: $LIME_GREEN;
         text-shadow: none;
       }
       &.work {
-        color: #7F993A;
+        color: $WHITE;
         text-shadow: none;
       }
     }
   }
 
   a.hashtag {
-    color: #1A9CB0;
+    color: $GRAY;
   }
 }
 
 .slide {
   h2 {
-    font: 600 50px/1 'Oswald',sans-serif;
+    font: 600 50px/1.2 'Oswald',sans-serif;
   }
 
 }
 
 .shout {
   &.dark {
-    background: #464547;
+    background: $GRAPHITE;
 
     h2 {
-      color: #FFF;
+      color: $WHITE;
     }
   }
 }
-
 // End of Branding
 
 // Fixes
 #Cover {
   h2 {
     margin: 30px 0 0;
-    color: #FFF;
+    color: $WHITE;
     text-align: center;
     font-size: 70px;
     text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
@@ -117,7 +142,7 @@ body {
     line-height: 1.5;
 
     a {
-      color: #FFF;
+      color: $WHITE;
     }
   }
 }
@@ -125,7 +150,7 @@ body {
 .slide {
   &.shout {
     h2 {
-      line-height: 1.2;
+      line-height: 1.5;
     }
   }
   &.-compact {
@@ -144,12 +169,15 @@ body {
     }
 
     &.-bright {
-      color: #B22746;
-      text-shadow: 2px 2px 0px #fff, 0 0 30px rgba(0, 0, 0, 1);
+      color: $RASPBERRY;
+      text-shadow: 2px 2px 0px $WHITE, 0 0 30px rgba(0, 0, 0, 1);
 
       h2 {
-        color: #A3C644;
-        text-shadow: 2px 2px 0px #fff, 0 0 40px rgba(0, 0, 0, 0.5);
+        display: table;
+        color: $WHITE;
+        background: $DARK_BLUE;
+        padding: 0.2em;
+        text-shadow: none;
       }
 
       kbd,
@@ -159,12 +187,12 @@ body {
       }
     }
     &.-dark {
-      text-shadow: 1px 1px 0px #fff;
-      color: #39C2D7;
+      text-shadow: 1px 1px 0px $WHITE;
+      color: $SHARP_BLUE;
 
       h2 {
-        color: #A3C644;
-        text-shadow: 2px 2px 0px #fff, 0 0 40px rgba(0, 0, 0, 0.5);
+        color: $LIME_GREEN;
+        text-shadow: 2px 2px 0px $WHITE, 0 0 40px rgba(0, 0, 0, 0.5);
       }
       kbd,
       code,
@@ -231,7 +259,7 @@ img {
 
 mark.important {
   background: #C00;
-  color: #FFF;
+  color: $WHITE;
 }
 
 .wbr {white-space: nowrap;}

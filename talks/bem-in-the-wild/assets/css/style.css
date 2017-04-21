@@ -37,13 +37,28 @@
   font-style: italic; }
 body {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "PT Sans", sans-serif; }
+  body.list {
+    background-color: #3a3a39;
+    background-image: none; }
+
+.full {
+  background-color: #3a3a39; }
 
 .badge a {
   background: #8E244D; }
+  .badge a:hover {
+    background: #B22746; }
+
+.list .slide:after {
+  color: #666666;
+  text-shadow: 0 1px 1px #000; }
+
+.slide:after {
+  background-image: url("../img/ribbon--epam.svg"); }
 
 .caption {
-  color: #464547;
-  text-shadow: 0 1px 10px #fff; }
+  color: #666666;
+  text-shadow: 0 1px 1px #000; }
   .caption a {
     color: #1A9CB0;
     text-shadow: 0 -1px 1px #464547; }
@@ -53,27 +68,28 @@ body {
 .caption h1 {
   font: 600 50px/1 'Oswald', 'PT Sans Narrow', sans-serif;
   color: #39C2D7;
-  text-shadow: 0 1px 1px #464547; }
+  text-shadow: 0 1px 1px #464547;
+  padding-bottom: 0; }
 .caption h3 a.name {
   color: #A3C644;
   text-shadow: none; }
 .caption h3 a.work {
-  color: #7F993A;
+  color: #FFFFFF;
   text-shadow: none; }
 .caption a.hashtag {
-  color: #1A9CB0; }
+  color: #999999; }
 
 .slide h2 {
-  font: 600 50px/1 'Oswald',sans-serif; }
+  font: 600 50px/1.2 'Oswald',sans-serif; }
 
 .shout.dark {
   background: #464547; }
   .shout.dark h2 {
-    color: #FFF; }
+    color: #FFFFFF; }
 
 #Cover h2 {
   margin: 30px 0 0;
-  color: #FFF;
+  color: #FFFFFF;
   text-align: center;
   font-size: 70px;
   text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3); }
@@ -93,10 +109,10 @@ body {
   font-size: 30px;
   line-height: 1.5; }
   #Cover p a {
-    color: #FFF; }
+    color: #FFFFFF; }
 
 .slide.shout h2 {
-  line-height: 1.2; }
+  line-height: 1.5; }
 .slide.-compact > div {
   padding-top: 20px;
   height: 620px; }
@@ -104,20 +120,23 @@ body {
   text-shadow: none; }
 .slide.-shadow.-bright {
   color: #B22746;
-  text-shadow: 2px 2px 0px #fff, 0 0 30px black; }
+  text-shadow: 2px 2px 0px #FFFFFF, 0 0 30px black; }
   .slide.-shadow.-bright h2 {
-    color: #A3C644;
-    text-shadow: 2px 2px 0px #fff, 0 0 40px rgba(0, 0, 0, 0.5); }
+    display: table;
+    color: #FFFFFF;
+    background: #1A9CB0;
+    padding: 0.2em;
+    text-shadow: none; }
   .slide.-shadow.-bright kbd,
   .slide.-shadow.-bright code,
   .slide.-shadow.-bright samp {
     color: inherit; }
 .slide.-shadow.-dark {
-  text-shadow: 1px 1px 0px #fff;
+  text-shadow: 1px 1px 0px #FFFFFF;
   color: #39C2D7; }
   .slide.-shadow.-dark h2 {
     color: #A3C644;
-    text-shadow: 2px 2px 0px #fff, 0 0 40px rgba(0, 0, 0, 0.5); }
+    text-shadow: 2px 2px 0px #FFFFFF, 0 0 40px rgba(0, 0, 0, 0.5); }
   .slide.-shadow.-dark kbd,
   .slide.-shadow.-dark code,
   .slide.-shadow.-dark samp {
@@ -157,7 +176,7 @@ img {
 
 mark.important {
   background: #C00;
-  color: #FFF; }
+  color: #FFFFFF; }
 
 .wbr {
   white-space: nowrap; }
