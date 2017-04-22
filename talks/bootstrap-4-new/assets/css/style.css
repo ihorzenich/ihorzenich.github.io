@@ -98,4 +98,9 @@ p.note.-cover {
 big {
   font-size: 200%; }
 
+p.subheader {
+  margin-top: -30px;
+  margin-bottom: 2em;
+  color: #999; }
+
 /*# sourceMappingURL=style.css.map */
