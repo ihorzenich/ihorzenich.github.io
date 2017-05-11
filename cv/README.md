@@ -9,7 +9,7 @@ Photos:
 Short bio:
  - 10+ years of experience in commercial webdev (8 as TL, 5 as PM)
  - 200+ projects in past.
- - Speaker at #wstdays, #WebCampOdessa and #frontendweekend #uwcua conferences.
+ - Speaker at [#wstdays](https://twitter.com/hashtag/wstdays), [#WebCampOdessa](https://twitter.com/hashtag/WebCampOdessa), [#frontendweekend](https://twitter.com/hashtag/frontendweekend) [#uwcua](https://twitter.com/hashtag/uwcua), [#KharkivCSS](https://twitter.com/hashtag/KharkivCSS) and [#ChernivtsiJS](https://twitter.com/hashtag/ChernivtsiJS) conferences.
  - Translator for [Frontender Magazine](http://frontender.info/).
  - 1<sup>st</sup> at the “Best use of technology” on WebHiTech’2008.
  
