@@ -11,7 +11,9 @@ Short bio:
  - 200+ projects in past.
  - Speaker at #wstdays, #WebCampOdessa and #frontendweekend #uwcua conferences.
  - Translator for [Frontender Magazine](http://frontender.info/).
- - 1<sup>st</sup> at the “Best use of technology”​ on WebHiTech’2008.
+ - 1<sup>st</sup> at the “Best use of technology” on WebHiTech’2008.
+ 
+ T-Shirt size: XL.
 
 **Professional interests**: frontend-developers management, ways to speedup html markup and it's quality.
 
