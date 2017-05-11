@@ -32,6 +32,8 @@ Short bio:
  - Video encoding (including Avisynth and DRM)
  - Really had the experience with: UI/UX, WAI-ARIA/WCAG2, Microformats (1 and 2)/Microdata, SEO, Adobe Edge
 
+Email: ihor.zenich@gmail.com
+
 ### Links
 - My projects: http://ihorzenich.github.io/
 - Twitter: https://twitter.com/ihorzenich
