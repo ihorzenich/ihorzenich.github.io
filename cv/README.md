@@ -35,4 +35,6 @@ Short bio:
 ### Links
 - My projects: http://ihorzenich.github.io/
 - Twitter: https://twitter.com/ihorzenich
+- Facebook: https://www.facebook.com/ihorzenich
+- Vk: https://vk.com/ihorzenich
 - LinkedIn: https://www.linkedin.com/in/ihorzenich
