@@ -93,6 +93,9 @@ p.note.-cover {
   line-height: normal;
   color: #333; }
 
+figure img {
+  width: 100%; }
+
 .slide pre code.css .comment {
   color: #608b46; }
 .slide pre code.css .import {

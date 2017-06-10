@@ -120,13 +120,27 @@
     <p class="subheader">…и зачем мне это знать.</p>
     <ol>
       <li>Sass вместо LESS</li>
-      <li class="next">Flexbox, ES6 и прощай IE8</li>
+      <li class="next">Flexbox, ES6 и прощай IE9</li>
       <li class="next"><big>🚫💩</big></li>
       <li class="next">Cетка: xs/sm/md/lg/xl, новый брекпойнт на 480px.</li>
       <li class="next">Reboot вместо Normalize</li>
       <li class="next">WTFForms для сеток и валидации форм</li>
     </ol>
   </section>
+
+  <section class="slide">
+		<h2>Разве не о таких формах мы мечтали?</h2>
+		<figure>
+			<img src="pictures/bootstrap-4-forms-1.png" alt="Bootstrap 4 forms">
+		</figure>
+	</section>
+
+  <section class="slide">
+		<h2>И такой сетке?</h2>
+		<figure>
+			<img src="pictures/Bootstrap-4-grid.jpg" alt="Bootstrap 4 grid">
+		</figure>
+	</section>
 
   <section class="slide -dark">
     <h2 class="shout">Как ПРАВИЛЬНО юзать Bootstrap?</h2>
@@ -163,7 +177,7 @@
 <span class="import">@import <span class="import-url">"../../node_modules/bootstrap-sass/... /_bootstrap";</span>
 <span class="import">@import <span class="import-url">"bootstrap/bootstrap-customization";</span>
 <span class="comment">/* Project CSS */</span>
-<span class="import">@import <span class="import-url">"project/...";</span></code></pre>
+<span class="import">@import <span class="import-url">"project/...scss";</span></code></pre>
 	</section>
 
   <section class="slide">
@@ -204,14 +218,20 @@ h1 {
 	</section>
 
   <section class="slide">
-		<h2>project/...</h2>
+		<h2>project/...scss</h2>
     <p>А дальше идет ваш обычный css, тут могут быть веселые баги с webpack, но это тема для отдельного доклада :)</p>
+	</section>
+
+  <section class="slide">
+		<h2>Что насчёт jQuery?</h2>
+    <p>Будет дропнут вместе с IE10 в Bootstrap 5.</p>
 	</section>
 
   <section class="slide">
     <h2>Что почитать?</h2>
     <ul>
       <li><a href="https://github.com/twbs/bootstrap/pull/17021">Список всех изменений в Bootstrap 4</a></li>
+      <li><a href="https://v4-alpha.getbootstrap.com/migration/">Migrating to v4</a></li>
       <li><a href="https://github.com/twbs/bootstrap/issues/21568">Анонс первой Beta-версии</a></li>
       <li><a href="https://github.com/zurb/foundation-sites/wiki/Project-Roadmap#70-november-2017">Планы развития Zurb Foundation</a></li>
     </ul>
