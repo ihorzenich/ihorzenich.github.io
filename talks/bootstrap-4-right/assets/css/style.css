@@ -80,8 +80,6 @@ body {
 
 .slide h2 {
   font: 600 50px/1.2 'Oswald',sans-serif; }
-  .slide h2.shout {
-    line-height: 1.5; }
 .slide.-dark {
   background: #464547; }
   .slide.-dark h2 {
@@ -95,6 +93,47 @@ p.note.-cover {
   line-height: normal;
   color: #333; }
 
+.slide pre code.css .comment {
+  color: #608b46; }
+.slide pre code.css .import {
+  color: #c586c0; }
+.slide pre code.css .import-url {
+  color: #ce9178; }
+
+#cover {
+  background-color: #000; }
+  #cover img {
+    opacity: 0.6; }
+  #cover h2 {
+    margin: 0;
+    color: #FFF;
+    text-align: center;
+    font-size: 70px;
+    text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3); }
+  #cover p {
+    margin: 10px 0;
+    text-align: center;
+    color: #FFF;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.6;
+    text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3); }
+    #cover p a {
+      color: #FFF; }
+  #cover iframe {
+    width: 45% !important;
+    display: inline-block !important; }
+  #cover #twitter-widget-0 {
+    float: left; }
+  #cover #twitter-widget-1 {
+    float: right; }
+
+#ThankYou img {
+  float: right;
+  width: 300px; }
+#ThankYou ul {
+  margin-top: -1em; }
+
 big {
   font-size: 200%; }
 
@@ -102,5 +141,11 @@ p.subheader {
   margin-top: -30px;
   margin-bottom: 2em;
   color: #999; }
+
+.twitter-big iframe {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5); }
 
 /*# sourceMappingURL=style.css.map */

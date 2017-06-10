@@ -99,10 +99,6 @@ body {
 .slide {
   h2 {
     font: 600 50px/1.2 'Oswald',sans-serif;
-
-    &.shout {
-      line-height: 1.5;
-    }
   }
 
   &.-dark {
@@ -115,7 +111,7 @@ body {
 }
 // End of Branding
 
-// Fixes
+// Customize
 p.note.-cover {
   position: absolute;
   bottom: 30px;
@@ -125,6 +121,79 @@ p.note.-cover {
   color: #333;
 }
 
+// Syntax highlight
+.slide {
+  pre {
+    code.css {
+      .comment {
+        color: #608b46;
+      }
+      .import {
+        color: #c586c0;
+      }
+      .import-url {
+        color: #ce9178;
+      }
+    }
+  }
+}
+
+// Cover slide
+#cover {
+  background-color: #000;
+
+  img {
+    opacity: 0.6;
+  }
+
+  h2 {
+    margin: 0;
+    color:#FFF;
+    text-align: center;
+    font-size: 70px;
+    text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  p {
+    margin: 10px 0;
+    text-align: center;
+    color:#FFF;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.6;
+    text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+
+    a {
+      color:#FFF;
+    }
+  }
+
+  iframe {
+    width: 45% !important;
+    display: inline-block !important;
+  }
+
+  #twitter-widget-0 {
+    float: left;
+  }
+
+  #twitter-widget-1 {
+    float: right;
+  }
+}
+
+// ThankYou slide
+#ThankYou {
+  img {
+    float: right;
+    width: 300px;
+  }
+  ul {
+    margin-top: -1em;
+  }
+}
+
+// Add-ons
 big {
   font-size: 200%;
 }
@@ -133,4 +202,11 @@ p.subheader {
   margin-top: -30px;
   margin-bottom: 2em;
   color: #999;
+}
+
+.twitter-big iframe {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+         -webkit-transform: scale(1.5);
+                 transform: scale(1.5);
 }

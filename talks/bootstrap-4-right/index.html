@@ -7,105 +7,235 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="assets/js/widgets.js" charset="utf-8"></script>
 </head>
 <body class="shower list">
     <header class="caption">
-      <h1>Bootstrap 4 уже скоро! Что там?</h1>
-      <h2><a class="hashtag" href="https://twitter.com/hashtag/KharkivCSS?f=tweets&src=hash">#KharkivCSS</a>, Kharkiv, April 22, 2017</h2>
+      <h1>Bootstrap: как правильно и что нового в 4-ке</h1>
+      <h2><a class="hashtag" href="https://twitter.com/hashtag/ChernivtsiJS?f=tweets&src=hash">#ChernivtsiJS</a>, Chernivtsi, June 10, 2017</h2>
       <h3><a class="name" href="http://twitter.com/ihorzenich">Ihor Zenich</a>, <a class="work" href="http://epam.com">EPAM</a></h3>
     </header>
 
+<!--
+Вы крутые JS-разработчики, а я пришел поговорить с вами о кажущейся немного неприличной в таком обществе теме – о бутстрапе,
+о его новой версии и попытаюсь немного убедить вас, что он не только для админок.
+
+Мы айтишники, любим сыры, зеркалки и велосипеды, велосипеды особенно.
+Делаем свои велосипеды, но они увы не сильно разгоняются зачастую.
+Еще недавно я не знал что есть электровелосипелы и что они круты.
+Увидел в Цитрусе и узнал что-то новое. Теперь хочу чтоб вы узнали новое про велосипеды и css-фреймворки.
+
+Многие бутстрап не знают,или считают что это смешной набор кнопочек для админки.
+Я хочу поговорить с вами о том как js-разработчики юзают Bootstrap, и как надо его юзать на самом деле.
+Ведь бывает что его к вебпаку подключают так, что потом ничё не работает.
+А ведь скоро Bootstrap 4 выходит, там очень большие изменения.
+Расскажу про них и о том что важно js-разработчикам учитывать.
+-->
+
   <section class="slide" id="cover">
-    <h2>Bootstrap 4 уже скоро!<br>
-        Что там?</h2>
+    <h2>Bootstrap: как правильно<br>
+        и что нового в 4-ке</h2>
     <p>
-      <a class="hashtag" href="https://twitter.com/hashtag/KharkivCSS?src=hash">#KharkivCSS</a>, April 22, 2017<br>
+      <a class="hashtag" href="https://twitter.com/hashtag/ChernivtsiJS?src=hash">#ChernivtsiJS</a>, June 10, 2017<br>
       <a class="name" href="http://twitter.com/ihorzenich">Ihor Zenich</a>, <a class="work" href="http://epam.com">EPAM</a>
     </p>
-    <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">Updated Bootstrap 4 status:<br><br>66 files changed, 1,564 insertions(+), 4,703 deletions(-)</p>&mdash; Mark Otto (@mdo) <a href="https://twitter.com/mdo/status/486462261230575617">July 8, 2014</a></blockquote>
+    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Bootstrap 4, day 1,065.<br><br>656 files changed, 66,882 insertions, 82,436 deletions.<br><br>(I swear it&#39;s getting close to being done!) <a href="https://t.co/8mXRvcZiu0">https://t.co/8mXRvcZiu0</a></p>&mdash; Mark Otto (@mdo) <a href="https://twitter.com/mdo/status/872481524163035136">June 7, 2017</a></blockquote>
     <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">For the first time in I have no idea how long, <a href="https://twitter.com/getbootstrap">@getbootstrap</a> is below 300 open issues and 100 open PRs on GitHub. Progress! <a href="https://t.co/Dpi5S8JMoJ">pic.twitter.com/Dpi5S8JMoJ</a></p>&mdash; Mark Otto (@mdo) <a href="https://twitter.com/mdo/status/791875094171688961">October 28, 2016</a></blockquote>
     <img src="pictures/cover.jpg" alt="" class="cover">
     <!--
       To apply styles to the certain slides
       set slide ID to get needed elements
       -->
-    <style>
-      #cover {
-        background-color: #000;
-      }
-      #cover img {
-        opacity: 0.6;
-      }
-      #cover h2 {
-        margin:30px 0 0;
-        color:#FFF;
-        text-align:center;
-        font-size:70px;
-                text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
-        }
-      #cover p {
-        margin:10px 0 0;
-        text-align:center;
-        color:#FFF;
-        font-style:italic;
-        font-size:20px;
-                text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
-        }
-        #cover p a {
-          color:#FFF;
-          }
-        #cover iframe {
-          width: 45% !important;
-          display: inline-block !important;
-        }
-        #cover #twitter-widget-0 {
-          float: left;
-        }
-        #cover #twitter-widget-1 {
-          float: right;
-        }
-    </style>
   </section>
 
+  <section class="slide">
+    <h2 class="shout"><a href="http://bit.ly/bs-4-right">bit.ly/bs-4-right</a></h2>
+  </section>
+
+<!--
+  В 2017 году в css-фреймворках грядут большие изменения.
+  Эти вещи происходят не только в Бутстрап. Берем Фондэйшен.
+  Он уже на гридах, а в этом году они хотят имплементировать БЭМ в том видео как его понимает ГарриРобертс - ITCSS.
+-->
+
+  <section class="slide">
+    <h2 class="shout">2017 – год больших изменений</h2>
+  </section>
+
+<!--
+  Почти 3 года назад Марк Отто начал рефакторить бутстрап.
+  Нет беты, есть 6-я альфа.
+-->
+
+  <section class="slide">
+    <h2>3 года рефакторинга!</h2>
+    <div class="twitter-big">
+      <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Bootstrap 4, day 1,065.<br><br>656 files changed, 66,882 insertions, 82,436 deletions.<br><br>(I swear it&#39;s getting close to being done!) <a href="https://t.co/8mXRvcZiu0">https://t.co/8mXRvcZiu0</a></p>&mdash; Mark Otto (@mdo) <a href="https://twitter.com/mdo/status/872481524163035136">June 7, 2017</a></blockquote>
+    </div>
+  </section>
+
+<!--
+  Помните «телегу про Бутстрап»?
+  Они все исправили.
+-->
+
+  <section class="slide -dark">
+    <h2 class="shout">4-ка хорошая!</h2>
+  </section>
+
+<!--
+“У одной моей подруги с ее парнем - 10 верстальщиков 6 месяцев пилили свой бутстрап и вышло не очень”
+
+Вы ведь знаете что бутстрап это не статический файлик который можно подключить,
+не только смешная штучка чтоб кастомизировать админки, еще там есть кнопочки.
+
+Вы по любому сталкивались с бутстрапом: хотелось, не хотелось, но пришлось - он был на проекте,
+или надо было быстро что-то прикрутить… КТО ЗНАЕТ КАКАЯ КОНКРЕТНО ВЕРСИЯ бутстрапа используется на вашем проекте? 3.точка?
+
+Когда будет 4 - вы все точно запомните:)
+
+Мы часто говорим - оно нам не надо, мы сделаем лучше. Или “это тяжело стайлить“. Или “оно тяжелое, а мне надо только сетку”,
+но поверьте - в 4-ом не будет страшных вещей, его можно смело юзать за основу, они КУЧУ ХОРОШИХ ВЕЩЕЙ СДЕЛАЛИ!
+-->
+
+<!--
+Там будет flexbox, он будет для всего и даже лого, и если вы не понимаете как с этим работать - придется изучить.
+
+Самая классная вещь, его многие презирали, там была куча говна, там были ужасные стили, страшные каскады,
+очень непонятные правила, магические числа…
+Они провели нереальную работу и все убрали!
+
+Я недавно обновлял бутстрап на своем проекте и заодно некоторые вещи взял из 4-го.
+
+Поработали над типографикой!
+Выкинули margin-top везде. Больше нет проблем.
+
+Создали свои сайд-проекты, чтоб все было еще более компонентным, в плане типографики,
+например они свой обновленный Normalize назвали Reboot.
+Раньше был css reset, потом нормалайз, они сказали - он устарел и сделали Ребут.
+Выкинули старье и добавили новое. Такой себе css boiletplate.
+-->
   <section class="slide">
     <h2>Что они делают?</h2>
     <p class="subheader">…и зачем мне это знать.</p>
     <ol>
-      <li>NPM и Sass</li>
-      <li class="next">Flexbox</li>
+      <li>Sass вместо LESS</li>
+      <li class="next">Flexbox, ES6 и прощай IE8</li>
       <li class="next"><big>🚫💩</big></li>
-      <li class="next">XL size</li>
+      <li class="next">Cетка: xs/sm/md/lg/xl, новый брекпойнт на 480px.</li>
       <li class="next">Reboot вместо Normalize</li>
-      <li class="next">ES6</li>
+      <li class="next">WTFForms для сеток и валидации форм</li>
     </ol>
   </section>
 
-  <section class="slide" id="ThankYou">
-    <style>
-      #ThankYou ul {
-        margin-top: -1em;
-      }
-    </style>
+  <section class="slide -dark">
+    <h2 class="shout">Как ПРАВИЛЬНО юзать Bootstrap?</h2>
+  </section>
 
+  <section class="slide">
+		<h2>Подключать через NPM</h2>
+    <p>На новый проект сразу берите 4-ку</p>
+    <pre><code>npm install <mark>bootstrap@4.0.0-alpha.6</mark></code></pre>
+	</section>
+
+<!--
+Еще в нем есть Sass-версия теперь она будет официальной.
+
+Что будет если обновить 3 на 4? Все развалится.
+Но если будете делать с нуля - будет очень круто, не пожалеете.
+Можно брать и Фондейшен и Гугл МДЛ, но бутстрап просто более популярный и его часто юзают,  те кто не умеют верстать, а нам потом с этим жить. Можно не признаваться, но почитать про 4-ку я советую!
+
+Он сейчас в альфе, 3-тий уже депрекейтед, 2 года не обновляют, а 4 даже бету не выпустили, что делать? Они провели огромную работу - можно на новом проекте смело юзать 4-ку. Страшных вещей там нет, она может где-то не вылизанна, но в 3-ке тоже проблем хватает, там были ужасные вещи.
+-->
+
+  <section class="slide">
+		<h2>Всегда брать Sass-версию</h2>
+    <p>В 4-ке он уже есть, а для 3-ки есть отдельный репозиторий:</p>
+    <pre><code>npm install <mark>bootstrap-sass</mark></code></pre>
+	</section>
+
+  <section class="slide">
+		<h2>Правильно кастомизировать</h2>
+<pre><code class="css"><span class="comment">/* Project variables */</span>
+<span class="import">@import</span> <span class="import-url">"project/variables";</span>
+<span class="comment">/* Bootstrap */</span>
+<span class="import">@import <span class="import-url">"bootstrap/bootstrap-variables";</span>
+<span class="import">@import <span class="import-url">"../../node_modules/bootstrap-sass/... /_bootstrap";</span>
+<span class="import">@import <span class="import-url">"bootstrap/bootstrap-customization";</span>
+<span class="comment">/* Project CSS */</span>
+<span class="import">@import <span class="import-url">"project/...";</span></code></pre>
+	</section>
+
+  <section class="slide">
+		<h2>project/_variables.scss</h2>
+<pre><code class="css"><span class="comment">// Layout</span>
+$site-padding-horizontal: 40px;
+$mainNavbar-height: 52px;
+$mainLogo-height: 44px;
+$footerBar-height: 40px;
+<span class="comment">// Colors</span>
+$project-header-bg: #3f484c;</code></pre>
+	</section>
+
+  <section class="slide">
+		<h2>bootstrap/_bootstrap-variables.scss</h2>
+<pre><code class="css"><span class="comment">// Bootstrap Variables file</span>
+<span class="comment">// Derived Bootstrap variables can depend on values from here</span>
+<span class="import">@import <span class="import-url"> 'variables.scss'</span>; <span class="comment">// Import project styles variables</span>
+<span class="comment">// Customize Bootstrap variables 
+that get imported before the original Bootstrap variables.</span>
+<span class="comment">// Layout</span>
+$navbar-height: $mainNavbar-height;
+$navbar-inverse-bg: $project-header-bg;</code></pre>
+	</section>
+
+  <section class="slide">
+		<h2>bootstrap/_bootstrap-customization.scss</h2>
+<pre><code class="css"><span class="comment">// Bootstrap Customization file</span>
+<span class="comment">// This gets loaded after bootstrap/variables is loaded</span>
+<span class="import">@import <span class="import-url"> 'variables.scss'</span>; <span class="comment">// Import project styles variables</span>
+<span class="comment">// Rewrite default bootstrap components</span>
+h1 {
+  &:first-child {
+    margin-top: 65px;
+  }
+}
+</code></pre>
+	</section>
+
+  <section class="slide">
+		<h2>project/...</h2>
+    <p>А дальше идет ваш обычный css, тут могут быть веселые баги с webpack, но это тема для отдельного доклада :)</p>
+	</section>
+
+  <section class="slide">
+    <h2>Что почитать?</h2>
+    <ul>
+      <li><a href="https://github.com/twbs/bootstrap/pull/17021">Список всех изменений в Bootstrap 4</a></li>
+      <li><a href="https://github.com/twbs/bootstrap/issues/21568">Анонс первой Beta-версии</a></li>
+      <li><a href="https://github.com/zurb/foundation-sites/wiki/Project-Roadmap#70-november-2017">Планы развития Zurb Foundation</a></li>
+    </ul>
+  </section>
+
+  <section class="slide" id="ThankYou">
     <h2>Спасибо!</h2>
     <p class="subheader">Вопросы «как жить дальше»? :)</p>
     <p><b>Ihor Zenich</b></p>
+    <img src="assets/img/epam-logo--primary.svg" alt="EPAM logo" />
     <ul>
       <li><a href="http://delka.name">delka.name</a></li>
       <li><a href="http://twitter.com/ihorzenich">twitter.com/ihorzenich</a></li>
       <li><a href="mailto:igor@delka.name">igor@delka.name</a></li>
     </ul>
-    <p>Презентация: <a href="http://bit.ly/bs-4-new">bit.ly/bs-4-new</a></p>
+    <p>Презентация: <a href="http://bit.ly/bs-4-right">bit.ly/bs-4-right</a></p>
   </section>
+
 	<p class="badge">
 		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
 	</p>
   <div class="progress"></div>
-  <script src="shower/shower.min.js"></script>
-  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
-  <!-- Photos by John Carey, fiftyfootshadows.net -->
 
+  <script src="shower/shower.min.js"></script>
      <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
