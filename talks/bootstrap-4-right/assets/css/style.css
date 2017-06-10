@@ -108,10 +108,11 @@ figure img {
   #cover img {
     opacity: 0.6; }
   #cover h2 {
-    margin: 0;
+    margin: -20px 0 0;
     color: #FFF;
     text-align: center;
     font-size: 70px;
+    line-height: 1.1;
     text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3); }
   #cover p {
     margin: 10px 0;
