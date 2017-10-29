@@ -13,7 +13,8 @@
   * [Пишем БЭМ правильно — Киев, FrontendWeekend, 2015](http://ihorzenich.github.io/talks/bem-frontendweekend)
 * [БЭМ в дикой природе — Киев, WSD, 2015](http://ihorzenich.github.io/talks/bem-in-the-wild)
 * [CSS Themes — Харьков, KharkivCSS, 2016](http://ihorzenich.github.io/talks/css-themes)
-* [Bootstrap 4 уже скоро! Что там? — Харьков, KharkivCSS, 2017](http://ihorzenich.github.io/talks/bootstrap-4-new)
+* [Bootstrap 4 уже скоро! Что там? — Kharkiv, KharkivCSS, 2017](http://ihorzenich.github.io/talks/bootstrap-4-new)
+* [Bootstrap: как правильно и что нового в 4-ке — Chernivtsi, ChernivtsiJS, 2017](http://ihorzenich.github.io/talks/bootstrap-4-right)
 
 ## CV
 * [About me + photos](https://github.com/ihorzenich/ihorzenich.github.io/tree/master/cv)
