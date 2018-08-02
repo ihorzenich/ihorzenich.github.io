@@ -1,0 +1,214 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald-demibold-webfont.eot");
+  src: url("../fonts/oswald-demibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-demibold-webfont.woff2") format("woff2"), url("../fonts/oswald-demibold-webfont.woff") format("woff"), url("../fonts/oswald-demibold-webfont.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald-regular-webfont.eot");
+  src: url("../fonts/oswald-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-regular-webfont.woff2") format("woff2"), url("../fonts/oswald-regular-webfont.woff") format("woff"), url("../fonts/oswald-regular-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald-light-webfont.eot");
+  src: url("../fonts/oswald-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-light-webfont.woff2") format("woff2"), url("../fonts/oswald-light-webfont.woff") format("woff"), url("../fonts/oswald-light-webfont.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald-demi-bolditalic-webfont.eot");
+  src: url("../fonts/oswald-demi-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-demi-bolditalic-webfont.woff2") format("woff2"), url("../fonts/oswald-demi-bolditalic-webfont.woff") format("woff"), url("../fonts/oswald-demi-bolditalic-webfont.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic; }
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald-regularitalic-webfont.eot");
+  src: url("../fonts/oswald-regularitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-regularitalic-webfont.woff2") format("woff2"), url("../fonts/oswald-regularitalic-webfont.woff") format("woff"), url("../fonts/oswald-regularitalic-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald-lightitalic-webfont.eot");
+  src: url("../fonts/oswald-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-lightitalic-webfont.woff2") format("woff2"), url("../fonts/oswald-lightitalic-webfont.woff") format("woff"), url("../fonts/oswald-lightitalic-webfont.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+body {
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "PT Sans", sans-serif;
+}
+
+body.shower.list {
+  background-color: #464547;
+  background-image: none;
+}
+
+.full {
+  background-color: #464547;
+}
+
+.badge a {
+  background: #8E244D;
+}
+
+.badge a:hover {
+  background: #B22746;
+}
+
+.slide:after {
+  background-image: url("../img/ribbon--epam.svg");
+}
+
+.caption {
+  color: #666666;
+  text-shadow: 0 1px 1px #000;
+}
+
+.caption a {
+  color: #1A9CB0;
+  text-shadow: 0 -1px 1px #464547;
+}
+
+.caption a:hover {
+  color: #39C2D7;
+}
+
+.caption h1 {
+  font: 600 50px/1 'Oswald', 'PT Sans Narrow', sans-serif;
+  color: #39C2D7;
+  text-shadow: 0 1px 1px #464547;
+  padding-bottom: 0;
+}
+
+.caption h2 {
+  font-size: 25px;
+}
+
+.caption h3 {
+  font-size: 25px;
+}
+
+.caption h3 a.name {
+  color: #A3C644;
+  text-shadow: none;
+}
+
+.caption h3 a.work {
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+.caption a.hashtag {
+  color: #999999;
+}
+
+.slide h2 {
+  font: 600 50px/1.2 'Oswald',sans-serif;
+}
+
+.slide.-dark {
+  background: #464547;
+}
+
+.slide.-dark h2 {
+  color: #FFFFFF;
+}
+
+p.note.-cover {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  font-size: 12px;
+  line-height: normal;
+  color: #333;
+}
+
+figure img {
+  width: 100%;
+}
+
+.cover h2 {
+  color: #FFF;
+}
+
+.slide pre code.css .comment {
+  color: #608b46;
+}
+
+.slide pre code.css .import {
+  color: #c586c0;
+}
+
+.slide pre code.css .import-url {
+  color: #ce9178;
+}
+
+#cover {
+  background-color: #000;
+}
+
+#cover img {
+  opacity: 0.6;
+}
+
+#cover h2 {
+  margin: -20px 0 0;
+  color: #FFF;
+  text-align: center;
+  font-size: 70px;
+  line-height: 1.1;
+  text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+#cover p {
+  margin: 10px 0;
+  text-align: center;
+  color: #FFF;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.6;
+  text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+#cover p a {
+  color: #FFF;
+}
+
+#cover iframe {
+  width: 45% !important;
+  display: inline-block !important;
+}
+
+#cover #twitter-widget-0 {
+  float: left;
+}
+
+#cover #twitter-widget-1 {
+  float: right;
+}
+
+#ThankYou img {
+  float: right;
+  width: 300px;
+}
+
+#ThankYou ul {
+  margin-top: -1em;
+}
+
+big {
+  font-size: 200%;
+}
+
+p.subheader {
+  margin-top: -30px;
+  margin-bottom: 2em;
+  color: #999;
+}
+
+.twitter-big iframe {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}

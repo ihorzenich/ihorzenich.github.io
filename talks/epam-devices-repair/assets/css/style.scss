@@ -1,0 +1,223 @@
+// -- Branding
+// EPAM COLOR PALETTE:
+// PRIMARY COLORS:
+  $SHARP_BLUE: #39C2D7;
+  $LIME_GREEN: #A3C644;
+  $GRAPHITE: #464547;
+  $WHITE: #FFFFFF;
+
+//SECONDARY COLORS:
+  $RASPBERRY: #B22746;
+  $PLUM: #8E244D;
+  $DARK_BLUE: #1A9CB0;
+  $DARK_GREEN: #7F993A;
+
+  $MEDIUM_GRAY: #666666;
+  $GRAY: #999999;
+  $LIGHT_GRAY: #CCCCCC;
+
+  $BG: $GRAPHITE;
+
+//EPAM FONTS:
+@import 'epam-fonts__oswald';
+  $TrebuchetMS: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",'PT Sans',sans-serif;
+  $Oswald: Oswald, $TrebuchetMS; // 300,400,600+italic
+
+body {
+  font-family: $TrebuchetMS;
+
+  &.shower.list {
+    background-color: $BG;
+    background-image: none;
+  }
+}
+
+.full {
+  background-color: $BG;
+}
+
+.badge {
+  a {
+    background: $PLUM;
+
+    &:hover {
+      background: $RASPBERRY;
+    }
+  }
+}
+
+.slide:after {
+  background-image: url('../img/ribbon--epam.svg');
+}
+
+.caption {
+  color: $MEDIUM_GRAY;
+  text-shadow: 0 1px 1px #000;
+
+  a {
+    color: $DARK_BLUE;
+    text-shadow: 0 -1px 1px $GRAPHITE;
+
+    &:hover {
+      color: $SHARP_BLUE;
+    }
+  }
+}
+
+.caption {
+  h1 {
+    font: 600 50px/1 'Oswald', 'PT Sans Narrow', sans-serif;
+    color: $SHARP_BLUE;
+    text-shadow: 0 1px 1px $GRAPHITE;
+    padding-bottom: 0;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 25px;
+
+    a {
+      &.name {
+        color: $LIME_GREEN;
+        text-shadow: none;
+      }
+      &.work {
+        color: $WHITE;
+        text-shadow: none;
+      }
+    }
+  }
+
+  a.hashtag {
+    color: $GRAY;
+  }
+}
+
+.slide {
+  h2 {
+    font: 600 50px/1.2 'Oswald',sans-serif;
+  }
+
+  &.-dark {
+    background: $GRAPHITE;
+
+    h2 {
+      color: $WHITE;
+    }
+  }
+}
+// End of Branding
+
+// Customize
+p.note.-cover {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  font-size: 12px;
+  line-height: normal;
+  color: #333;
+}
+
+figure img {
+  width: 100%;
+}
+
+.cover {
+  h2 {
+    color:#FFF;
+  }
+}
+
+// Syntax highlight
+.slide {
+  pre {
+    code.css {
+      .comment {
+        color: #608b46;
+      }
+      .import {
+        color: #c586c0;
+      }
+      .import-url {
+        color: #ce9178;
+      }
+    }
+  }
+}
+
+// Cover slide
+#cover {
+  background-color: #000;
+
+  img {
+    opacity: 0.6;
+  }
+
+  h2 {
+    margin: -20px 0 0;
+    color:#FFF;
+    text-align: center;
+    font-size: 70px;
+    line-height: 1.1;
+    text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  p {
+    margin: 10px 0;
+    text-align: center;
+    color:#FFF;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.6;
+    text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+
+    a {
+      color:#FFF;
+    }
+  }
+
+  iframe {
+    width: 45% !important;
+    display: inline-block !important;
+  }
+
+  #twitter-widget-0 {
+    float: left;
+  }
+
+  #twitter-widget-1 {
+    float: right;
+  }
+}
+
+// ThankYou slide
+#ThankYou {
+  img {
+    float: right;
+    width: 300px;
+  }
+  ul {
+    margin-top: -1em;
+  }
+}
+
+// Add-ons
+big {
+  font-size: 200%;
+}
+
+p.subheader {
+  margin-top: -30px;
+  margin-bottom: 2em;
+  color: #999;
+}
+
+.twitter-big iframe {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+         -webkit-transform: scale(1.5);
+                 transform: scale(1.5);
+}
